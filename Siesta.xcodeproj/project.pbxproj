@@ -1,0 +1,1159 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E602301A2B103000004AE174 /* StatsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60230192B103000004AE174 /* StatsViewWatch.swift */; };
+		E602301C2B1034BE004AE174 /* GameSquaresViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */; };
+		E602301E2B1034CF004AE174 /* GameMessageViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */; };
+		E6F28B9B2B0EB4500007DDC1 /* SiestaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28B9A2B0EB4500007DDC1 /* SiestaApp.swift */; };
+		E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28B9C2B0EB4500007DDC1 /* ContentView.swift */; };
+		E6F28B9F2B0EB4510007DDC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F28B9E2B0EB4510007DDC1 /* Assets.xcassets */; };
+		E6F28BA32B0EB4510007DDC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F28BA22B0EB4510007DDC1 /* Preview Assets.xcassets */; };
+		E6F28BAD2B0EB4510007DDC1 /* SiestaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BAC2B0EB4510007DDC1 /* SiestaTests.swift */; };
+		E6F28BB72B0EB4510007DDC1 /* SiestaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BB62B0EB4510007DDC1 /* SiestaUITests.swift */; };
+		E6F28BB92B0EB4510007DDC1 /* SiestaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BB82B0EB4510007DDC1 /* SiestaUITestsLaunchTests.swift */; };
+		E6F28BCC2B0EB4C70007DDC1 /* SiestaWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BCB2B0EB4C70007DDC1 /* SiestaWatchApp.swift */; };
+		E6F28BCE2B0EB4C70007DDC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BCD2B0EB4C70007DDC1 /* ContentView.swift */; };
+		E6F28BD02B0EB4C80007DDC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F28BCF2B0EB4C80007DDC1 /* Assets.xcassets */; };
+		E6F28BD32B0EB4C80007DDC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F28BD22B0EB4C80007DDC1 /* Preview Assets.xcassets */; };
+		E6F28BDD2B0EB4C80007DDC1 /* SiestaWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BDC2B0EB4C80007DDC1 /* SiestaWatch_Watch_AppTests.swift */; };
+		E6F28BE72B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BE62B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITests.swift */; };
+		E6F28BE92B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BE82B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITestsLaunchTests.swift */; };
+		E6F28BEC2B0EB4C80007DDC1 /* SiestaWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E6F28BC92B0EB4C70007DDC1 /* SiestaWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E6F28BF82B0EB71F0007DDC1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BF72B0EB71F0007DDC1 /* GameViewModel.swift */; };
+		E6F28BF92B0EB71F0007DDC1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BF72B0EB71F0007DDC1 /* GameViewModel.swift */; };
+		E6F28BFE2B0EB8560007DDC1 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BFD2B0EB8560007DDC1 /* StatsView.swift */; };
+		E6F28C012B0EB9480007DDC1 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C002B0EB9480007DDC1 /* SettingsButtonView.swift */; };
+		E6F28C072B0EB97A0007DDC1 /* GameSquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */; };
+		E6F28C0A2B0EB9980007DDC1 /* GameMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */; };
+		E6F28C0D2B0EB9AA0007DDC1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */; };
+		E6F28C132B0EBB850007DDC1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C122B0EBB850007DDC1 /* GameView.swift */; };
+		E6F28C192B0EBE550007DDC1 /* PanelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C182B0EBE550007DDC1 /* PanelColor.swift */; };
+		E6F28C1A2B0EBE550007DDC1 /* PanelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C182B0EBE550007DDC1 /* PanelColor.swift */; };
+		E6F28C1C2B0EBF6B0007DDC1 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */; };
+		E6F28C1D2B0EBF6B0007DDC1 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */; };
+		E6F28C242B0EC8410007DDC1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C122B0EBB850007DDC1 /* GameView.swift */; };
+		E6F28C252B0EC8440007DDC1 /* GameSquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */; };
+		E6F28C262B0EC8470007DDC1 /* GameMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */; };
+		E6F28C292B0EC8500007DDC1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */; };
+		E6F28C2B2B1001BB0007DDC1 /* StartButtonViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */; };
+		E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C0F2B0EBABC0007DDC1 /* StartButtonView.swift */; };
+		E6F28C2E2B10251E0007DDC1 /* SettingsButtonViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6F28BA92B0EB4510007DDC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F28B8F2B0EB4500007DDC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F28B962B0EB4500007DDC1;
+			remoteInfo = Siesta;
+		};
+		E6F28BB32B0EB4510007DDC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F28B8F2B0EB4500007DDC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F28B962B0EB4500007DDC1;
+			remoteInfo = Siesta;
+		};
+		E6F28BD92B0EB4C80007DDC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F28B8F2B0EB4500007DDC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F28BC82B0EB4C70007DDC1;
+			remoteInfo = "SiestaWatch Watch App";
+		};
+		E6F28BE32B0EB4C80007DDC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F28B8F2B0EB4500007DDC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F28BC82B0EB4C70007DDC1;
+			remoteInfo = "SiestaWatch Watch App";
+		};
+		E6F28BEA2B0EB4C80007DDC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F28B8F2B0EB4500007DDC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F28BC82B0EB4C70007DDC1;
+			remoteInfo = "SiestaWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6F28BF02B0EB4C80007DDC1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E6F28BEC2B0EB4C80007DDC1 /* SiestaWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E60230192B103000004AE174 /* StatsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewWatch.swift; sourceTree = "<group>"; };
+		E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquaresViewWatch.swift; sourceTree = "<group>"; };
+		E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMessageViewWatch.swift; sourceTree = "<group>"; };
+		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F28B9A2B0EB4500007DDC1 /* SiestaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaApp.swift; sourceTree = "<group>"; };
+		E6F28B9C2B0EB4500007DDC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E6F28B9E2B0EB4510007DDC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6F28BA02B0EB4510007DDC1 /* Siesta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Siesta.entitlements; sourceTree = "<group>"; };
+		E6F28BA22B0EB4510007DDC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6F28BA82B0EB4510007DDC1 /* SiestaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiestaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F28BAC2B0EB4510007DDC1 /* SiestaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaTests.swift; sourceTree = "<group>"; };
+		E6F28BB22B0EB4510007DDC1 /* SiestaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiestaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F28BB62B0EB4510007DDC1 /* SiestaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaUITests.swift; sourceTree = "<group>"; };
+		E6F28BB82B0EB4510007DDC1 /* SiestaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6F28BC92B0EB4C70007DDC1 /* SiestaWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SiestaWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F28BCB2B0EB4C70007DDC1 /* SiestaWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaWatchApp.swift; sourceTree = "<group>"; };
+		E6F28BCD2B0EB4C70007DDC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E6F28BCF2B0EB4C80007DDC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6F28BD22B0EB4C80007DDC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6F28BD82B0EB4C80007DDC1 /* SiestaWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SiestaWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F28BDC2B0EB4C80007DDC1 /* SiestaWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		E6F28BE22B0EB4C80007DDC1 /* SiestaWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SiestaWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F28BE62B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		E6F28BE82B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6F28BF72B0EB71F0007DDC1 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		E6F28BFD2B0EB8560007DDC1 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		E6F28C002B0EB9480007DDC1 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
+		E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquaresView.swift; sourceTree = "<group>"; };
+		E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMessageView.swift; sourceTree = "<group>"; };
+		E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E6F28C0F2B0EBABC0007DDC1 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		E6F28C122B0EBB850007DDC1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		E6F28C182B0EBE550007DDC1 /* PanelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelColor.swift; sourceTree = "<group>"; };
+		E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
+		E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonViewWatch.swift; sourceTree = "<group>"; };
+		E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonViewWatch.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6F28B942B0EB4500007DDC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BA52B0EB4510007DDC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BAF2B0EB4510007DDC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BC62B0EB4C70007DDC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BD52B0EB4C80007DDC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BDF2B0EB4C80007DDC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6F28B8E2B0EB4500007DDC1 = {
+			isa = PBXGroup;
+			children = (
+				E6F28B992B0EB4500007DDC1 /* Siesta */,
+				E6F28BAB2B0EB4510007DDC1 /* SiestaTests */,
+				E6F28BB52B0EB4510007DDC1 /* SiestaUITests */,
+				E6F28BCA2B0EB4C70007DDC1 /* SiestaWatch Watch App */,
+				E6F28BDB2B0EB4C80007DDC1 /* SiestaWatch Watch AppTests */,
+				E6F28BE52B0EB4C80007DDC1 /* SiestaWatch Watch AppUITests */,
+				E6F28B982B0EB4500007DDC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6F28B982B0EB4500007DDC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28B972B0EB4500007DDC1 /* Siesta.app */,
+				E6F28BA82B0EB4510007DDC1 /* SiestaTests.xctest */,
+				E6F28BB22B0EB4510007DDC1 /* SiestaUITests.xctest */,
+				E6F28BC92B0EB4C70007DDC1 /* SiestaWatch Watch App.app */,
+				E6F28BD82B0EB4C80007DDC1 /* SiestaWatch Watch AppTests.xctest */,
+				E6F28BE22B0EB4C80007DDC1 /* SiestaWatch Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6F28B992B0EB4500007DDC1 /* Siesta */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28B9A2B0EB4500007DDC1 /* SiestaApp.swift */,
+				E6F28C1E2B0EC0050007DDC1 /* Services */,
+				E6F28C172B0EBDCE0007DDC1 /* Models */,
+				E6F28C162B0EBDC70007DDC1 /* ViewModels */,
+				E6F28C152B0EBDBE0007DDC1 /* Views */,
+				E6F28C1F2B0EC0120007DDC1 /* Resources */,
+			);
+			path = Siesta;
+			sourceTree = "<group>";
+		};
+		E6F28BA12B0EB4510007DDC1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BA22B0EB4510007DDC1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6F28BAB2B0EB4510007DDC1 /* SiestaTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BAC2B0EB4510007DDC1 /* SiestaTests.swift */,
+			);
+			path = SiestaTests;
+			sourceTree = "<group>";
+		};
+		E6F28BB52B0EB4510007DDC1 /* SiestaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BB62B0EB4510007DDC1 /* SiestaUITests.swift */,
+				E6F28BB82B0EB4510007DDC1 /* SiestaUITestsLaunchTests.swift */,
+			);
+			path = SiestaUITests;
+			sourceTree = "<group>";
+		};
+		E6F28BCA2B0EB4C70007DDC1 /* SiestaWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BCB2B0EB4C70007DDC1 /* SiestaWatchApp.swift */,
+				E6F28BCD2B0EB4C70007DDC1 /* ContentView.swift */,
+				E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */,
+				E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */,
+				E60230192B103000004AE174 /* StatsViewWatch.swift */,
+				E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */,
+				E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */,
+				E6F28BCF2B0EB4C80007DDC1 /* Assets.xcassets */,
+				E6F28BD12B0EB4C80007DDC1 /* Preview Content */,
+			);
+			path = "SiestaWatch Watch App";
+			sourceTree = "<group>";
+		};
+		E6F28BD12B0EB4C80007DDC1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BD22B0EB4C80007DDC1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6F28BDB2B0EB4C80007DDC1 /* SiestaWatch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BDC2B0EB4C80007DDC1 /* SiestaWatch_Watch_AppTests.swift */,
+			);
+			path = "SiestaWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		E6F28BE52B0EB4C80007DDC1 /* SiestaWatch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BE62B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITests.swift */,
+				E6F28BE82B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "SiestaWatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		E6F28C152B0EBDBE0007DDC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28B9C2B0EB4500007DDC1 /* ContentView.swift */,
+				E6F28C0F2B0EBABC0007DDC1 /* StartButtonView.swift */,
+				E6F28C122B0EBB850007DDC1 /* GameView.swift */,
+				E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */,
+				E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */,
+				E6F28BFD2B0EB8560007DDC1 /* StatsView.swift */,
+				E6F28C002B0EB9480007DDC1 /* SettingsButtonView.swift */,
+				E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6F28C162B0EBDC70007DDC1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BF72B0EB71F0007DDC1 /* GameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E6F28C172B0EBDCE0007DDC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28C182B0EBE550007DDC1 /* PanelColor.swift */,
+				E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6F28C1E2B0EC0050007DDC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E6F28C1F2B0EC0120007DDC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28B9E2B0EB4510007DDC1 /* Assets.xcassets */,
+				E6F28BA12B0EB4510007DDC1 /* Preview Content */,
+				E6F28BA02B0EB4510007DDC1 /* Siesta.entitlements */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6F28B962B0EB4500007DDC1 /* Siesta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F28BBC2B0EB4510007DDC1 /* Build configuration list for PBXNativeTarget "Siesta" */;
+			buildPhases = (
+				E6F28B932B0EB4500007DDC1 /* Sources */,
+				E6F28B942B0EB4500007DDC1 /* Frameworks */,
+				E6F28B952B0EB4500007DDC1 /* Resources */,
+				E6F28BF02B0EB4C80007DDC1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F28BEB2B0EB4C80007DDC1 /* PBXTargetDependency */,
+			);
+			name = Siesta;
+			productName = Siesta;
+			productReference = E6F28B972B0EB4500007DDC1 /* Siesta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6F28BA72B0EB4510007DDC1 /* SiestaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F28BBF2B0EB4510007DDC1 /* Build configuration list for PBXNativeTarget "SiestaTests" */;
+			buildPhases = (
+				E6F28BA42B0EB4510007DDC1 /* Sources */,
+				E6F28BA52B0EB4510007DDC1 /* Frameworks */,
+				E6F28BA62B0EB4510007DDC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F28BAA2B0EB4510007DDC1 /* PBXTargetDependency */,
+			);
+			name = SiestaTests;
+			productName = SiestaTests;
+			productReference = E6F28BA82B0EB4510007DDC1 /* SiestaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6F28BB12B0EB4510007DDC1 /* SiestaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F28BC22B0EB4510007DDC1 /* Build configuration list for PBXNativeTarget "SiestaUITests" */;
+			buildPhases = (
+				E6F28BAE2B0EB4510007DDC1 /* Sources */,
+				E6F28BAF2B0EB4510007DDC1 /* Frameworks */,
+				E6F28BB02B0EB4510007DDC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F28BB42B0EB4510007DDC1 /* PBXTargetDependency */,
+			);
+			name = SiestaUITests;
+			productName = SiestaUITests;
+			productReference = E6F28BB22B0EB4510007DDC1 /* SiestaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E6F28BC82B0EB4C70007DDC1 /* SiestaWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F28BED2B0EB4C80007DDC1 /* Build configuration list for PBXNativeTarget "SiestaWatch Watch App" */;
+			buildPhases = (
+				E6F28BC52B0EB4C70007DDC1 /* Sources */,
+				E6F28BC62B0EB4C70007DDC1 /* Frameworks */,
+				E6F28BC72B0EB4C70007DDC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SiestaWatch Watch App";
+			productName = "SiestaWatch Watch App";
+			productReference = E6F28BC92B0EB4C70007DDC1 /* SiestaWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6F28BD72B0EB4C80007DDC1 /* SiestaWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F28BF12B0EB4C80007DDC1 /* Build configuration list for PBXNativeTarget "SiestaWatch Watch AppTests" */;
+			buildPhases = (
+				E6F28BD42B0EB4C80007DDC1 /* Sources */,
+				E6F28BD52B0EB4C80007DDC1 /* Frameworks */,
+				E6F28BD62B0EB4C80007DDC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F28BDA2B0EB4C80007DDC1 /* PBXTargetDependency */,
+			);
+			name = "SiestaWatch Watch AppTests";
+			productName = "SiestaWatch Watch AppTests";
+			productReference = E6F28BD82B0EB4C80007DDC1 /* SiestaWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6F28BE12B0EB4C80007DDC1 /* SiestaWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F28BF42B0EB4C80007DDC1 /* Build configuration list for PBXNativeTarget "SiestaWatch Watch AppUITests" */;
+			buildPhases = (
+				E6F28BDE2B0EB4C80007DDC1 /* Sources */,
+				E6F28BDF2B0EB4C80007DDC1 /* Frameworks */,
+				E6F28BE02B0EB4C80007DDC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F28BE42B0EB4C80007DDC1 /* PBXTargetDependency */,
+			);
+			name = "SiestaWatch Watch AppUITests";
+			productName = "SiestaWatch Watch AppUITests";
+			productReference = E6F28BE22B0EB4C80007DDC1 /* SiestaWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6F28B8F2B0EB4500007DDC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E6F28B962B0EB4500007DDC1 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					E6F28BA72B0EB4510007DDC1 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E6F28B962B0EB4500007DDC1;
+					};
+					E6F28BB12B0EB4510007DDC1 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E6F28B962B0EB4500007DDC1;
+					};
+					E6F28BC82B0EB4C70007DDC1 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					E6F28BD72B0EB4C80007DDC1 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E6F28BC82B0EB4C70007DDC1;
+					};
+					E6F28BE12B0EB4C80007DDC1 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E6F28BC82B0EB4C70007DDC1;
+					};
+				};
+			};
+			buildConfigurationList = E6F28B922B0EB4500007DDC1 /* Build configuration list for PBXProject "Siesta" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6F28B8E2B0EB4500007DDC1;
+			productRefGroup = E6F28B982B0EB4500007DDC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6F28B962B0EB4500007DDC1 /* Siesta */,
+				E6F28BA72B0EB4510007DDC1 /* SiestaTests */,
+				E6F28BB12B0EB4510007DDC1 /* SiestaUITests */,
+				E6F28BC82B0EB4C70007DDC1 /* SiestaWatch Watch App */,
+				E6F28BD72B0EB4C80007DDC1 /* SiestaWatch Watch AppTests */,
+				E6F28BE12B0EB4C80007DDC1 /* SiestaWatch Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6F28B952B0EB4500007DDC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F28BA32B0EB4510007DDC1 /* Preview Assets.xcassets in Resources */,
+				E6F28B9F2B0EB4510007DDC1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BA62B0EB4510007DDC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BB02B0EB4510007DDC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BC72B0EB4C70007DDC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F28BD32B0EB4C80007DDC1 /* Preview Assets.xcassets in Resources */,
+				E6F28BD02B0EB4C80007DDC1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BD62B0EB4C80007DDC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BE02B0EB4C80007DDC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6F28B932B0EB4500007DDC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F28BF82B0EB71F0007DDC1 /* GameViewModel.swift in Sources */,
+				E6F28C072B0EB97A0007DDC1 /* GameSquaresView.swift in Sources */,
+				E6F28C012B0EB9480007DDC1 /* SettingsButtonView.swift in Sources */,
+				E6F28C132B0EBB850007DDC1 /* GameView.swift in Sources */,
+				E6F28C192B0EBE550007DDC1 /* PanelColor.swift in Sources */,
+				E6F28BFE2B0EB8560007DDC1 /* StatsView.swift in Sources */,
+				E6F28C0A2B0EB9980007DDC1 /* GameMessageView.swift in Sources */,
+				E6F28C0D2B0EB9AA0007DDC1 /* SettingsView.swift in Sources */,
+				E6F28C1C2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
+				E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */,
+				E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */,
+				E6F28B9B2B0EB4500007DDC1 /* SiestaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BA42B0EB4510007DDC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F28BAD2B0EB4510007DDC1 /* SiestaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BAE2B0EB4510007DDC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F28BB72B0EB4510007DDC1 /* SiestaUITests.swift in Sources */,
+				E6F28BB92B0EB4510007DDC1 /* SiestaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BC52B0EB4C70007DDC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E602301C2B1034BE004AE174 /* GameSquaresViewWatch.swift in Sources */,
+				E6F28BF92B0EB71F0007DDC1 /* GameViewModel.swift in Sources */,
+				E6F28C252B0EC8440007DDC1 /* GameSquaresView.swift in Sources */,
+				E6F28C1D2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
+				E6F28BCE2B0EB4C70007DDC1 /* ContentView.swift in Sources */,
+				E6F28C2E2B10251E0007DDC1 /* SettingsButtonViewWatch.swift in Sources */,
+				E6F28C2B2B1001BB0007DDC1 /* StartButtonViewWatch.swift in Sources */,
+				E6F28C262B0EC8470007DDC1 /* GameMessageView.swift in Sources */,
+				E602301E2B1034CF004AE174 /* GameMessageViewWatch.swift in Sources */,
+				E6F28C1A2B0EBE550007DDC1 /* PanelColor.swift in Sources */,
+				E6F28C292B0EC8500007DDC1 /* SettingsView.swift in Sources */,
+				E6F28BCC2B0EB4C70007DDC1 /* SiestaWatchApp.swift in Sources */,
+				E602301A2B103000004AE174 /* StatsViewWatch.swift in Sources */,
+				E6F28C242B0EC8410007DDC1 /* GameView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BD42B0EB4C80007DDC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F28BDD2B0EB4C80007DDC1 /* SiestaWatch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F28BDE2B0EB4C80007DDC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F28BE72B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITests.swift in Sources */,
+				E6F28BE92B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6F28BAA2B0EB4510007DDC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F28B962B0EB4500007DDC1 /* Siesta */;
+			targetProxy = E6F28BA92B0EB4510007DDC1 /* PBXContainerItemProxy */;
+		};
+		E6F28BB42B0EB4510007DDC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F28B962B0EB4500007DDC1 /* Siesta */;
+			targetProxy = E6F28BB32B0EB4510007DDC1 /* PBXContainerItemProxy */;
+		};
+		E6F28BDA2B0EB4C80007DDC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F28BC82B0EB4C70007DDC1 /* SiestaWatch Watch App */;
+			targetProxy = E6F28BD92B0EB4C80007DDC1 /* PBXContainerItemProxy */;
+		};
+		E6F28BE42B0EB4C80007DDC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F28BC82B0EB4C70007DDC1 /* SiestaWatch Watch App */;
+			targetProxy = E6F28BE32B0EB4C80007DDC1 /* PBXContainerItemProxy */;
+		};
+		E6F28BEB2B0EB4C80007DDC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F28BC82B0EB4C70007DDC1 /* SiestaWatch Watch App */;
+			targetProxy = E6F28BEA2B0EB4C80007DDC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E6F28BBA2B0EB4510007DDC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6F28BBB2B0EB4510007DDC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E6F28BBD2B0EB4510007DDC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Siesta/Siesta.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Siesta/Preview Content\"";
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.Siesta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6F28BBE2B0EB4510007DDC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Siesta/Siesta.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Siesta/Preview Content\"";
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.Siesta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6F28BC02B0EB4510007DDC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.SiestaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siesta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Siesta";
+			};
+			name = Debug;
+		};
+		E6F28BC12B0EB4510007DDC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.SiestaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siesta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Siesta";
+			};
+			name = Release;
+		};
+		E6F28BC32B0EB4510007DDC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.SiestaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Siesta;
+			};
+			name = Debug;
+		};
+		E6F28BC42B0EB4510007DDC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.SiestaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Siesta;
+			};
+			name = Release;
+		};
+		E6F28BEE2B0EB4C80007DDC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SiestaWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SiestaWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.shahzadi.Siesta;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.Siesta.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		E6F28BEF2B0EB4C80007DDC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SiestaWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SiestaWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.shahzadi.Siesta;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahzadi.Siesta.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		E6F28BF22B0EB4C80007DDC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shahzadi.SiestaWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SiestaWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SiestaWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		E6F28BF32B0EB4C80007DDC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shahzadi.SiestaWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SiestaWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SiestaWatch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		E6F28BF52B0EB4C80007DDC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shahzadi.SiestaWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SiestaWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		E6F28BF62B0EB4C80007DDC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T552SYNXXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shahzadi.SiestaWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SiestaWatch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6F28B922B0EB4500007DDC1 /* Build configuration list for PBXProject "Siesta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F28BBA2B0EB4510007DDC1 /* Debug */,
+				E6F28BBB2B0EB4510007DDC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F28BBC2B0EB4510007DDC1 /* Build configuration list for PBXNativeTarget "Siesta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F28BBD2B0EB4510007DDC1 /* Debug */,
+				E6F28BBE2B0EB4510007DDC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F28BBF2B0EB4510007DDC1 /* Build configuration list for PBXNativeTarget "SiestaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F28BC02B0EB4510007DDC1 /* Debug */,
+				E6F28BC12B0EB4510007DDC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F28BC22B0EB4510007DDC1 /* Build configuration list for PBXNativeTarget "SiestaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F28BC32B0EB4510007DDC1 /* Debug */,
+				E6F28BC42B0EB4510007DDC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F28BED2B0EB4C80007DDC1 /* Build configuration list for PBXNativeTarget "SiestaWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F28BEE2B0EB4C80007DDC1 /* Debug */,
+				E6F28BEF2B0EB4C80007DDC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F28BF12B0EB4C80007DDC1 /* Build configuration list for PBXNativeTarget "SiestaWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F28BF22B0EB4C80007DDC1 /* Debug */,
+				E6F28BF32B0EB4C80007DDC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F28BF42B0EB4C80007DDC1 /* Build configuration list for PBXNativeTarget "SiestaWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F28BF52B0EB4C80007DDC1 /* Debug */,
+				E6F28BF62B0EB4C80007DDC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6F28B8F2B0EB4500007DDC1 /* Project object */;
+}
