@@ -14,6 +14,7 @@ struct ContentView: View {
     
     var body: some View {
             NavigationStack {
+                Spacer() 
                 Image(colorScheme == .dark ? "bannerDark" : "bannerLight")
                     .resizable()
                     .frame(width: 200, height: 200, alignment: .center)
@@ -28,8 +29,6 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Text("Version 1.1.0 Siesta ©")
-                    .font(.footnote)
             }
             .onAppear {
                 viewModel.userScore = 0

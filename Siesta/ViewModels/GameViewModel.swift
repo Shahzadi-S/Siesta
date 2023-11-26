@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 //import WatchKit
 import Combine
+import UIKit
+import AVFoundation
 
 class ViewModel: ObservableObject {
     
@@ -255,7 +257,7 @@ class ViewModel: ObservableObject {
     // Tracks when a user has actually started playing and stores the input
     // Matches the input with the stored sequence
     func panelWasTapped(panelColor: PanelColor) {
-//        playSoundsAndHaptics()
+        playSoundsAndHaptics()
         flashNextColor(panelColor)
         userInput.append(panelColor)
         validateUserInput()
@@ -370,6 +372,31 @@ extension ViewModel {
     
     // RETRIEVES THE VALUES STORED IN USER DEFAULTS FOR SOUND AND HAPTICS
     // THE USER HAS THE OPTION FOR DEFAULT, LOUR OR SILENT MODE
+//#warning("Check if this has worked on watchOS ")
+    
+    func playSoundsAndHaptics() {
+        let silentModeIsEnabled = UserDefaults.getSilentValue()
+        let loudModeIsEnabled = UserDefaults.getLoudValue()
+        
+        #if os(watchOS)
+            ViewModelWatch().playSoundsAndHapticsWatch()
+        #else
+        let generator = UINotificationFeedbackGenerator()
+        if silentModeIsEnabled {
+            // No sound or haptics
+        } else if loudModeIsEnabled {
+            generator.notificationOccurred(.success)
+            AudioServicesPlaySystemSound(1057)
+        } else {
+            generator.notificationOccurred(.success)
+        }
+            
+        #endif
+    }
+
+    
+    
+//    
 //    func playSoundsAndHaptics() {
 //        let silentModeIsEnabled = UserDefaults.getSilentValue()
 //        let loudModeIsEnabled = UserDefaults.getLoudValue()

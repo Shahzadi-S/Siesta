@@ -19,13 +19,8 @@ struct SiestaApp: App {
 
 /* Notes for the Siesta App
  
- // BUG - meant to be untappable when demo is happening
- 
-// Create seperate view or say watchos only for gameSQ gameMSG. For some just add padding etc.
-  - increase time for the animation flashing
-  - check the timer and dispatch queue times and increase them to match 
-  - settings view needs to be checked
- 
+// increase time for the animation flashing
+// check the timer and dispatch queue times and increase them to match
  
 // Seperate the viewModels per view and device instead of having one big one
    Seperation of responsibility is much better if it's all untangled.
@@ -34,13 +29,15 @@ struct SiestaApp: App {
  
 // Accessibility
  
-// Run on a bunch of different devices to make sure it's all ok 
+// landscape view - or locked to portrait
+// Run on a bunch of different devices to make sure it's all ok
  
-// Settings to have version no. 
  
  DONE!!!
- 
- 
+ // BUG - meant to be untappable when demo is happening
+ // Create seperate view or say watchos only for gameSQ gameMSG. For some just add padding etc.
+ // Settings view - Add sound and haptics back
+ // Settings to have version no.
  
  NOTES!!!!
  

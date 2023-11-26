@@ -33,7 +33,17 @@ struct SettingsView: View {
                     .font(.footnote)
                     .fixedSize(horizontal: false, vertical: true)
                     .foregroundStyle(.gray)
+                
             }
+            Spacer()
+                .frame(height: 30)
+            
+            VStack(alignment: .center) {
+                Text("Version 1.1.0 Siesta ©")
+                    .font(.footnote)
+            }
+            
+           
         }
     }
 }

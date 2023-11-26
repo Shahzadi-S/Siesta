@@ -10,6 +10,7 @@
 		E602301A2B103000004AE174 /* StatsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60230192B103000004AE174 /* StatsViewWatch.swift */; };
 		E602301C2B1034BE004AE174 /* GameSquaresViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */; };
 		E602301E2B1034CF004AE174 /* GameMessageViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */; };
+		E60230202B12BC7D004AE174 /* GameViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */; };
 		E6F28B9B2B0EB4500007DDC1 /* SiestaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28B9A2B0EB4500007DDC1 /* SiestaApp.swift */; };
 		E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28B9C2B0EB4500007DDC1 /* ContentView.swift */; };
 		E6F28B9F2B0EB4510007DDC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F28B9E2B0EB4510007DDC1 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		E60230192B103000004AE174 /* StatsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewWatch.swift; sourceTree = "<group>"; };
 		E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquaresViewWatch.swift; sourceTree = "<group>"; };
 		E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMessageViewWatch.swift; sourceTree = "<group>"; };
+		E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelWatch.swift; sourceTree = "<group>"; };
 		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F28B9A2B0EB4500007DDC1 /* SiestaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiestaApp.swift; sourceTree = "<group>"; };
 		E6F28B9C2B0EB4500007DDC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */,
 				E6F28BCF2B0EB4C80007DDC1 /* Assets.xcassets */,
 				E6F28BD12B0EB4C80007DDC1 /* Preview Content */,
+				E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */,
 			);
 			path = "SiestaWatch Watch App";
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				E602301C2B1034BE004AE174 /* GameSquaresViewWatch.swift in Sources */,
 				E6F28BF92B0EB71F0007DDC1 /* GameViewModel.swift in Sources */,
 				E6F28C252B0EC8440007DDC1 /* GameSquaresView.swift in Sources */,
+				E60230202B12BC7D004AE174 /* GameViewModelWatch.swift in Sources */,
 				E6F28C1D2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
 				E6F28BCE2B0EB4C70007DDC1 /* ContentView.swift in Sources */,
 				E6F28C2E2B10251E0007DDC1 /* SettingsButtonViewWatch.swift in Sources */,
