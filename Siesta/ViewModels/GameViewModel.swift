@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 //import WatchKit
 import Combine
-import UIKit
-import AVFoundation
 
 class ViewModel: ObservableObject {
+    
+    let hapticsManager = HapticsManager()
     
 //    let coordinator = SessionCoordinator()
     
@@ -257,7 +257,7 @@ class ViewModel: ObservableObject {
     // Tracks when a user has actually started playing and stores the input
     // Matches the input with the stored sequence
     func panelWasTapped(panelColor: PanelColor) {
-        playSoundsAndHaptics()
+        hapticsManager.playSoundsAndHaptics()
         flashNextColor(panelColor)
         userInput.append(panelColor)
         validateUserInput()
@@ -367,31 +367,6 @@ extension ViewModel {
     }
 }
 
-// MARK: - EXTENSION - SOUND AND HAPTICS SETTINGS
-extension ViewModel {
-    
-    // RETRIEVES THE VALUES STORED IN USER DEFAULTS FOR SOUND AND HAPTICS
-    // THE USER HAS THE OPTION FOR DEFAULT, LOUR OR SILENT MODE
-    func playSoundsAndHaptics() {
-        let silentModeIsEnabled = UserDefaults.getSilentValue()
-        let loudModeIsEnabled = UserDefaults.getLoudValue()
-        
-        #if os(watchOS)
-            ViewModelWatch().playSoundsAndHapticsWatch()
-        #else
-        let generator = UINotificationFeedbackGenerator()
-        if silentModeIsEnabled {
-            // No sound or haptics
-        } else if loudModeIsEnabled {
-            generator.notificationOccurred(.success)
-            AudioServicesPlaySystemSound(1057)
-        } else {
-            generator.notificationOccurred(.success)
-        }
-            
-        #endif
-    }
-}
 
 // MARK: - EXTENTION - USER DEFAULTS SET/GET SEQUENCE
 extension ViewModel {
@@ -412,30 +387,6 @@ extension ViewModel {
     func storeDemoSequenceToUserDefaults() {
         let data = try! JSONEncoder().encode(sequence)
         UserDefaults.standard.set(data, forKey: Constants.dataSequenceKey)
-    }
-}
-
-// MARK: -  EXTENTION - GET STORED VALUES FROM USER DEFAULTS
-extension UserDefaults {
-    
-    // GETS USERS CURRENT SCORE
-    static func getUserScoreValue() -> Int {
-        return UserDefaults.standard.integer(forKey: ViewModel.Constants.userScoreKey)
-    }
-    
-    // GETS USERS HIGH SCORE - NOT CURRENTLY USED
-    static func getHighScoreValue() -> Int {
-        return UserDefaults.standard.integer(forKey: ViewModel.Constants.highScoreKey)
-    }
-    
-    // GETS THE VALUE FOR SETTINGS - SILENT MODE
-    static func getSilentValue() -> Bool {
-        return UserDefaults.standard.bool(forKey: ViewModel.Constants.silentKey)
-    }
-    
-    // GETS THE VALUE FOR SETTINGS - LOUD MODE
-    static func getLoudValue() -> Bool {
-        return UserDefaults.standard.bool(forKey: ViewModel.Constants.loudKey)
     }
 }
 
