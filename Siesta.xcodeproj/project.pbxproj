@@ -185,6 +185,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6D645182B15533E00E4790A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BCD2B0EB4C70007DDC1 /* ContentView.swift */,
+				E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */,
+				E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */,
+				E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */,
+				E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */,
+				E60230192B103000004AE174 /* StatsViewWatch.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6D645192B15535F00E4790A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E6D6451A2B15537800E4790A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28BD12B0EB4C80007DDC1 /* Preview Content */,
+				E6F28BCF2B0EB4C80007DDC1 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		E6F28B8E2B0EB4500007DDC1 = {
 			isa = PBXGroup;
 			children = (
@@ -253,15 +283,9 @@
 			isa = PBXGroup;
 			children = (
 				E6F28BCB2B0EB4C70007DDC1 /* SiestaWatchApp.swift */,
-				E6F28BCD2B0EB4C70007DDC1 /* ContentView.swift */,
-				E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */,
-				E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */,
-				E60230192B103000004AE174 /* StatsViewWatch.swift */,
-				E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */,
-				E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */,
-				E6F28BCF2B0EB4C80007DDC1 /* Assets.xcassets */,
-				E6F28BD12B0EB4C80007DDC1 /* Preview Content */,
-				E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */,
+				E6D645192B15535F00E4790A /* ViewModels */,
+				E6D645182B15533E00E4790A /* Views */,
+				E6D6451A2B15537800E4790A /* Resources */,
 			);
 			path = "SiestaWatch Watch App";
 			sourceTree = "<group>";

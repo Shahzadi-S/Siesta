@@ -372,8 +372,6 @@ extension ViewModel {
     
     // RETRIEVES THE VALUES STORED IN USER DEFAULTS FOR SOUND AND HAPTICS
     // THE USER HAS THE OPTION FOR DEFAULT, LOUR OR SILENT MODE
-//#warning("Check if this has worked on watchOS ")
-    
     func playSoundsAndHaptics() {
         let silentModeIsEnabled = UserDefaults.getSilentValue()
         let loudModeIsEnabled = UserDefaults.getLoudValue()
@@ -393,22 +391,6 @@ extension ViewModel {
             
         #endif
     }
-
-    
-    
-//    
-//    func playSoundsAndHaptics() {
-//        let silentModeIsEnabled = UserDefaults.getSilentValue()
-//        let loudModeIsEnabled = UserDefaults.getLoudValue()
-//        
-//        if silentModeIsEnabled {
-//            // No sound or haptics
-//        } else if loudModeIsEnabled {
-//            WKInterfaceDevice.current().play(.start)
-//        } else {
-//            WKInterfaceDevice.current().play(.click)
-//        }
-//    }
 }
 
 // MARK: - EXTENTION - USER DEFAULTS SET/GET SEQUENCE

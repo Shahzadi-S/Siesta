@@ -13,11 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-//            ScrollView(.vertical) {
+            ScrollView(.vertical) {
                 StartButtonViewWatch()
                 StatsViewWatch()
                 SettingsButtonViewWatch()
-//            }
+            }
         }
         .onAppear {
             viewModel.userScore = 0
