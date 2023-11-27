@@ -20,7 +20,7 @@ struct GameSquaresView: View {
                     }
                     .allowsHitTesting(viewModel.panelEnabled)
                     .opacity(viewModel.redFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.redFlashed)
+                    .animation(Animation.linear(duration: 0.5).repeatCount(1), value: viewModel.redFlashed)
                     .padding(3)
                 
                 
@@ -31,8 +31,9 @@ struct GameSquaresView: View {
                     }
                     .allowsHitTesting(viewModel.panelEnabled)
                     .opacity(viewModel.greenFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.greenFlashed)
+                    .animation(Animation.linear(duration: 0.5).repeatCount(1), value: viewModel.greenFlashed)
                     .padding(3)
+                   
             }
             HStack {
                 RoundedRectangle(cornerRadius: 6)
@@ -42,7 +43,7 @@ struct GameSquaresView: View {
                     }
                     .allowsHitTesting(viewModel.panelEnabled)
                     .opacity(viewModel.yellowFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.yellowFlashed)
+                    .animation(Animation.linear(duration: 0.5).repeatCount(1), value: viewModel.yellowFlashed)
                     .padding(3)
                 
                 
@@ -53,7 +54,7 @@ struct GameSquaresView: View {
                     }
                     .allowsHitTesting(viewModel.panelEnabled)
                     .opacity(viewModel.blueFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.blueFlashed)
+                    .animation(Animation.linear(duration: 0.5).repeatCount(1), value: viewModel.blueFlashed)
                     .padding(3)
             }
         }

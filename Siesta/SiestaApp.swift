@@ -18,22 +18,24 @@ struct SiestaApp: App {
 
 
 /* Notes for the Siesta App
- 
-// increase time for the animation flashing
-// check the timer and dispatch queue times and increase them to match
- 
+  
 // Seperate the viewModels per view and device instead of having one big one
    Seperation of responsibility is much better if it's all untangled.
  
 // App and phone - should they store the same level or not 
  
-// Accessibility
+// Sessions - manage user session if app is backgrounded etc on watch and ios
+ 
+// Accessibility - labels added but need to get flashing color to read out in VO
  
 // landscape view - or locked to portrait
 // Run on a bunch of different devices to make sure it's all ok
  
  
  DONE!!!
+ // check the timer and dispatch queue times and increase them to match
+ // increase time for the animation flashing
+ // BUG - content view if you tap on square nothing happens - have to tap on text
  // BUG - meant to be untappable when demo is happening
  // Create seperate view or say watchos only for gameSQ gameMSG. For some just add padding etc.
  // Settings view - Add sound and haptics back

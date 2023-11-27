@@ -10,12 +10,8 @@ import SwiftUI
 struct SettingsButtonView: View {
     var body: some View {
         VStack() {
-            Button(action: {
-                
-            }, label: {
-                NavigationLink("SETTINGS", destination: SettingsView())
-            })
-            .buttonStyle(RoundedButton(color: .blue, font: .title3))
+            NavigationLink("SETTINGS", destination: SettingsView())
+                .buttonStyle(RoundedButton(color: .blue, font: .title3))
         }
         .padding(20)
     }

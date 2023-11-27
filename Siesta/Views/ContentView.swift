@@ -18,6 +18,7 @@ struct ContentView: View {
                 Image(colorScheme == .dark ? "bannerDark" : "bannerLight")
                     .resizable()
                     .frame(width: 200, height: 200, alignment: .center)
+                    .accessibilityHidden(true)
                 
                 Spacer()
                 

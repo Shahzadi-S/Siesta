@@ -25,6 +25,7 @@ struct GameMessageView: View {
                 .onTapGesture {
                     viewModel.messageWasTapped()
                 }
+                .accessibilityLabel(viewModel.statusLabel)
                 .overlay(
                     RoundedRectangle(cornerRadius: 6.0)
                         .stroke(.white)

@@ -13,10 +13,10 @@ struct RoundedButton: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-        .frame(width: 250, height: 70, alignment: .center)
-        .background(color.cornerRadius(50.0).opacity(0.2))
-        .foregroundStyle(color)
-        .font(font)
+            .frame(width: 250, height: 70, alignment: .center)
+            .background(color.cornerRadius(50.0).opacity(0.2))
+            .foregroundStyle(color)
+            .font(font)
         
     }
 }
@@ -26,19 +26,15 @@ struct StartButtonView: View {
     
     var body: some View {
         VStack() {
-            Button(action: {
-                
-            }, label: {
-                NavigationLink("START", destination: GameView().onAppear {
-                    if viewModel.didStartGame {
-                        viewModel.status.value = .stopped
-                    } else {
-                        viewModel.status.value = .demo
-                    }
-                })
+            NavigationLink("START", destination: GameView().onAppear {
+                if viewModel.didStartGame {
+                    viewModel.status.value = .stopped
+                } else {
+                    viewModel.status.value = .demo
+                }
             })
             .buttonStyle(RoundedButton(color: .green, font: .title3))
-            
+            .accessibilitySortPriority(3)
         }
         .padding(20)
     }

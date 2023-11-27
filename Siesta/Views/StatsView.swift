@@ -23,6 +23,8 @@ struct StatsView: View {
                     .font(.callout)
                 Text("\(UserDefaults.getUserScoreValue())")
             }
+            .accessibilityElement(children: .combine)
+
             
             HStack {
                 Image(systemName: "trophy.fill")
@@ -35,6 +37,7 @@ struct StatsView: View {
                     .font(.callout)
                 Text("\(UserDefaults.getHighScoreValue())")
             }
+            .accessibilityElement(children: .combine)
         }
     }
 }
