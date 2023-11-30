@@ -14,7 +14,7 @@ class ViewModel: ObservableObject {
     
     let hapticsManager = HapticsManager()
     
-//    let coordinator = SessionCoordinator()
+    let coordinator = SessionCoordinator()
     
     // MARK: - USING COMBINE
     // Using Combine's CurrentValueSubject to pass the state as a value
@@ -414,12 +414,8 @@ private extension ViewModel {
         static let yourTurnText = "Your Turn Now"
         static let resumeText = "Tap to Resume"
         static let tryAgainText = "Tap to Try Again"
-        
+      
         // USER DEFAULT KEYS
         static let dataSequenceKey = "dataSequence"
-        static let userScoreKey = "userScore"
-        static let highScoreKey = "highScore"
-        static let silentKey = "silentKey"
-        static let loudKey = "loudKey"
     }
 }

@@ -11,6 +11,9 @@
 		E602301C2B1034BE004AE174 /* GameSquaresViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */; };
 		E602301E2B1034CF004AE174 /* GameMessageViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */; };
 		E60230202B12BC7D004AE174 /* GameViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */; };
+		E64A8DEF2B169BB500803E6B /* SessionManagerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */; };
+		E64A8DF12B169BDE00803E6B /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */; };
+		E64A8DF32B169E6000803E6B /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */; };
 		E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451E2B15573300E4790A /* UserDefaults.swift */; };
@@ -108,6 +111,8 @@
 		E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquaresViewWatch.swift; sourceTree = "<group>"; };
 		E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMessageViewWatch.swift; sourceTree = "<group>"; };
 		E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelWatch.swift; sourceTree = "<group>"; };
+		E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerWatch.swift; sourceTree = "<group>"; };
+		E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoordinator.swift; sourceTree = "<group>"; };
 		E6D6451B2B15555A00E4790A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E6D6451E2B15573300E4790A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +297,7 @@
 				E6D645192B15535F00E4790A /* ViewModels */,
 				E6D645182B15533E00E4790A /* Views */,
 				E6D6451A2B15537800E4790A /* Resources */,
+				E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */,
 			);
 			path = "SiestaWatch Watch App";
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 			children = (
 				E6D6451B2B15555A00E4790A /* HapticsManager.swift */,
 				E6D6451E2B15573300E4790A /* UserDefaults.swift */,
+				E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -598,6 +605,7 @@
 				E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */,
 				E6F28C072B0EB97A0007DDC1 /* GameSquaresView.swift in Sources */,
 				E6F28C012B0EB9480007DDC1 /* SettingsButtonView.swift in Sources */,
+				E64A8DF12B169BDE00803E6B /* SessionCoordinator.swift in Sources */,
 				E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */,
 				E6F28C132B0EBB850007DDC1 /* GameView.swift in Sources */,
 				E6F28C192B0EBE550007DDC1 /* PanelColor.swift in Sources */,
@@ -634,8 +642,10 @@
 			files = (
 				E602301C2B1034BE004AE174 /* GameSquaresViewWatch.swift in Sources */,
 				E6F28BF92B0EB71F0007DDC1 /* GameViewModel.swift in Sources */,
+				E64A8DEF2B169BB500803E6B /* SessionManagerWatch.swift in Sources */,
 				E6F28C252B0EC8440007DDC1 /* GameSquaresView.swift in Sources */,
 				E60230202B12BC7D004AE174 /* GameViewModelWatch.swift in Sources */,
+				E64A8DF32B169E6000803E6B /* SessionCoordinator.swift in Sources */,
 				E6F28C1D2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
 				E6D645202B15581A00E4790A /* UserDefaults.swift in Sources */,
 				E6F28BCE2B0EB4C70007DDC1 /* ContentView.swift in Sources */,
@@ -828,6 +838,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Siesta;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -836,7 +847,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -867,6 +879,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Siesta;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -875,7 +888,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

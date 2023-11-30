@@ -36,7 +36,6 @@ extension UserDefaults {
 private extension UserDefaults {
     enum Constants {
         // USER DEFAULT KEYS
-        static let dataSequenceKey = "dataSequence"
         static let userScoreKey = "userScore"
         static let highScoreKey = "highScore"
         static let silentKey = "silentKey"
