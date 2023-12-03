@@ -9,43 +9,69 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @AppStorage("silentKey") var silentValue = false
     @AppStorage("loudKey") var loudValue = false
     
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(alignment: .leading) {
-                Text("")
-                    .navigationTitle("Settings")
-                    .navigationBarTitleDisplayMode(.inline)
+        VStack(alignment: .leading) {
+            Text("")
+                .navigationTitle("Settings")
+                .navigationBarTitleDisplayMode(.inline)
+            
+            List {
+                Section("Sound") {
+                    VStack(alignment: .leading) {
+                        Toggle("Silent Mode", isOn: $silentValue)
+                        Text("Turn sounds and haptics off.")
+                            .font(.footnote)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .foregroundStyle(.gray)
+                    }
+                    VStack(alignment: .leading) {
+                        Toggle("Loud Mode", isOn: $loudValue)
+                        Text("Turn on for sound.")
+                            .font(.footnote)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .foregroundStyle(.gray)
+                    }
+                }
                 
-                Toggle("Silent Mode", isOn: $silentValue)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 2))
-                    .disabled(loudValue == true)
-                    .accessibilityHint("Turn on silent mode to stop sounds and haptics.")
-                Text("Turn on silent mode to stop sounds and haptics.")
-                    .font(.footnote)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .foregroundStyle(.gray)
-                Toggle("Loud Mode", isOn: $loudValue)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 2))
-                    .disabled(silentValue == true)
-                    .accessibilityHint("Turn on loud mode for sound.")
-                Text("Turn on loud mode for sound.")
-                    .font(.footnote)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .foregroundStyle(.gray)
+                // These don't currently do anything
+                Section {
+                    Text("Feedback")
+                    Text("Buy Me A Coffee")
+                    Text("Instagram")
+                    Text("TikTok")
+                }
+                
+                Section {
+                    HStack {
+                        Image(colorScheme == .dark ? "bannerDark" : "bannerLight")
+                            .resizable()
+                            .frame(width: 100, height: 100, alignment: .center)
+                            .accessibilityHidden(true)
+                            .clipShape(RoundedRectangle(cornerRadius: 8.0))
+                        VStack(alignment: .leading) {
+                            Text("Siesta ©")
+                            Text("Version 1.0.0")
+                                .font(.footnote)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .foregroundStyle(.gray)
+                            Text("Sanaa Shahzadi")
+                                .font(.footnote)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .foregroundStyle(.gray)
+                            Text("All rights reserved")
+                                .font(.footnote)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .foregroundStyle(.gray)
+                        }
+                        .padding(.leading)
+                    }
+                }
                 
             }
-            Spacer()
-                .frame(height: 30)
-            
-            VStack(alignment: .center) {
-                Text("Version 1.1.0 Siesta ©")
-                    .font(.footnote)
-            }
-            
-           
         }
     }
 }

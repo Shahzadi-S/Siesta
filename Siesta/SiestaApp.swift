@@ -15,3 +15,7 @@ struct SiestaApp: App {
         }
     }
 }
+
+// Refactor settings to have vibrations and sound mode 
+// Make methods and classes private/final/static etc
+// Testing strategy of all the features. 

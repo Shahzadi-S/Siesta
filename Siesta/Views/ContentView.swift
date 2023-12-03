@@ -33,6 +33,7 @@ struct ContentView: View {
             }
             .onAppear {
                 viewModel.userScore = 0
+                viewModel.requestReview()
             }
     }
 }

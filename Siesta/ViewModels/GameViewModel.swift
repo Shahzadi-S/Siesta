@@ -7,14 +7,15 @@
 
 import Foundation
 import SwiftUI
-//import WatchKit
 import Combine
+import StoreKit
 
 class ViewModel: ObservableObject {
     
     let hapticsManager = HapticsManager()
-    
+    let reviewManager = ReviewManager()
     let coordinator = SessionCoordinator()
+    
     
     // MARK: - USING COMBINE
     // Using Combine's CurrentValueSubject to pass the state as a value
@@ -31,6 +32,9 @@ class ViewModel: ObservableObject {
     let userDefaults = UserDefaults.standard
     @AppStorage("userScore") var userScore = 0
     @AppStorage("highScore") var highScore = 0
+    
+    // The most recent app version that prompts for a review.
+    @AppStorage("lastVersionPromptedForReview") var lastVersionPromptedForReview = ""
     
     // MARK: - GAME SEQUENCE FUNCTIONALITY
     
@@ -118,7 +122,7 @@ class ViewModel: ObservableObject {
     // and finally ends the sequence before telling the user it's their turn now.
     func demoMode() {
         didStartGame = true
-//        coordinator.startSession()
+        coordinator.startSession()
         gameDemoSequenceStarted()
     }
     
@@ -226,7 +230,7 @@ class ViewModel: ObservableObject {
     // Method is called when a user returns from inactive or background state
     // Therefore the game can be immediately resumed
     func stoppedGame() {
-//        coordinator.stopSession()
+        coordinator.stopSession()
         timer?.invalidate()
         currentIndexOfSequence = sequence.count
         turnAllPanelsOff()
@@ -308,7 +312,7 @@ extension ViewModel {
     
     // ENDS THE TIMER FOR THE DEMO SO THE USER CAN START PLAYING
     func demoSequenceEnded() {
-//        coordinator.stopSession()
+        coordinator.stopSession()
         timer?.invalidate()
         turnAllPanelsOff()
         currentIndexOfSequence = 0
@@ -405,6 +409,30 @@ extension ViewModel {
     }
 }
 
+// MARK: - CHECKS IF A USER HAS SCORED 15+ & IS ON A NEW APPVERSION BEFORE ASKING FOR FEEDBACK
+extension ViewModel {
+    
+    // REQUESTS THE USER TO LEAVE A REVIEW ON THE APPSTORE
+    func requestReview() {
+        // Checks what the current user score is. This should only appear if the score is 15+
+        let currentScore = UserDefaults.getUserScoreValue()
+        guard currentScore < 14 else { return }
+        
+        // Gets the current app version
+        let infoDictionaryKey = kCFBundleVersionKey as String
+        guard let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: infoDictionaryKey) as? String
+        else { fatalError("Expected to find a bundle version in the info dictionary") }
+        
+        // Checks the last tiem a review was requested, and if it was for the same version
+        // If it's a different version then the review screen is presented
+        // The last Version Prompted For Review is updated
+        if currentAppVersion != lastVersionPromptedForReview {
+            reviewManager.presentReview()
+            lastVersionPromptedForReview = currentAppVersion
+        }
+    }
+}
+
 // MARK: - CONSTANTS
 private extension ViewModel {
     enum Constants {
@@ -414,7 +442,7 @@ private extension ViewModel {
         static let yourTurnText = "Your Turn Now"
         static let resumeText = "Tap to Resume"
         static let tryAgainText = "Tap to Try Again"
-      
+        
         // USER DEFAULT KEYS
         static let dataSequenceKey = "dataSequence"
     }

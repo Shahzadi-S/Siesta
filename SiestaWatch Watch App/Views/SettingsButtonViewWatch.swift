@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsButtonViewWatch: View {
     var body: some View {
         VStack() {
-            NavigationLink("Settings", destination: SettingsView())
+            NavigationLink("Settings", destination: SettingsViewWatch())
                 .padding()
                 .tint(.blue)
         }

@@ -14,6 +14,9 @@
 		E64A8DEF2B169BB500803E6B /* SessionManagerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */; };
 		E64A8DF12B169BDE00803E6B /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */; };
 		E64A8DF32B169E6000803E6B /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */; };
+		E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
+		E64A8DFC2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
+		E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */; };
 		E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451E2B15573300E4790A /* UserDefaults.swift */; };
@@ -48,7 +51,6 @@
 		E6F28C242B0EC8410007DDC1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C122B0EBB850007DDC1 /* GameView.swift */; };
 		E6F28C252B0EC8440007DDC1 /* GameSquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */; };
 		E6F28C262B0EC8470007DDC1 /* GameMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */; };
-		E6F28C292B0EC8500007DDC1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */; };
 		E6F28C2B2B1001BB0007DDC1 /* StartButtonViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */; };
 		E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C0F2B0EBABC0007DDC1 /* StartButtonView.swift */; };
 		E6F28C2E2B10251E0007DDC1 /* SettingsButtonViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */; };
@@ -113,6 +115,8 @@
 		E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelWatch.swift; sourceTree = "<group>"; };
 		E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerWatch.swift; sourceTree = "<group>"; };
 		E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoordinator.swift; sourceTree = "<group>"; };
+		E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
+		E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewWatch.swift; sourceTree = "<group>"; };
 		E6D6451B2B15555A00E4790A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E6D6451E2B15573300E4790A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +209,7 @@
 				E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */,
 				E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */,
 				E60230192B103000004AE174 /* StatsViewWatch.swift */,
+				E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				E6D6451B2B15555A00E4790A /* HapticsManager.swift */,
 				E6D6451E2B15573300E4790A /* UserDefaults.swift */,
 				E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */,
+				E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				E6F28BFE2B0EB8560007DDC1 /* StatsView.swift in Sources */,
 				E6F28C0A2B0EB9980007DDC1 /* GameMessageView.swift in Sources */,
 				E6F28C0D2B0EB9AA0007DDC1 /* SettingsView.swift in Sources */,
+				E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */,
 				E6F28C1C2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
 				E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */,
 				E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */,
@@ -649,13 +656,14 @@
 				E6F28C1D2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
 				E6D645202B15581A00E4790A /* UserDefaults.swift in Sources */,
 				E6F28BCE2B0EB4C70007DDC1 /* ContentView.swift in Sources */,
+				E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */,
 				E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */,
 				E6F28C2E2B10251E0007DDC1 /* SettingsButtonViewWatch.swift in Sources */,
+				E64A8DFC2B1A9F6C00803E6B /* ReviewManager.swift in Sources */,
 				E6F28C2B2B1001BB0007DDC1 /* StartButtonViewWatch.swift in Sources */,
 				E6F28C262B0EC8470007DDC1 /* GameMessageView.swift in Sources */,
 				E602301E2B1034CF004AE174 /* GameMessageViewWatch.swift in Sources */,
 				E6F28C1A2B0EBE550007DDC1 /* PanelColor.swift in Sources */,
-				E6F28C292B0EC8500007DDC1 /* SettingsView.swift in Sources */,
 				E6F28BCC2B0EB4C70007DDC1 /* SiestaWatchApp.swift in Sources */,
 				E602301A2B103000004AE174 /* StatsViewWatch.swift in Sources */,
 				E6F28C242B0EC8410007DDC1 /* GameView.swift in Sources */,
