@@ -20,29 +20,44 @@ struct SettingsView: View {
                 .navigationBarTitleDisplayMode(.inline)
             
             List {
-                Section("Sound") {
-                    VStack(alignment: .leading) {
-                        Toggle("Silent Mode", isOn: $silentValue)
-                        Text("Turn sounds and haptics off.")
-                            .font(.footnote)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .foregroundStyle(.gray)
-                    }
-                    VStack(alignment: .leading) {
-                        Toggle("Loud Mode", isOn: $loudValue)
-                        Text("Turn on for sound.")
-                            .font(.footnote)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .foregroundStyle(.gray)
-                    }
+                Section {
+                    Label(
+                        title: { Toggle("Vibrations", isOn: $silentValue) },
+                        icon: { Image(systemName: "iphone.radiowaves.left.and.right") }
+                    )
+                    Label(
+                        title: { Toggle("Sound", isOn: $loudValue) },
+                        icon: { Image(systemName: "speaker.wave.2.fill") }
+                    )
+                } header: {
+                    Text("Sound")
+                } footer: {
+                    Text("Vibrations are turned on by default.")
                 }
                 
                 // These don't currently do anything
                 Section {
-                    Text("Feedback")
-                    Text("Buy Me A Coffee")
-                    Text("Instagram")
-                    Text("TikTok")
+                    Label(
+                        title: { Text("Review") },
+                        icon: { Image(systemName: "star.bubble") }
+                    )
+                    Label(
+                        title: { Text("Buy Me A Coffee") },
+                        icon: { Image(systemName: "cup.and.saucer.fill") }
+)
+                    Label(
+                        title: { Text("Instagram") },
+                        icon: { Image("Instagram_icon")
+                                .resizable()
+                                .frame(width: 30, height: 30, alignment: .center)}
+                    )
+                    Label(
+                        title: { Text("TikTok") },
+                        icon: { Image("Tiktok_icon")
+                                .resizable()
+                                .frame(width: 30, height: 30, alignment: .center)}
+                    )
+                    
                 }
                 
                 Section {

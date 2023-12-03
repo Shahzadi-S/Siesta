@@ -34,3 +34,10 @@ class HapticsManager {
         #endif
     }
 }
+
+/*
+ 
+ vibrations of by default. if off then silent mode.
+ sound off by default. if on then vibrations are also on. 
+ 
+ */

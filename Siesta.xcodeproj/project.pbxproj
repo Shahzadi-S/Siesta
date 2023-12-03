@@ -368,9 +368,9 @@
 			isa = PBXGroup;
 			children = (
 				E6D6451B2B15555A00E4790A /* HapticsManager.swift */,
+				E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */,
 				E6D6451E2B15573300E4790A /* UserDefaults.swift */,
 				E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */,
-				E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
