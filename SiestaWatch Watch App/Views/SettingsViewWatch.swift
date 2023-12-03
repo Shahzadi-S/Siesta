@@ -41,7 +41,7 @@ struct SettingsViewWatch: View {
                 .frame(height: 30)
             
             VStack(alignment: .center) {
-                Text("Version 1.1.0 Siesta ©")
+                Text("Version 1.0.0 Siesta ©")
                     .font(.footnote)
             }
             
