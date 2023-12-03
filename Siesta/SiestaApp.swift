@@ -16,6 +16,7 @@ struct SiestaApp: App {
     }
 }
 
-// Refactor settings to have vibrations and sound mode 
+// Refactor settings to have vibrations and sound mode - start from scratch to avoid confusion 
+// Bug with first launch - where feedback screen appears. Check those guards
 // Make methods and classes private/final/static etc
 // Testing strategy of all the features. 
