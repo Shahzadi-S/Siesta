@@ -416,7 +416,7 @@ extension ViewModel {
     func requestReview() {
         // Checks what the current user score is. This should only appear if the score is 15+
         let currentScore = UserDefaults.getUserScoreValue()
-        guard currentScore < 14 else { return }
+        guard currentScore > 14 else { return }
         
         // Gets the current app version
         let infoDictionaryKey = kCFBundleVersionKey as String
