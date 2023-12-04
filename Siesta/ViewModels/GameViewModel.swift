@@ -10,10 +10,10 @@ import SwiftUI
 import Combine
 import StoreKit
 
-class ViewModel: ObservableObject {
+final class ViewModel: ObservableObject {
     
-    let hapticsManager = HapticsManager()
-    let reviewManager = ReviewManager()
+    private let hapticsManager = HapticsManager()
+    private let reviewManager = ReviewManager()
     let coordinator = SessionCoordinator()
     
     
@@ -24,12 +24,11 @@ class ViewModel: ObservableObject {
     // Cancellables ensure subsciptions are stored if a view is recreated
     // but can be removed aka cancelled at a later time to release memory
     // Therefore storing them prevents accidental memory leaks
-    var cancellables = Set<AnyCancellable>()
+    private var cancellables = Set<AnyCancellable>()
     
     // MARK: - USING USERDEFAULTS
     // SwiftUI uses appStorage for User Default similarly to an ObservableObject
     // Any changes to the value are automatically stored and can reload the view
-    let userDefaults = UserDefaults.standard
     @AppStorage("userScore") var userScore = 0
     @AppStorage("highScore") var highScore = 0
     
@@ -38,18 +37,18 @@ class ViewModel: ObservableObject {
     
     // MARK: - GAME SEQUENCE FUNCTIONALITY
     
-    var timer: Timer?
+    private var timer: Timer?
     
     // THE COLORS OPTIONS USED TO CREATE THE RANDOM DEMO SEQUENCE
-    var colorOptions: [PanelColor] = [.red, .green, .yellow, .blue]
+    private var colorOptions: [PanelColor] = [.red, .green, .yellow, .blue]
     
     // THE DEMO SEQUENCE WHICH WILL BE FLASHED
-    var sequence: [PanelColor] = [.red, .green, .yellow, .blue]
+    private var sequence: [PanelColor] = [.red, .green, .yellow, .blue]
     
     // THE SEQUENCE OF COLORS THAT THE USER HAS SELECTED
-    var userInput: [PanelColor] = []
+    private var userInput: [PanelColor] = []
     
-    var currentIndexOfSequence = 0
+   private var currentIndexOfSequence = 0
     
     
     @Published var redFlashed = false
@@ -70,7 +69,7 @@ class ViewModel: ObservableObject {
         addSubscriptions()
     }
     
-    func addSubscriptions() {
+    private func addSubscriptions() {
         status
             .receive(on: DispatchQueue.main)
             .sink { completion in
@@ -120,7 +119,7 @@ class ViewModel: ObservableObject {
     // In charge of starting the game demo sequence
     // which then proceeds to flash the next colour in the sequence
     // and finally ends the sequence before telling the user it's their turn now.
-    func demoMode() {
+    private func demoMode() {
         didStartGame = true
         coordinator.startSession()
         gameDemoSequenceStarted()
@@ -129,7 +128,7 @@ class ViewModel: ObservableObject {
     // MARK: - YOUR TURN MESSAGE IS SHOWN
     // Tells the user they need to start selecting panels
     // Allows the user to play the game by enabling the panels
-    func yourTurnMessageIsShown() {
+    private func yourTurnMessageIsShown() {
         showMessage = true
         statusLabel = Constants.yourTurnText
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -144,7 +143,7 @@ class ViewModel: ObservableObject {
     // The next sequence is generated and stored to user defaults
     // The users previous activity is cleared and the current score is incremented
     // The well done message is shown
-    func userIsSuccessfull() {
+    private func userIsSuccessfull() {
         panelEnabled = false
         turnAllPanelsOff()
         generateNextSequenceAndStoreToUserDefaults()
@@ -161,7 +160,7 @@ class ViewModel: ObservableObject {
     // MARK: - USER FAILED
     // The user selected the wrong panel
     // Their previous activity is cleared and you lost message is shown
-    func userDidFail() {
+    private func userDidFail() {
         panelEnabled = false
         userInput = []
         youLoseMessageIsShown()
@@ -170,7 +169,7 @@ class ViewModel: ObservableObject {
     // MARK: - WELL DONE MESSAGE IS SHOWN
     // User is shown the well done message
     // After a delay the users new score is shown
-    func wellDoneMessageIsShown() {
+    private func wellDoneMessageIsShown() {
         showMessage = true
         statusLabel = Constants.successText
         
@@ -182,7 +181,7 @@ class ViewModel: ObservableObject {
     // MARK: - YOU LOSE MESSAGE IS SHOWN
     // User is told they have lost
     // after a delay they are shown the try again message which they can tap
-    func youLoseMessageIsShown() {
+    private func youLoseMessageIsShown() {
         showMessage = true
         statusLabel = Constants.failedText
         
@@ -194,7 +193,7 @@ class ViewModel: ObservableObject {
     // MARK: - USER SCORE MESSAGE IS SHOWN
     // User is told their current score as per the value stored in UserDefaults
     // After the message the next demo is started immediately.
-    func userScoreMessageIsShown() {
+    private func userScoreMessageIsShown() {
         showMessage = true
         statusLabel = "Score is: \(userScore)"
         
@@ -207,7 +206,7 @@ class ViewModel: ObservableObject {
     // MARK: - TRY AGAIN MESSAGE IS SHOWN
     // If the user has lost they are shown the try again message
     // If tapped a the same demo is played again
-    func tryAgainMessageIsShown() {
+    private func tryAgainMessageIsShown() {
         showMessage = true
         statusLabel = Constants.tryAgainText
     }
@@ -229,7 +228,7 @@ class ViewModel: ObservableObject {
     // All values are reset e.g. message, labels, indexOfsequence
     // Method is called when a user returns from inactive or background state
     // Therefore the game can be immediately resumed
-    func stoppedGame() {
+    private func stoppedGame() {
         coordinator.stopSession()
         timer?.invalidate()
         currentIndexOfSequence = sequence.count
@@ -247,7 +246,7 @@ class ViewModel: ObservableObject {
     // If a user returns after stopping a game, it is resumed
     // The last sequence is retrieved if the user had managed to complete the first level
     // The demo of the last sequence is played
-    func resumeGame() {
+    private func resumeGame() {
         if UserDefaults.getUserScoreValue() >= 1 {
             getDemoSequenceFromUserDefaults()
         }
@@ -272,7 +271,7 @@ class ViewModel: ObservableObject {
     // if correct then checks if the entire sequence has been completed
     // if it has it starts the success journey
     // if the user has tapped incorrectly then the fail journey starts
-    func validateUserInput() {
+    private func validateUserInput() {
         if userInput.last == sequence[userInput.endIndex-1] {
             if userInput.count == sequence.count {
                 status.value = .success
@@ -287,7 +286,7 @@ class ViewModel: ObservableObject {
 }
 
 // MARK: - EXTENTION - DEMO SEQUENCE LOGIC
-extension ViewModel {
+private extension ViewModel {
     
     // TIMER IS STARTED TO START PLAYING THE DEMO SEQUENCE
     func gameDemoSequenceStarted() {
@@ -331,7 +330,7 @@ extension ViewModel {
 }
 
 // MARK: -  EXTENTION - FLASH NEXT PANEL
-extension ViewModel {
+private extension ViewModel {
     
     // IS TOLD WHICH COLOR NEEDS TO BE TURNED ON OR OFF
     func flashNextColor(_ currentColor: PanelColor) {
@@ -360,7 +359,7 @@ extension ViewModel {
 }
 
 // MARK: -  EXTENTION - TURN ALL PANELS OFF
-extension ViewModel {
+private extension ViewModel {
     
     // TELLS THE VIEW THE OPACITY OFF ALL PANELS NEEDS TO BE REDUCED
     func turnAllPanelsOff() {
@@ -373,7 +372,7 @@ extension ViewModel {
 
 
 // MARK: - EXTENTION - USER DEFAULTS SET/GET SEQUENCE
-extension ViewModel {
+private extension ViewModel {
     
     // GETS THE LAST CREATED SEQUENCE SO THE USER CAN PLAY THE SAME LEVEL AGAIN
     func getDemoSequenceFromUserDefaults() {
@@ -395,7 +394,7 @@ extension ViewModel {
 }
 
 // MARK: - CHECKS IF A USER HAS CREATED A NEW HIGHSCORE - CURRENTLY NOT SHOWING
-extension ViewModel {
+private extension ViewModel {
     
     // COMPARES THE PREVIOUSLY STORED SCORE WITH THE NEW SCORE
     func hasCreatedNewHighScore(_ currentScore: Int) -> Bool {

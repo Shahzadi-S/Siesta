@@ -200,6 +200,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E696CE252B1E7F2100A55375 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E6D645182B15533E00E4790A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,10 +307,10 @@
 			isa = PBXGroup;
 			children = (
 				E6F28BCB2B0EB4C70007DDC1 /* SiestaWatchApp.swift */,
+				E696CE252B1E7F2100A55375 /* Helpers */,
 				E6D645192B15535F00E4790A /* ViewModels */,
 				E6D645182B15533E00E4790A /* Views */,
 				E6D6451A2B15537800E4790A /* Resources */,
-				E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */,
 			);
 			path = "SiestaWatch Watch App";
 			sourceTree = "<group>";
