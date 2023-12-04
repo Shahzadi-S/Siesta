@@ -23,7 +23,7 @@ struct SettingsView: View {
             List {
                 Section {
                     Label(
-                        title: { 
+                        title: {
                             Toggle("Vibrations", isOn: $vibrationsValue)
                                 .onChange(of: vibrationsValue) { oldValue, newValue in
                                     if newValue == false {
@@ -34,7 +34,7 @@ struct SettingsView: View {
                         icon: { Image(systemName: "iphone.radiowaves.left.and.right") }
                     )
                     Label(
-                        title: { 
+                        title: {
                             Toggle("Sound", isOn: $soundValue)
                                 .onChange(of: soundValue) { oldValue, newValue in
                                     if newValue == true {
@@ -50,27 +50,57 @@ struct SettingsView: View {
                 
                 // These don't currently do anything
                 Section {
-                    Label(
-                        title: { Text("Review") },
-                        icon: { Image(systemName: "star.bubble") }
-                    )
-                    Label(
-                        title: { Text("Buy Me A Coffee") },
-                        icon: { Image(systemName: "cup.and.saucer.fill") }
-)
-                    Label(
-                        title: { Text("Instagram") },
-                        icon: { Image("Instagram_icon")
-                                .resizable()
-                                .frame(width: 30, height: 30, alignment: .center)}
-                    )
-                    Label(
-                        title: { Text("TikTok") },
-                        icon: { Image("Tiktok_icon")
-                                .resizable()
-                                .frame(width: 30, height: 30, alignment: .center)}
-                    )
+                    Button {
+                        print("Review Me")
+                    } label: {
+                        Label(
+                            title: { 
+                                Text("Review")
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
+                            },
+                            icon: { Image(systemName: "star.bubble") }
+                        )
+                    }
                     
+                    Button {
+                        print("Time to brew the coffee")
+                    } label: {
+                        Label(
+                            title: {
+                                Text("Buy Me A Coffee")
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
+                            },
+                            icon: { Image(systemName: "cup.and.saucer.fill") }
+                        )
+                    }
+                    
+                    Button {
+                        print("Take me to the gram")
+                    } label: {
+                        Label(
+                            title: {
+                                Text("Instagram")
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
+                            },
+                            icon: { Image("Instagram_icon")
+                                    .resizable()
+                                .frame(width: 30, height: 30, alignment: .center)}
+                        )
+                    }
+                    
+                    Button {
+                        print("Time is ticking")
+                    } label: {
+                        Label(
+                            title: {
+                                Text("TikTok")
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
+                            },
+                            icon: { Image("Tiktok_icon")
+                                    .resizable()
+                                .frame(width: 30, height: 30, alignment: .center)}
+                        )
+                    }
                 }
                 
                 Section {
