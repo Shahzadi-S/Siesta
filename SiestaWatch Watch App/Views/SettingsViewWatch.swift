@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SettingsViewWatch: View {
     
-    @AppStorage("silentKey") var silentValue = false
-    @AppStorage("loudKey") var loudValue = false
+    @AppStorage("vibrationsKey") var vibrationsValue = false
+    @AppStorage("soundKey") var soundValue = false
     
     var body: some View {
         ScrollView(.vertical) {
@@ -19,23 +19,24 @@ struct SettingsViewWatch: View {
                     .navigationTitle("Settings")
                     .navigationBarTitleDisplayMode(.inline)
                 
-                Toggle("Silent Mode", isOn: $silentValue)
+                Toggle("Vibrations", isOn: $vibrationsValue)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 2))
-                    .disabled(loudValue == true)
-                    .accessibilityHint("Turn on silent mode to stop sounds and haptics.")
-                Text("Turn on silent mode to stop sounds and haptics.")
-                    .font(.footnote)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .foregroundStyle(.gray)
-                Toggle("Loud Mode", isOn: $loudValue)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 2))
-                    .disabled(silentValue == true)
-                    .accessibilityHint("Turn on loud mode for sound.")
-                Text("Turn on loud mode for sound.")
-                    .font(.footnote)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .foregroundStyle(.gray)
+                    .accessibilityHint("Turn vibrations on or off.")
+                    .onChange(of: vibrationsValue) { oldValue, newValue in
+                        if newValue == false {
+                            soundValue = false
+                        }
+                    }
                 
+                Toggle("Sound", isOn: $soundValue)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 2))
+                    .accessibilityHint("Turn on for sound and vibrations.")
+                    .onChange(of: soundValue) { oldValue, newValue in
+                        if newValue == true {
+                            vibrationsValue = true
+                        }
+                    }
+
             }
             Spacer()
                 .frame(height: 30)

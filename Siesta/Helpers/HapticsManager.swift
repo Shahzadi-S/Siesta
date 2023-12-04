@@ -13,31 +13,26 @@ class HapticsManager {
     
     // SOUND AND HAPTICS SETTINGS
     // RETRIEVES THE VALUES STORED IN USER DEFAULTS FOR SOUND AND HAPTICS
-    // THE USER HAS THE OPTION FOR DEFAULT, LOUR OR SILENT MODE
-    func playSoundsAndHaptics() {
-        let silentModeIsEnabled = UserDefaults.getSilentValue()
-        let loudModeIsEnabled = UserDefaults.getLoudValue()
+    // THE USER HAS THE OPTION TO TURN VIBRATIONS AND SOUND ON/OFF
+    func playSoundsAndVibrations() {
+        let vibrationsEnabled = UserDefaults.getVibrationValue()
+        let soundEnabled = UserDefaults.getSoundValue()
         
         #if os(watchOS)
-            ViewModelWatch().playSoundsAndHapticsWatch()
+            ViewModelWatch().playSoundsAndVibrationsWatch()
         #else
         let generator = UINotificationFeedbackGenerator()
-        if silentModeIsEnabled {
-            // No sound or haptics
-        } else if loudModeIsEnabled {
+        if soundEnabled {
             generator.notificationOccurred(.success)
             AudioServicesPlaySystemSound(1057)
+        } else if (soundEnabled == false) && (vibrationsEnabled == false) {
+            // No sound or haptics
+        } else if vibrationsEnabled && (soundEnabled == false) {
+            generator.notificationOccurred(.success)
         } else {
             generator.notificationOccurred(.success)
         }
-            
         #endif
+        
     }
 }
-
-/*
- 
- vibrations of by default. if off then silent mode.
- sound off by default. if on then vibrations are also on. 
- 
- */

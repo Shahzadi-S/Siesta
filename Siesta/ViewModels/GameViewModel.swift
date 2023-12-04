@@ -261,7 +261,7 @@ class ViewModel: ObservableObject {
     // Tracks when a user has actually started playing and stores the input
     // Matches the input with the stored sequence
     func panelWasTapped(panelColor: PanelColor) {
-        hapticsManager.playSoundsAndHaptics()
+        hapticsManager.playSoundsAndVibrations()
         flashNextColor(panelColor)
         userInput.append(panelColor)
         validateUserInput()

@@ -10,8 +10,9 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    @AppStorage("silentKey") var silentValue = false
-    @AppStorage("loudKey") var loudValue = false
+    
+    @AppStorage("vibrationsKey") var vibrationsValue = false
+    @AppStorage("soundKey") var soundValue = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,17 +23,29 @@ struct SettingsView: View {
             List {
                 Section {
                     Label(
-                        title: { Toggle("Vibrations", isOn: $silentValue) },
+                        title: { 
+                            Toggle("Vibrations", isOn: $vibrationsValue)
+                                .onChange(of: vibrationsValue) { oldValue, newValue in
+                                    if newValue == false {
+                                        soundValue = false
+                                    }
+                                }
+                        },
                         icon: { Image(systemName: "iphone.radiowaves.left.and.right") }
                     )
                     Label(
-                        title: { Toggle("Sound", isOn: $loudValue) },
+                        title: { 
+                            Toggle("Sound", isOn: $soundValue)
+                                .onChange(of: soundValue) { oldValue, newValue in
+                                    if newValue == true {
+                                        vibrationsValue = true
+                                    }
+                                }
+                        },
                         icon: { Image(systemName: "speaker.wave.2.fill") }
                     )
                 } header: {
                     Text("Sound")
-                } footer: {
-                    Text("Vibrations are turned on by default.")
                 }
                 
                 // These don't currently do anything

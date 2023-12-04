@@ -20,14 +20,14 @@ extension UserDefaults {
         return UserDefaults.standard.integer(forKey: Constants.highScoreKey)
     }
     
-    // GETS THE VALUE FOR SETTINGS - SILENT MODE
-    static func getSilentValue() -> Bool {
-        return UserDefaults.standard.bool(forKey: Constants.silentKey)
+    // GETS THE VALUE FOR VIBRATION SETTINGS
+    static func getVibrationValue() -> Bool {
+        return UserDefaults.standard.bool(forKey: Constants.vibrationsKey)
     }
     
-    // GETS THE VALUE FOR SETTINGS - LOUD MODE
-    static func getLoudValue() -> Bool {
-        return UserDefaults.standard.bool(forKey: Constants.loudKey)
+    // GETS THE VALUE FOR SOUND SETTINGS
+    static func getSoundValue() -> Bool {
+        return UserDefaults.standard.bool(forKey: Constants.soundKey)
     }
 }
 
@@ -40,5 +40,7 @@ private extension UserDefaults {
         static let highScoreKey = "highScore"
         static let silentKey = "silentKey"
         static let loudKey = "loudKey"
+        static let vibrationsKey = "vibrationsKey"
+        static let soundKey = "soundKey"
     }
 }

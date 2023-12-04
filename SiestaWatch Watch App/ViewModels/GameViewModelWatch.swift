@@ -11,14 +11,16 @@ import WatchKit
 
 class ViewModelWatch {
     
-    func playSoundsAndHapticsWatch() {
-        let silentModeIsEnabled = UserDefaults.getSilentValue()
-        let loudModeIsEnabled = UserDefaults.getLoudValue()
+    func playSoundsAndVibrationsWatch() {
+        let vibrationsEnabled = UserDefaults.getVibrationValue()
+        let soundEnabled = UserDefaults.getSoundValue()
         
-        if silentModeIsEnabled {
-            // No sound or haptics
-        } else if loudModeIsEnabled {
+        if soundEnabled {
             WKInterfaceDevice.current().play(.start)
+        } else if (soundEnabled == false) && (vibrationsEnabled == false) {
+            // No sound or haptics
+        } else if vibrationsEnabled && (soundEnabled == false) {
+            WKInterfaceDevice.current().play(.click)
         } else {
             WKInterfaceDevice.current().play(.click)
         }
