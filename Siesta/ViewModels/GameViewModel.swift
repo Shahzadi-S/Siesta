@@ -5,7 +5,6 @@
 //  Created by Sanaa Shahzadi on 22/11/2023.
 //
 
-import Foundation
 import SwiftUI
 import Combine
 import StoreKit
@@ -14,7 +13,7 @@ final class ViewModel: ObservableObject {
     
     private let hapticsManager = HapticsManager()
     private let reviewManager = ReviewManager()
-    let coordinator = SessionCoordinator()
+    let sessionManager = SessionManager()
     
     
     // MARK: - USING COMBINE
@@ -36,7 +35,6 @@ final class ViewModel: ObservableObject {
     @AppStorage("lastVersionPromptedForReview") var lastVersionPromptedForReview = ""
     
     // MARK: - GAME SEQUENCE FUNCTIONALITY
-    
     private var timer: Timer?
     
     // THE COLORS OPTIONS USED TO CREATE THE RANDOM DEMO SEQUENCE
@@ -48,7 +46,7 @@ final class ViewModel: ObservableObject {
     // THE SEQUENCE OF COLORS THAT THE USER HAS SELECTED
     private var userInput: [PanelColor] = []
     
-   private var currentIndexOfSequence = 0
+    private var currentIndexOfSequence = 0
     
     
     @Published var redFlashed = false
@@ -121,7 +119,7 @@ final class ViewModel: ObservableObject {
     // and finally ends the sequence before telling the user it's their turn now.
     private func demoMode() {
         didStartGame = true
-        coordinator.startSession()
+        sessionManager.startSession()
         gameDemoSequenceStarted()
     }
     
@@ -229,7 +227,7 @@ final class ViewModel: ObservableObject {
     // Method is called when a user returns from inactive or background state
     // Therefore the game can be immediately resumed
     private func stoppedGame() {
-        coordinator.stopSession()
+        sessionManager.stopSession()
         timer?.invalidate()
         currentIndexOfSequence = sequence.count
         turnAllPanelsOff()
@@ -311,7 +309,7 @@ private extension ViewModel {
     
     // ENDS THE TIMER FOR THE DEMO SO THE USER CAN START PLAYING
     func demoSequenceEnded() {
-        coordinator.stopSession()
+        sessionManager.stopSession()
         timer?.invalidate()
         turnAllPanelsOff()
         currentIndexOfSequence = 0

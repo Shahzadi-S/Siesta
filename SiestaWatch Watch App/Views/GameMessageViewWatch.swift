@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GameMessageViewWatch: View {
-    
     @EnvironmentObject var viewModel: ViewModel
     
     @State private var animationAmount = 1.0
@@ -40,7 +39,6 @@ struct GameMessageViewWatch: View {
                 }
         }
     }
-    
 }
 
 

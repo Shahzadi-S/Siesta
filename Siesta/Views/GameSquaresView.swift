@@ -33,7 +33,7 @@ struct GameSquaresView: View {
                     .opacity(viewModel.greenFlashed ? 1 : 0.3)
                     .animation(Animation.linear(duration: 0.5).repeatCount(1), value: viewModel.greenFlashed)
                     .padding(3)
-                   
+                
             }
             HStack {
                 RoundedRectangle(cornerRadius: 6)

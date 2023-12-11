@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingsViewWatch: View {
-    
     @AppStorage("vibrationsKey") var vibrationsValue = false
     @AppStorage("soundKey") var soundValue = false
     
@@ -36,7 +35,6 @@ struct SettingsViewWatch: View {
                             vibrationsValue = true
                         }
                     }
-
             }
             Spacer()
                 .frame(height: 30)
@@ -49,8 +47,6 @@ struct SettingsViewWatch: View {
                 Text("All rights reserved")
                     .font(.footnote)
             }
-            
-           
         }
     }
 }

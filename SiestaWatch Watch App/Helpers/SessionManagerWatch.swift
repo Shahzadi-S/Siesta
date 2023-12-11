@@ -8,7 +8,9 @@
 import Foundation
 import WatchKit
 
-class SessionManagerWatch: NSObject, WKExtendedRuntimeSessionDelegate {
+final class SessionManagerWatch: NSObject, WKExtendedRuntimeSessionDelegate {
+    
+    // DELEGATE METHODS THAT ARE REQUIRED WHEN WORKING WITH WATCH SESSIONS
     func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
         print("Session stopped at", Date())
     }
@@ -21,10 +23,10 @@ class SessionManagerWatch: NSObject, WKExtendedRuntimeSessionDelegate {
     
     private var session = WKExtendedRuntimeSession()
     
-    // Check to see current session status before being toggled
+    // CHECK TO SEE CURRENT SESSION STATUS BEFORE TOGGLING
     var sessionIsActive = false
     
-    // App needs to remain active whilst sequence is playing
+    // APP REMAINS ACTIVE WHILST USER IS PLAYING
     func startSession() {
         if sessionIsActive == false {
             session = WKExtendedRuntimeSession()
@@ -34,7 +36,7 @@ class SessionManagerWatch: NSObject, WKExtendedRuntimeSessionDelegate {
         }
     }
     
-    // App no longer needs to remain active
+    // APP NO LONGER NEEDS TO REMAIN ACTIVE
     func stopSession() {
         if sessionIsActive {
             session.invalidate()

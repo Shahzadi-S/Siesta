@@ -17,7 +17,6 @@ struct RoundedButton: ButtonStyle {
             .background(color.cornerRadius(50.0).opacity(0.2))
             .foregroundStyle(color)
             .font(font)
-        
     }
 }
 

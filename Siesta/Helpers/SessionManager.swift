@@ -5,24 +5,25 @@
 //  Created by Sanaa Shahzadi on 28/11/2023.
 //
 
-import Foundation
 import UIKit
 
-class SessionCoordinator {
+class SessionManager {
     
+    // STOPS THE SCREEN FOR TIMING OUT WHEN THIS IS ACTIVE
     func startSession() {
-        #if os(watchOS)
+#if os(watchOS)
         SessionManagerWatch().startSession()
-        #else
+#else
         UIApplication.shared.isIdleTimerDisabled = true
-        #endif
+#endif
     }
     
+    // IF USER NAVIGATES AWAY THEN SESSION IS ENDED AND SCREEN CAN DIM
     func stopSession() {
-        #if os(watchOS)
+#if os(watchOS)
         SessionManagerWatch().stopSession()
-        #else
+#else
         UIApplication.shared.isIdleTimerDisabled = false
-        #endif
+#endif
     }
 }

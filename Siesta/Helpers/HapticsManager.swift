@@ -5,11 +5,10 @@
 //  Created by Sanaa Shahzadi on 27/11/2023.
 //
 
-import Foundation
 import UIKit
 import AVFoundation
 
-class HapticsManager {
+final class HapticsManager {
     
     // SOUND AND HAPTICS SETTINGS
     // RETRIEVES THE VALUES STORED IN USER DEFAULTS FOR SOUND AND HAPTICS
@@ -18,9 +17,9 @@ class HapticsManager {
         let vibrationsEnabled = UserDefaults.getVibrationValue()
         let soundEnabled = UserDefaults.getSoundValue()
         
-        #if os(watchOS)
-            ViewModelWatch().playSoundsAndVibrationsWatch()
-        #else
+#if os(watchOS)
+        ViewModelWatch().playSoundsAndVibrationsWatch()
+#else
         let generator = UINotificationFeedbackGenerator()
         if soundEnabled {
             generator.notificationOccurred(.success)
@@ -32,7 +31,7 @@ class HapticsManager {
         } else {
             generator.notificationOccurred(.success)
         }
-        #endif
+#endif
         
     }
 }

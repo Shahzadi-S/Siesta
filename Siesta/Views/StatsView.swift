@@ -24,7 +24,7 @@ struct StatsView: View {
                 Text("\(UserDefaults.getUserScoreValue())")
             }
             .accessibilityElement(children: .combine)
-
+            
             
             HStack {
                 Image(systemName: "trophy.fill")

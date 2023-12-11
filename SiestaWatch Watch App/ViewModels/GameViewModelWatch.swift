@@ -5,12 +5,12 @@
 //  Created by Sanaa Shahzadi on 25/11/2023.
 //
 
-import Foundation
 import WatchKit
 
 
-class ViewModelWatch {
+final class ViewModelWatch {
     
+    // PLAYS SOUNDS AND VIBRATIONS BASED ON USER SETTINGS
     func playSoundsAndVibrationsWatch() {
         let vibrationsEnabled = UserDefaults.getVibrationValue()
         let soundEnabled = UserDefaults.getSoundValue()
