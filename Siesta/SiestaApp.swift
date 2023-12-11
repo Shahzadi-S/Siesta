@@ -16,4 +16,7 @@ struct SiestaApp: App {
     }
 }
 
-// Testing strategy of all the features. 
+
+// Refactor settings to reuse the list items
+// Look at notifications again - see stash
+// Testing strategy of all the features.

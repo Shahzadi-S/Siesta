@@ -131,7 +131,7 @@ final class ViewModel: ObservableObject {
     private func yourTurnMessageIsShown() {
         showMessage = true
         statusLabel = Constants.yourTurnText
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.showMessage = false
             self.status.value = .playing
             self.panelEnabled = true
@@ -197,7 +197,7 @@ final class ViewModel: ObservableObject {
         showMessage = true
         statusLabel = "Score is: \(userScore)"
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.showMessage = false
             self.status.value = .demo
         }

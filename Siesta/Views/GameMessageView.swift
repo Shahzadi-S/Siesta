@@ -21,7 +21,7 @@ struct GameMessageView: View {
                 .frame(alignment: .center)
                 .padding(15)
                 .background(RoundedRectangle(cornerRadius: 6.0)
-                    .fill(Color.black.opacity(0.6)).shadow(radius: 3))
+                    .fill(Color.black.opacity(0.7)).shadow(radius: 3))
                 .onTapGesture {
                     viewModel.messageWasTapped()
                 }
