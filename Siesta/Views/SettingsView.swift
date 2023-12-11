@@ -10,9 +10,24 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.openURL) var openURL
     
     @AppStorage("vibrationsKey") var vibrationsValue = false
     @AppStorage("soundKey") var soundValue = false
+    
+    let reviewLinks: [ExternalLink] = [ExternalLink(icon: "star.bubble",
+                                                    title: "Review",
+                                                    url: "https://www.apple.com"),
+                                       ExternalLink(icon: "cup.and.saucer.fill",
+                                                    title: "Buy Me A Coffee",
+                                                    url: "https://www.buymeacoffee.com/thesiestaapp")]
+    
+    let socialLinks: [ExternalLink] = [ExternalLink(icon: "Instagram_icon",
+                                                    title: "Instagram",
+                                                    url: "https://www.instagram.com/thesiestaapp"),
+                                       ExternalLink(icon: "Tiktok_icon",
+                                                    title: "TikTok",
+                                                    url: "https://www.tiktok.com/@siesta.app")]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -48,58 +63,39 @@ struct SettingsView: View {
                     Text("Sound")
                 }
                 
-                // These don't currently do anything
                 Section {
-                    Button {
-                        print("Review Me")
-                    } label: {
-                        Label(
-                            title: { 
-                                Text("Review")
-                                    .foregroundStyle(colorScheme == .light ? .black : .white)
-                            },
-                            icon: { Image(systemName: "star.bubble") }
-                        )
+                    ForEach(reviewLinks) { link in
+                        Button {
+                            openURL(URL(string: link.url)!)
+                        } label: {
+                            Label(
+                                title: {
+                                    Text(link.title)
+                                        .foregroundStyle(colorScheme == .light ? .black : .white)
+                                },
+                                icon: {
+                                    Image(systemName: link.icon)
+                                }
+                            )
+                        }
                     }
                     
-                    Button {
-                        print("Time to brew the coffee")
-                    } label: {
-                        Label(
-                            title: {
-                                Text("Buy Me A Coffee")
-                                    .foregroundStyle(colorScheme == .light ? .black : .white)
-                            },
-                            icon: { Image(systemName: "cup.and.saucer.fill") }
-                        )
-                    }
-                    
-                    Button {
-                        print("Take me to the gram")
-                    } label: {
-                        Label(
-                            title: {
-                                Text("Instagram")
-                                    .foregroundStyle(colorScheme == .light ? .black : .white)
-                            },
-                            icon: { Image("Instagram_icon")
-                                    .resizable()
-                                .frame(width: 30, height: 30, alignment: .center)}
-                        )
-                    }
-                    
-                    Button {
-                        print("Time is ticking")
-                    } label: {
-                        Label(
-                            title: {
-                                Text("TikTok")
-                                    .foregroundStyle(colorScheme == .light ? .black : .white)
-                            },
-                            icon: { Image("Tiktok_icon")
-                                    .resizable()
-                                .frame(width: 30, height: 30, alignment: .center)}
-                        )
+                    ForEach(socialLinks) { link in
+                        Button {
+                            openURL(URL(string: link.url)!)
+                        } label: {
+                            Label(
+                                title: {
+                                    Text(link.title)
+                                        .foregroundStyle(colorScheme == .light ? .black : .white)
+                                },
+                                icon: {
+                                    Image(link.icon)
+                                        .resizable()
+                                        .frame(width: 30, height: 30, alignment: .center)
+                                }
+                            )
+                        }
                     }
                 }
                 
@@ -132,6 +128,10 @@ struct SettingsView: View {
             }
         }
     }
+}
+
+extension SettingsView {
+    
 }
 
 #Preview {

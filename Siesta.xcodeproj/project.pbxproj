@@ -17,6 +17,7 @@
 		E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
 		E64A8DFC2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
 		E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */; };
+		E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686DC4F2B27AE7800140B36 /* ExternalLink.swift */; };
 		E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451E2B15573300E4790A /* UserDefaults.swift */; };
@@ -117,6 +118,7 @@
 		E64A8DF02B169BDE00803E6B /* SessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoordinator.swift; sourceTree = "<group>"; };
 		E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewWatch.swift; sourceTree = "<group>"; };
+		E686DC4F2B27AE7800140B36 /* ExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLink.swift; sourceTree = "<group>"; };
 		E6D6451B2B15555A00E4790A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E6D6451E2B15573300E4790A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -368,6 +370,7 @@
 			children = (
 				E6F28C182B0EBE550007DDC1 /* PanelColor.swift */,
 				E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */,
+				E686DC4F2B27AE7800140B36 /* ExternalLink.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				E6F28C1C2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
 				E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */,
 				E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */,
+				E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */,
 				E6F28B9B2B0EB4500007DDC1 /* SiestaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
