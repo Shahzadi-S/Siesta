@@ -137,6 +137,7 @@
 		E6D013762B309F71004BEEE9 /* ReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyView.swift; sourceTree = "<group>"; };
 		E6D0137D2B30A3A6004BEEE9 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		E6D0137F2B30A3EB004BEEE9 /* TapMeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMeButton.swift; sourceTree = "<group>"; };
+		E6D013822B30BBCD004BEEE9 /* SiestaWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SiestaWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E6D6451B2B15555A00E4790A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E6D6451E2B15573300E4790A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,6 +377,7 @@
 		E6F28BCA2B0EB4C70007DDC1 /* SiestaWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				E6D013822B30BBCD004BEEE9 /* SiestaWatch-Watch-App-Info.plist */,
 				E6F28BCB2B0EB4C70007DDC1 /* SiestaWatchApp.swift */,
 				E696CE252B1E7F2100A55375 /* Helpers */,
 				E6D645192B15535F00E4790A /* ViewModels */,
@@ -1109,6 +1111,7 @@
 				DEVELOPMENT_TEAM = T552SYNXXS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SiestaWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SiestaWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.shahzadi.Siesta;
@@ -1140,6 +1143,7 @@
 				DEVELOPMENT_TEAM = T552SYNXXS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SiestaWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SiestaWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.shahzadi.Siesta;
