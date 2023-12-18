@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct TapMeButton: ButtonStyle {
-    var color: Color
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundStyle(.background)
-            .foregroundStyle(color)
-            .frame(width: 70, height: 70, alignment: .center)
-            .background(color.cornerRadius(50.0).opacity(0.7))
-    }
-}
-
-
 struct PlayView: View {
     @State private var opacityRed = 1.0
     @State private var opacityGreen = 0.0
@@ -110,6 +97,7 @@ struct PlayView: View {
             }
         }
         .scaledToFit()
+        .accessibilityHidden(true)
         
     }
 }

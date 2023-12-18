@@ -25,6 +25,8 @@
 		E6D013732B2F9A60004BEEE9 /* MemoriseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013722B2F9A60004BEEE9 /* MemoriseView.swift */; };
 		E6D013752B2FA6E4004BEEE9 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013742B2FA6E4004BEEE9 /* PlayView.swift */; };
 		E6D013772B309F71004BEEE9 /* ReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013762B309F71004BEEE9 /* ReadyView.swift */; };
+		E6D0137E2B30A3A6004BEEE9 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0137D2B30A3A6004BEEE9 /* RoundedButton.swift */; };
+		E6D013802B30A3EB004BEEE9 /* TapMeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0137F2B30A3EB004BEEE9 /* TapMeButton.swift */; };
 		E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451E2B15573300E4790A /* UserDefaults.swift */; };
@@ -133,6 +135,8 @@
 		E6D013722B2F9A60004BEEE9 /* MemoriseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriseView.swift; sourceTree = "<group>"; };
 		E6D013742B2FA6E4004BEEE9 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		E6D013762B309F71004BEEE9 /* ReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyView.swift; sourceTree = "<group>"; };
+		E6D0137D2B30A3A6004BEEE9 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E6D0137F2B30A3EB004BEEE9 /* TapMeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMeButton.swift; sourceTree = "<group>"; };
 		E6D6451B2B15555A00E4790A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E6D6451E2B15573300E4790A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +239,44 @@
 			path = OnboardingImageViews;
 			sourceTree = "<group>";
 		};
+		E6D013782B30A2AE004BEEE9 /* OnboardingViews */ = {
+			isa = PBXGroup;
+			children = (
+				E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */,
+				E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */,
+				E6D0136F2B2F93B5004BEEE9 /* OnboardingImageViews */,
+			);
+			path = OnboardingViews;
+			sourceTree = "<group>";
+		};
+		E6D0137A2B30A2F2004BEEE9 /* SettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28C002B0EB9480007DDC1 /* SettingsButtonView.swift */,
+				E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */,
+			);
+			path = SettingsViews;
+			sourceTree = "<group>";
+		};
+		E6D0137B2B30A30B004BEEE9 /* GameViews */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28C122B0EBB850007DDC1 /* GameView.swift */,
+				E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */,
+				E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */,
+			);
+			path = GameViews;
+			sourceTree = "<group>";
+		};
+		E6D0137C2B30A349004BEEE9 /* CustomButtons */ = {
+			isa = PBXGroup;
+			children = (
+				E6D0137D2B30A3A6004BEEE9 /* RoundedButton.swift */,
+				E6D0137F2B30A3EB004BEEE9 /* TapMeButton.swift */,
+			);
+			path = CustomButtons;
+			sourceTree = "<group>";
+		};
 		E6D645182B15533E00E4790A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,10 +338,11 @@
 			isa = PBXGroup;
 			children = (
 				E6F28B9A2B0EB4500007DDC1 /* SiestaApp.swift */,
-				E6F28C1E2B0EC0050007DDC1 /* Helpers */,
 				E6F28C172B0EBDCE0007DDC1 /* Models */,
 				E6F28C162B0EBDC70007DDC1 /* ViewModels */,
 				E6F28C152B0EBDBE0007DDC1 /* Views */,
+				E6F28C1E2B0EC0050007DDC1 /* Helpers */,
+				E6D0137C2B30A349004BEEE9 /* CustomButtons */,
 				E6F28C1F2B0EC0120007DDC1 /* Resources */,
 			);
 			path = Siesta;
@@ -370,17 +413,12 @@
 		E6F28C152B0EBDBE0007DDC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E6D0136F2B2F93B5004BEEE9 /* OnboardingImageViews */,
 				E6F28B9C2B0EB4500007DDC1 /* ContentView.swift */,
 				E6F28C0F2B0EBABC0007DDC1 /* StartButtonView.swift */,
-				E6F28C122B0EBB850007DDC1 /* GameView.swift */,
-				E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */,
-				E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */,
 				E6F28BFD2B0EB8560007DDC1 /* StatsView.swift */,
-				E6F28C002B0EB9480007DDC1 /* SettingsButtonView.swift */,
-				E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */,
-				E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */,
-				E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */,
+				E6D0137B2B30A30B004BEEE9 /* GameViews */,
+				E6D0137A2B30A2F2004BEEE9 /* SettingsViews */,
+				E6D013782B30A2AE004BEEE9 /* OnboardingViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -656,6 +694,7 @@
 				E6D013752B2FA6E4004BEEE9 /* PlayView.swift in Sources */,
 				E6D013712B2F93D3004BEEE9 /* FocusView.swift in Sources */,
 				E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */,
+				E6D013802B30A3EB004BEEE9 /* TapMeButton.swift in Sources */,
 				E6F28C132B0EBB850007DDC1 /* GameView.swift in Sources */,
 				E6F28C192B0EBE550007DDC1 /* PanelColor.swift in Sources */,
 				E6F28BFE2B0EB8560007DDC1 /* StatsView.swift in Sources */,
@@ -668,6 +707,7 @@
 				E6D013772B309F71004BEEE9 /* ReadyView.swift in Sources */,
 				E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */,
 				E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */,
+				E6D0137E2B30A3A6004BEEE9 /* RoundedButton.swift in Sources */,
 				E6D013732B2F9A60004BEEE9 /* MemoriseView.swift in Sources */,
 				E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */,
 				E6F28B9B2B0EB4500007DDC1 /* SiestaApp.swift in Sources */,

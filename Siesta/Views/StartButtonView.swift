@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct RoundedButton: ButtonStyle {
-    var color: Color
-    var font: Font
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .frame(width: 250, height: 70, alignment: .center)
-            .background(color.cornerRadius(50.0).opacity(0.2))
-            .foregroundStyle(color)
-            .font(font)
-    }
-}
-
 struct StartButtonView: View {
     @EnvironmentObject var viewModel: ViewModel
     

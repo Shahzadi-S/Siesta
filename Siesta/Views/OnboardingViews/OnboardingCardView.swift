@@ -19,6 +19,7 @@ struct OnboardingCardView: View {
                     Image("logoCircle")
                         .resizable()
                         .scaledToFit()
+                        .accessibilityHidden(true)
                 case 1:
                     FocusView()
                 case 2:
@@ -31,6 +32,7 @@ struct OnboardingCardView: View {
                     ReadyView()
                 }
                 
+                
                 Text(onboarding.title)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
@@ -41,6 +43,8 @@ struct OnboardingCardView: View {
                     .frame(maxWidth: 480)
                 
             }
+            .accessibilityElement(children: .combine)
+            .accessibilityHint("Swipe for next page")
         }.onAppear {
             withAnimation(.easeOut(duration: 0.5)) {
                 isAnimating = true

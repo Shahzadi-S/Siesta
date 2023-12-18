@@ -57,6 +57,7 @@ struct MemoriseView: View {
                     }
             }
         }
+        .accessibilityHidden(true)
     }
 }
 

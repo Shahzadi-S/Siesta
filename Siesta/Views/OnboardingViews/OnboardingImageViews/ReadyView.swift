@@ -17,6 +17,7 @@ struct ReadyView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .padding()
                 .font(.system(size: 100))
+                .accessibilityHidden(true)
             
             Text("Are you ready?")
                 .font(.largeTitle)
@@ -26,6 +27,7 @@ struct ReadyView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 16)
         }
+        .accessibilityElement(children: .combine)
         .contentShape(Rectangle())
         .onTapGesture {
             isOnboarding = false

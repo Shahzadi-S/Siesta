@@ -69,6 +69,7 @@ struct FocusView: View {
             }
         }
         .scaledToFit()
+        .accessibilityHidden(true)
     }
 }
 

@@ -21,7 +21,3 @@ struct SiestaApp: App {
         }
     }
 }
-
-
-// clean up code and reuse
-// accessibility on onboarding 
