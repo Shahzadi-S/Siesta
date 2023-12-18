@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct SiestaApp: App {
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView().environmentObject(ViewModel())
+        WindowGroup { 
+            if isOnboarding {
+                OnboardingView().environmentObject(ViewModel())
+          } else {
+              ContentView().environmentObject(ViewModel())
+          }
         }
     }
 }
+
+
+// clean up code and reuse
+// accessibility on onboarding 

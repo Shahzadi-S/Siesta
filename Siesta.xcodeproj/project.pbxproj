@@ -18,6 +18,13 @@
 		E64A8DFC2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
 		E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */; };
 		E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686DC4F2B27AE7800140B36 /* ExternalLink.swift */; };
+		E6D0136A2B2E37D5004BEEE9 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */; };
+		E6D0136C2B2E5339004BEEE9 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */; };
+		E6D0136E2B2F62C2004BEEE9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */; };
+		E6D013712B2F93D3004BEEE9 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013702B2F93D3004BEEE9 /* FocusView.swift */; };
+		E6D013732B2F9A60004BEEE9 /* MemoriseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013722B2F9A60004BEEE9 /* MemoriseView.swift */; };
+		E6D013752B2FA6E4004BEEE9 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013742B2FA6E4004BEEE9 /* PlayView.swift */; };
+		E6D013772B309F71004BEEE9 /* ReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013762B309F71004BEEE9 /* ReadyView.swift */; };
 		E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451E2B15573300E4790A /* UserDefaults.swift */; };
@@ -119,6 +126,13 @@
 		E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewWatch.swift; sourceTree = "<group>"; };
 		E686DC4F2B27AE7800140B36 /* ExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLink.swift; sourceTree = "<group>"; };
+		E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E6D013702B2F93D3004BEEE9 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		E6D013722B2F9A60004BEEE9 /* MemoriseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriseView.swift; sourceTree = "<group>"; };
+		E6D013742B2FA6E4004BEEE9 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		E6D013762B309F71004BEEE9 /* ReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyView.swift; sourceTree = "<group>"; };
 		E6D6451B2B15555A00E4790A /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E6D6451E2B15573300E4790A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E6F28B972B0EB4500007DDC1 /* Siesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +222,17 @@
 				E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E6D0136F2B2F93B5004BEEE9 /* OnboardingImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				E6D013702B2F93D3004BEEE9 /* FocusView.swift */,
+				E6D013722B2F9A60004BEEE9 /* MemoriseView.swift */,
+				E6D013742B2FA6E4004BEEE9 /* PlayView.swift */,
+				E6D013762B309F71004BEEE9 /* ReadyView.swift */,
+			);
+			path = OnboardingImageViews;
 			sourceTree = "<group>";
 		};
 		E6D645182B15533E00E4790A /* Views */ = {
@@ -345,6 +370,7 @@
 		E6F28C152B0EBDBE0007DDC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E6D0136F2B2F93B5004BEEE9 /* OnboardingImageViews */,
 				E6F28B9C2B0EB4500007DDC1 /* ContentView.swift */,
 				E6F28C0F2B0EBABC0007DDC1 /* StartButtonView.swift */,
 				E6F28C122B0EBB850007DDC1 /* GameView.swift */,
@@ -353,6 +379,8 @@
 				E6F28BFD2B0EB8560007DDC1 /* StatsView.swift */,
 				E6F28C002B0EB9480007DDC1 /* SettingsButtonView.swift */,
 				E6F28C0C2B0EB9AA0007DDC1 /* SettingsView.swift */,
+				E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */,
+				E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +399,7 @@
 				E6F28C182B0EBE550007DDC1 /* PanelColor.swift */,
 				E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */,
 				E686DC4F2B27AE7800140B36 /* ExternalLink.swift */,
+				E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -620,19 +649,26 @@
 			files = (
 				E6F28BF82B0EB71F0007DDC1 /* GameViewModel.swift in Sources */,
 				E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */,
+				E6D0136C2B2E5339004BEEE9 /* OnboardingCardView.swift in Sources */,
 				E6F28C072B0EB97A0007DDC1 /* GameSquaresView.swift in Sources */,
 				E6F28C012B0EB9480007DDC1 /* SettingsButtonView.swift in Sources */,
 				E64A8DF12B169BDE00803E6B /* SessionManager.swift in Sources */,
+				E6D013752B2FA6E4004BEEE9 /* PlayView.swift in Sources */,
+				E6D013712B2F93D3004BEEE9 /* FocusView.swift in Sources */,
 				E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */,
 				E6F28C132B0EBB850007DDC1 /* GameView.swift in Sources */,
 				E6F28C192B0EBE550007DDC1 /* PanelColor.swift in Sources */,
 				E6F28BFE2B0EB8560007DDC1 /* StatsView.swift in Sources */,
 				E6F28C0A2B0EB9980007DDC1 /* GameMessageView.swift in Sources */,
 				E6F28C0D2B0EB9AA0007DDC1 /* SettingsView.swift in Sources */,
+				E6D0136A2B2E37D5004BEEE9 /* OnboardingItem.swift in Sources */,
+				E6D0136E2B2F62C2004BEEE9 /* OnboardingView.swift in Sources */,
 				E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */,
 				E6F28C1C2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
+				E6D013772B309F71004BEEE9 /* ReadyView.swift in Sources */,
 				E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */,
 				E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */,
+				E6D013732B2F9A60004BEEE9 /* MemoriseView.swift in Sources */,
 				E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */,
 				E6F28B9B2B0EB4500007DDC1 /* SiestaApp.swift in Sources */,
 			);
