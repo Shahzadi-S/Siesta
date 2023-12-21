@@ -409,6 +409,18 @@ private extension ViewModel {
 // MARK: - CHECKS IF A USER HAS SCORED 15+ & IS ON A NEW APPVERSION BEFORE ASKING FOR FEEDBACK
 extension ViewModel {
     
+    // FOR WHEN THE USER TAPS THE BUTTON TO REQUEST A REVIEW
+    func requestReviewManually() {
+#if os(watchOS)
+        // Not requesting feedback from the apple watch app yet. 
+#else
+      let url = "https://apps.apple.com/app/id6474789649?action=write-review"
+      guard let writeReviewURL = URL(string: url)
+          else { fatalError("Expected a valid URL") }
+      UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
+#endif
+    }
+    
     // REQUESTS THE USER TO LEAVE A REVIEW ON THE APPSTORE
     func requestReview() {
         // Checks what the current user score is. This should only appear if the score is 15+

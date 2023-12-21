@@ -8,26 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
+    @EnvironmentObject var viewModel: ViewModel
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.openURL) var openURL
     
     @AppStorage("vibrationsKey") var vibrationsValue = false
     @AppStorage("soundKey") var soundValue = false
-    
-    let reviewLinks: [ExternalLink] = [ExternalLink(icon: "star.bubble",
-                                                    title: "Review",
-                                                    url: "https://www.apple.com"),
-                                       ExternalLink(icon: "cup.and.saucer.fill",
-                                                    title: "Buy Me A Coffee",
-                                                    url: "https://www.buymeacoffee.com/thesiestaapp")]
-    
-    let socialLinks: [ExternalLink] = [ExternalLink(icon: "Instagram_icon",
-                                                    title: "Instagram",
-                                                    url: "https://www.instagram.com/thesiestaapp"),
-                                       ExternalLink(icon: "Tiktok_icon",
-                                                    title: "TikTok",
-                                                    url: "https://www.tiktok.com/@siesta.app")]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -64,20 +50,32 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    ForEach(reviewLinks) { link in
-                        Button {
-                            openURL(URL(string: link.url)!)
-                        } label: {
-                            Label(
-                                title: {
-                                    Text(link.title)
-                                        .foregroundStyle(colorScheme == .light ? .black : .white)
-                                },
-                                icon: {
-                                    Image(systemName: link.icon)
-                                }
-                            )
-                        }
+                    Button {
+                        viewModel.requestReviewManually()
+                    } label: {
+                        Label(
+                            title: {
+                                Text(reviewLink.title)
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
+                            },
+                            icon: {
+                                Image(systemName: reviewLink.icon)
+                            }
+                        )
+                    }
+                    
+                    Button {
+                        openURL(URL(string: buyCoffeeLink.url)!)
+                    } label: {
+                        Label(
+                            title: {
+                                Text(buyCoffeeLink.title)
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
+                            },
+                            icon: {
+                                Image(systemName: buyCoffeeLink.icon)
+                            }
+                        )
                     }
                     
                     ForEach(socialLinks) { link in
@@ -116,7 +114,7 @@ struct SettingsView: View {
                                 .font(.footnote)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .foregroundStyle(.gray)
-                            Text("All rights reserved")
+                            Text("All rights reserved.")
                                 .font(.footnote)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .foregroundStyle(.gray)
