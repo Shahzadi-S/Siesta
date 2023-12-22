@@ -18,10 +18,6 @@ let reviewLink: ExternalLink = ExternalLink(icon: "star.bubble",
                                                 title: "Review",
                                                 url: "https://www.apple.com")
 
-let buyCoffeeLink: ExternalLink = ExternalLink(icon: "cup.and.saucer.fill",
-                                               title: "Buy Me A Coffee",
-                                               url: "https://www.buymeacoffee.com/thesiestaapp")
-                                   
 let socialLinks: [ExternalLink] = [ExternalLink(icon: "Instagram_icon",
                                                 title: "Instagram",
                                                 url: "https://www.instagram.com/thesiestaapp"),
