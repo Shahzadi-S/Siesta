@@ -24,7 +24,12 @@ struct ContentView: View {
             VStack {
                 StartButtonView()
                 StatsView()
-                SettingsButtonView()
+                HistoryButtonView()
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    SettingsButtonView()
+                }
             }
             
             Spacer()
@@ -32,6 +37,8 @@ struct ContentView: View {
         }
         .onAppear {
             viewModel.userScore = 0
+            // save user score and date
+            // create a new user score of zero 
             viewModel.requestReview()
         }
     }
