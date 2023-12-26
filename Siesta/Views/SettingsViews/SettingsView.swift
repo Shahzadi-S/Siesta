@@ -64,20 +64,6 @@ struct SettingsView: View {
                         )
                     }
                     
-                    Button {
-                        openURL(URL(string: buyCoffeeLink.url)!)
-                    } label: {
-                        Label(
-                            title: {
-                                Text(buyCoffeeLink.title)
-                                    .foregroundStyle(colorScheme == .light ? .black : .white)
-                            },
-                            icon: {
-                                Image(systemName: buyCoffeeLink.icon)
-                            }
-                        )
-                    }
-                    
                     ForEach(socialLinks) { link in
                         Button {
                             openURL(URL(string: link.url)!)
