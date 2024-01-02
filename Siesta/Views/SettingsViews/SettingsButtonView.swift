@@ -17,7 +17,7 @@ struct SettingsButtonView: View {
                     .frame(width: 44, height: 44)
             }
         }
-        .padding(20)
+        .padding(.top)
     }
 }
 
