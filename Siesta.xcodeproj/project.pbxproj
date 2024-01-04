@@ -13,13 +13,13 @@
 		E60230202B12BC7D004AE174 /* GameViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E602301F2B12BC7D004AE174 /* GameViewModelWatch.swift */; };
 		E64A8DEF2B169BB500803E6B /* SessionManagerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */; };
 		E64A8DF12B169BDE00803E6B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DF02B169BDE00803E6B /* SessionManager.swift */; };
-		E64A8DF32B169E6000803E6B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DF02B169BDE00803E6B /* SessionManager.swift */; };
 		E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
-		E64A8DFC2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
 		E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */; };
 		E64F67432B3A3A1200A3D1AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F67422B3A3A1200A3D1AC /* HistoryView.swift */; };
 		E64F67452B3A3A3500A3D1AC /* HistoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F67442B3A3A3500A3D1AC /* HistoryButtonView.swift */; };
 		E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686DC4F2B27AE7800140B36 /* ExternalLink.swift */; };
+		E6A742452B471AAC00BEAF8D /* HapticsManagerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A742442B471AAC00BEAF8D /* HapticsManagerWatch.swift */; };
+		E6A742482B471CF800BEAF8D /* GameViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A742472B471CF800BEAF8D /* GameViewWatch.swift */; };
 		E6D0136A2B2E37D5004BEEE9 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */; };
 		E6D0136C2B2E5339004BEEE9 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */; };
 		E6D0136E2B2F62C2004BEEE9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */; };
@@ -30,7 +30,6 @@
 		E6D0137E2B30A3A6004BEEE9 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0137D2B30A3A6004BEEE9 /* RoundedButton.swift */; };
 		E6D013802B30A3EB004BEEE9 /* TapMeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0137F2B30A3EB004BEEE9 /* TapMeButton.swift */; };
 		E6D6451C2B15555A00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
-		E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451B2B15555A00E4790A /* HapticsManager.swift */; };
 		E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451E2B15573300E4790A /* UserDefaults.swift */; };
 		E6D645202B15581A00E4790A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6451E2B15573300E4790A /* UserDefaults.swift */; };
 		E6F28B9B2B0EB4500007DDC1 /* SiestaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28B9A2B0EB4500007DDC1 /* SiestaApp.swift */; };
@@ -49,7 +48,6 @@
 		E6F28BE92B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BE82B0EB4C80007DDC1 /* SiestaWatch_Watch_AppUITestsLaunchTests.swift */; };
 		E6F28BEC2B0EB4C80007DDC1 /* SiestaWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E6F28BC92B0EB4C70007DDC1 /* SiestaWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E6F28BF82B0EB71F0007DDC1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BF72B0EB71F0007DDC1 /* GameViewModel.swift */; };
-		E6F28BF92B0EB71F0007DDC1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BF72B0EB71F0007DDC1 /* GameViewModel.swift */; };
 		E6F28BFE2B0EB8560007DDC1 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28BFD2B0EB8560007DDC1 /* StatsView.swift */; };
 		E6F28C012B0EB9480007DDC1 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C002B0EB9480007DDC1 /* SettingsButtonView.swift */; };
 		E6F28C072B0EB97A0007DDC1 /* GameSquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */; };
@@ -60,9 +58,6 @@
 		E6F28C1A2B0EBE550007DDC1 /* PanelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C182B0EBE550007DDC1 /* PanelColor.swift */; };
 		E6F28C1C2B0EBF6B0007DDC1 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */; };
 		E6F28C1D2B0EBF6B0007DDC1 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */; };
-		E6F28C242B0EC8410007DDC1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C122B0EBB850007DDC1 /* GameView.swift */; };
-		E6F28C252B0EC8440007DDC1 /* GameSquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C062B0EB97A0007DDC1 /* GameSquaresView.swift */; };
-		E6F28C262B0EC8470007DDC1 /* GameMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C092B0EB9980007DDC1 /* GameMessageView.swift */; };
 		E6F28C2B2B1001BB0007DDC1 /* StartButtonViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */; };
 		E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C0F2B0EBABC0007DDC1 /* StartButtonView.swift */; };
 		E6F28C2E2B10251E0007DDC1 /* SettingsButtonViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */; };
@@ -132,6 +127,8 @@
 		E64F67422B3A3A1200A3D1AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		E64F67442B3A3A3500A3D1AC /* HistoryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryButtonView.swift; sourceTree = "<group>"; };
 		E686DC4F2B27AE7800140B36 /* ExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLink.swift; sourceTree = "<group>"; };
+		E6A742442B471AAC00BEAF8D /* HapticsManagerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManagerWatch.swift; sourceTree = "<group>"; };
+		E6A742472B471CF800BEAF8D /* GameViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewWatch.swift; sourceTree = "<group>"; };
 		E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -229,8 +226,28 @@
 			isa = PBXGroup;
 			children = (
 				E64A8DEE2B169BB500803E6B /* SessionManagerWatch.swift */,
+				E6A742442B471AAC00BEAF8D /* HapticsManagerWatch.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E6A742462B471CCB00BEAF8D /* GameViewWatch */ = {
+			isa = PBXGroup;
+			children = (
+				E6A742472B471CF800BEAF8D /* GameViewWatch.swift */,
+				E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */,
+				E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */,
+			);
+			path = GameViewWatch;
+			sourceTree = "<group>";
+		};
+		E6A742492B471D4300BEAF8D /* SettingsViewWatch */ = {
+			isa = PBXGroup;
+			children = (
+				E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */,
+				E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */,
+			);
+			path = SettingsViewWatch;
 			sourceTree = "<group>";
 		};
 		E6D0136F2B2F93B5004BEEE9 /* OnboardingImageViews */ = {
@@ -287,11 +304,9 @@
 			children = (
 				E6F28BCD2B0EB4C70007DDC1 /* ContentView.swift */,
 				E6F28C2A2B1001BB0007DDC1 /* StartButtonViewWatch.swift */,
-				E6F28C2D2B10251E0007DDC1 /* SettingsButtonViewWatch.swift */,
-				E602301B2B1034BE004AE174 /* GameSquaresViewWatch.swift */,
-				E602301D2B1034CF004AE174 /* GameMessageViewWatch.swift */,
 				E60230192B103000004AE174 /* StatsViewWatch.swift */,
-				E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */,
+				E6A742462B471CCB00BEAF8D /* GameViewWatch */,
+				E6A742492B471D4300BEAF8D /* SettingsViewWatch */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,9 +398,9 @@
 			children = (
 				E6D013822B30BBCD004BEEE9 /* SiestaWatch-Watch-App-Info.plist */,
 				E6F28BCB2B0EB4C70007DDC1 /* SiestaWatchApp.swift */,
-				E696CE252B1E7F2100A55375 /* Helpers */,
 				E6D645192B15535F00E4790A /* ViewModels */,
 				E6D645182B15533E00E4790A /* Views */,
+				E696CE252B1E7F2100A55375 /* Helpers */,
 				E6D6451A2B15537800E4790A /* Resources */,
 			);
 			path = "SiestaWatch Watch App";
@@ -746,25 +761,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E602301C2B1034BE004AE174 /* GameSquaresViewWatch.swift in Sources */,
-				E6F28BF92B0EB71F0007DDC1 /* GameViewModel.swift in Sources */,
 				E64A8DEF2B169BB500803E6B /* SessionManagerWatch.swift in Sources */,
-				E6F28C252B0EC8440007DDC1 /* GameSquaresView.swift in Sources */,
 				E60230202B12BC7D004AE174 /* GameViewModelWatch.swift in Sources */,
-				E64A8DF32B169E6000803E6B /* SessionManager.swift in Sources */,
 				E6F28C1D2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
 				E6D645202B15581A00E4790A /* UserDefaults.swift in Sources */,
 				E6F28BCE2B0EB4C70007DDC1 /* ContentView.swift in Sources */,
 				E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */,
-				E6D6451D2B1555EF00E4790A /* HapticsManager.swift in Sources */,
 				E6F28C2E2B10251E0007DDC1 /* SettingsButtonViewWatch.swift in Sources */,
-				E64A8DFC2B1A9F6C00803E6B /* ReviewManager.swift in Sources */,
+				E6A742482B471CF800BEAF8D /* GameViewWatch.swift in Sources */,
 				E6F28C2B2B1001BB0007DDC1 /* StartButtonViewWatch.swift in Sources */,
-				E6F28C262B0EC8470007DDC1 /* GameMessageView.swift in Sources */,
 				E602301E2B1034CF004AE174 /* GameMessageViewWatch.swift in Sources */,
 				E6F28C1A2B0EBE550007DDC1 /* PanelColor.swift in Sources */,
 				E6F28BCC2B0EB4C70007DDC1 /* SiestaWatchApp.swift in Sources */,
 				E602301A2B103000004AE174 /* StatsViewWatch.swift in Sources */,
-				E6F28C242B0EC8410007DDC1 /* GameView.swift in Sources */,
+				E6A742452B471AAC00BEAF8D /* HapticsManagerWatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

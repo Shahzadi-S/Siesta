@@ -411,14 +411,10 @@ extension ViewModel {
     
     // FOR WHEN THE USER TAPS THE BUTTON TO REQUEST A REVIEW
     func requestReviewManually() {
-#if os(watchOS)
-        // Not requesting feedback from the apple watch app yet. 
-#else
       let url = "https://apps.apple.com/app/id6474789649?action=write-review"
       guard let writeReviewURL = URL(string: url)
           else { fatalError("Expected a valid URL") }
       UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
-#endif
     }
     
     // REQUESTS THE USER TO LEAVE A REVIEW ON THE APPSTORE

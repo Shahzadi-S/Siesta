@@ -7,6 +7,7 @@
 
 import Foundation
 
+// SHARED WITH WATCH APP 
 enum StatusType {
     case start
     case demo
