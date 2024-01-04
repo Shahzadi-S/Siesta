@@ -9,7 +9,6 @@ import Foundation
 import WatchKit
 
 final class SessionManagerWatch: NSObject, WKExtendedRuntimeSessionDelegate {
-    
     // DELEGATE METHODS THAT ARE REQUIRED WHEN WORKING WITH WATCH SESSIONS
     func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
         print("Session stopped at", Date())

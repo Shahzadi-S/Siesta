@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StatsViewWatch: View {
-    @EnvironmentObject var viewModel: ViewModel
+    @EnvironmentObject var viewModel: ViewModelWatch
     
     var body: some View {
         VStack(alignment: .center) {

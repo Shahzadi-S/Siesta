@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct GameView: View {
-    @EnvironmentObject var viewModel: ViewModel
+struct GameViewWatch: View {
+    @EnvironmentObject var viewModel: ViewModelWatch
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         VStack {
             ZStack {
-                GameSquaresView()
-                GameMessageView()
+                GameSquaresViewWatch()
+                GameMessageViewWatch()
             }
         }
         .onChange(of: scenePhase) { _, newPhase in
@@ -29,5 +29,5 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView().environmentObject(ViewModel())
+    GameViewWatch().environmentObject(ViewModelWatch())
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// SHARED WITH WATCH APP
 enum PanelColor: Codable {
     case red
     case green

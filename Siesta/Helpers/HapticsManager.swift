@@ -17,10 +17,8 @@ final class HapticsManager {
         let vibrationsEnabled = UserDefaults.getVibrationValue()
         let soundEnabled = UserDefaults.getSoundValue()
         
-#if os(watchOS)
-        ViewModelWatch().playSoundsAndVibrationsWatch()
-#else
         let generator = UINotificationFeedbackGenerator()
+        
         if soundEnabled {
             generator.notificationOccurred(.success)
             AudioServicesPlaySystemSound(1057)
@@ -31,7 +29,5 @@ final class HapticsManager {
         } else {
             generator.notificationOccurred(.success)
         }
-#endif
-        
     }
 }

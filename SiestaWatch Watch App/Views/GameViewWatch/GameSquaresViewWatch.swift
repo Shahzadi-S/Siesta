@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameSquaresViewWatch: View {
-    @EnvironmentObject var viewModel: ViewModel
+    @EnvironmentObject var viewModel: ViewModelWatch
     
     var body: some View {
         VStack {
@@ -57,5 +57,5 @@ struct GameSquaresViewWatch: View {
 }
 
 #Preview {
-    GameSquaresViewWatch().environmentObject(ViewModel())
+    GameSquaresViewWatch().environmentObject(ViewModelWatch())
 }

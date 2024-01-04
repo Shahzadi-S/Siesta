@@ -7,6 +7,7 @@
 
 import Foundation
 
+// SHARED WITH WATCH APP 
 // GET STORED VALUES FROM USER DEFAULTS
 extension UserDefaults {
     

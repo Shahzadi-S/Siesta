@@ -17,26 +17,25 @@ struct StatsView: View {
                     .foregroundStyle(.yellow)
                     .frame(width: 30, height: 30, alignment: .center)
                     .font(.system(size: 40))
-                    .padding()
-                
-                Text("CURRENT SCORE: ")
+                   
+                Text("CURRENT SCORE: \(UserDefaults.getUserScoreValue())")
                     .font(.callout)
-                Text("\(UserDefaults.getUserScoreValue())")
+                    .padding(.leading)
             }
+            .padding()
             .accessibilityElement(children: .combine)
-            
             
             HStack {
                 Image(systemName: "trophy.fill")
                     .foregroundStyle(.red)
                     .frame(width: 30, height: 30, alignment: .center)
                     .font(.system(size: 40))
-                    .padding()
-                
-                Text("HIGHEST SCORE: ")
+            
+                Text("HIGHEST SCORE: \(UserDefaults.getHighScoreValue()) ")
                     .font(.callout)
-                Text("\(UserDefaults.getHighScoreValue())")
+                    .padding(.leading)
             }
+            .padding()
             .accessibilityElement(children: .combine)
         }
     }

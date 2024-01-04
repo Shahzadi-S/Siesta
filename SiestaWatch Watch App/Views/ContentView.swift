@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel: ViewModel
+    @EnvironmentObject var viewModel: ViewModelWatch
     
     var body: some View {
         NavigationStack {
@@ -25,5 +25,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView().environmentObject(ViewModel())
+    ContentView().environmentObject(ViewModelWatch())
 }
