@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct HistoryButtonView: View {
+struct InsightsButtonView: View {
     var body: some View {
         VStack {
-            NavigationLink("HISTORY", destination: HistoryView())
+            NavigationLink("INSIGHTS", destination: InsightsView())
                 .buttonStyle(RoundedButton(color: .blue, font: .title3))
         }
         .padding(20)
@@ -18,7 +18,5 @@ struct HistoryButtonView: View {
 }
 
 #Preview {
-    HistoryButtonView()
+    InsightsButtonView()
 }
-
-// or insights or statistics or progress 

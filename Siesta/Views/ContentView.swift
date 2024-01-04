@@ -24,7 +24,7 @@ struct ContentView: View {
             VStack {
                 StartButtonView()
                 StatsView()
-                HistoryButtonView()
+                InsightsButtonView()
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

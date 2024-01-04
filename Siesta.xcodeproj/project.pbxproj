@@ -15,8 +15,8 @@
 		E64A8DF12B169BDE00803E6B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DF02B169BDE00803E6B /* SessionManager.swift */; };
 		E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
 		E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */; };
-		E64F67432B3A3A1200A3D1AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F67422B3A3A1200A3D1AC /* HistoryView.swift */; };
-		E64F67452B3A3A3500A3D1AC /* HistoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F67442B3A3A3500A3D1AC /* HistoryButtonView.swift */; };
+		E64F67432B3A3A1200A3D1AC /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F67422B3A3A1200A3D1AC /* InsightsView.swift */; };
+		E64F67452B3A3A3500A3D1AC /* InsightsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64F67442B3A3A3500A3D1AC /* InsightsButtonView.swift */; };
 		E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686DC4F2B27AE7800140B36 /* ExternalLink.swift */; };
 		E6A742452B471AAC00BEAF8D /* HapticsManagerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A742442B471AAC00BEAF8D /* HapticsManagerWatch.swift */; };
 		E6A742482B471CF800BEAF8D /* GameViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A742472B471CF800BEAF8D /* GameViewWatch.swift */; };
@@ -124,8 +124,8 @@
 		E64A8DF02B169BDE00803E6B /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewWatch.swift; sourceTree = "<group>"; };
-		E64F67422B3A3A1200A3D1AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		E64F67442B3A3A3500A3D1AC /* HistoryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryButtonView.swift; sourceTree = "<group>"; };
+		E64F67422B3A3A1200A3D1AC /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		E64F67442B3A3A3500A3D1AC /* InsightsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsButtonView.swift; sourceTree = "<group>"; };
 		E686DC4F2B27AE7800140B36 /* ExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLink.swift; sourceTree = "<group>"; };
 		E6A742442B471AAC00BEAF8D /* HapticsManagerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManagerWatch.swift; sourceTree = "<group>"; };
 		E6A742472B471CF800BEAF8D /* GameViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewWatch.swift; sourceTree = "<group>"; };
@@ -248,6 +248,15 @@
 				E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */,
 			);
 			path = SettingsViewWatch;
+			sourceTree = "<group>";
+		};
+		E6A7424A2B472D4B00BEAF8D /* InsightsView */ = {
+			isa = PBXGroup;
+			children = (
+				E64F67442B3A3A3500A3D1AC /* InsightsButtonView.swift */,
+				E64F67422B3A3A1200A3D1AC /* InsightsView.swift */,
+			);
+			path = InsightsView;
 			sourceTree = "<group>";
 		};
 		E6D0136F2B2F93B5004BEEE9 /* OnboardingImageViews */ = {
@@ -440,8 +449,7 @@
 				E6D0137B2B30A30B004BEEE9 /* GameViews */,
 				E6D0137A2B30A2F2004BEEE9 /* SettingsViews */,
 				E6D013782B30A2AE004BEEE9 /* OnboardingViews */,
-				E64F67422B3A3A1200A3D1AC /* HistoryView.swift */,
-				E64F67442B3A3A3500A3D1AC /* HistoryButtonView.swift */,
+				E6A7424A2B472D4B00BEAF8D /* InsightsView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -712,7 +720,7 @@
 				E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */,
 				E6D0136C2B2E5339004BEEE9 /* OnboardingCardView.swift in Sources */,
 				E6F28C072B0EB97A0007DDC1 /* GameSquaresView.swift in Sources */,
-				E64F67432B3A3A1200A3D1AC /* HistoryView.swift in Sources */,
+				E64F67432B3A3A1200A3D1AC /* InsightsView.swift in Sources */,
 				E6F28C012B0EB9480007DDC1 /* SettingsButtonView.swift in Sources */,
 				E64A8DF12B169BDE00803E6B /* SessionManager.swift in Sources */,
 				E6D013752B2FA6E4004BEEE9 /* PlayView.swift in Sources */,
@@ -727,7 +735,7 @@
 				E6D0136A2B2E37D5004BEEE9 /* OnboardingItem.swift in Sources */,
 				E6D0136E2B2F62C2004BEEE9 /* OnboardingView.swift in Sources */,
 				E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */,
-				E64F67452B3A3A3500A3D1AC /* HistoryButtonView.swift in Sources */,
+				E64F67452B3A3A3500A3D1AC /* InsightsButtonView.swift in Sources */,
 				E6F28C1C2B0EBF6B0007DDC1 /* StatusType.swift in Sources */,
 				E6D013772B309F71004BEEE9 /* ReadyView.swift in Sources */,
 				E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */,
