@@ -9,24 +9,12 @@ import SwiftUI
 import Combine
 import StoreKit
 
-struct DailyScoreRecord {
-    let id = UUID()
-    let date: String
-    var score: Int
-}
-
-struct PieChartItem {
-    let id = UUID()
-    let group: Int
-    let total: Int
-}
-
 final class ViewModel: ObservableObject {
     
     private let hapticsManager = HapticsManager()
     private let reviewManager = ReviewManager()
+    let chartDataManager = ChartDataManager()
     let sessionManager = SessionManager()
-    
     
     // MARK: - USING COMBINE
     // Using Combine's CurrentValueSubject to pass the state as a value
@@ -57,21 +45,8 @@ final class ViewModel: ObservableObject {
     
     // THE SEQUENCE OF COLORS THAT THE USER HAS SELECTED
     private var userInput: [PanelColor] = []
-    
-    private var lastScore = 0
-    private var dailyScoreRecords: [DailyScoreRecord] = []
-    
-    var mockDailyScoreRecords: [DailyScoreRecord] = [DailyScoreRecord(date: "04.01.24", score: 2),
-                                                     DailyScoreRecord(date: "05.01.24", score: 1),
-                                                     DailyScoreRecord(date: "06.01.24", score: 5),
-                                                     DailyScoreRecord(date: "07.01.24", score: 2),
-                                                     DailyScoreRecord(date: "10.01.24", score: 2),
-                                                     DailyScoreRecord(date: "15.01.24", score: 1)]
-    
-    @Published var pieChartData: [PieChartItem] = []
-    
+
     private var currentIndexOfSequence = 0
-    
     
     @Published var redFlashed = false
     @Published var greenFlashed = false
@@ -172,131 +147,12 @@ final class ViewModel: ObservableObject {
         
         userInput = []
         userScore += 1
+        chartDataManager.userCreatedNewScore(userScore)
         if hasCreatedNewHighScore(userScore) {
             highScore = userScore
         }
-        saveUserScore()
+        
         wellDoneMessageIsShown()
-    }
-    
-    private func saveUserScore() {
-        // get todays date as string
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yy"
-        let today = formatter.string(from: Date.now)
-        print(today)
-        
-        // last score is the highest user score
-        if lastScore < userScore {
-            lastScore = userScore
-        }
-        print(lastScore)
-        
-        // Checks if last record was created today
-        // if yes, has the user created a higher score
-        // if yes, remove the last record
-        // create a new record with the new score
-        if dailyScoreRecords.last?.date == today {
-            if dailyScoreRecords.last?.score ?? 0 < userScore {
-                _ = dailyScoreRecords.popLast()
-                let data = DailyScoreRecord(date: today, score: lastScore)
-                dailyScoreRecords.append(data)
-            }
-        } else {
-            // if there has been no record created today
-            // create a new record with the user score
-            let data = DailyScoreRecord(date: today, score: lastScore)
-            dailyScoreRecords.append(data)
-        }
-        print(dailyScoreRecords)
-        
-        groupUserRecord()
-    }
-    
-    private func groupUserRecord() {
-        
-        var groups = Dictionary(grouping: mockDailyScoreRecords, by: { $0.score })
-        
-        
-        
-//        // replace mock with actual dailyScoreRecords
-//        var groups: [String: Int] = [:]
-//        var title = ""
-//        for record in mockDailyScoreRecords {
-//            title = String(record.score)
-//            groups[title] = (groups[title] ?? 0) + 1
-//        }
-//        
-//        print(groups)
-        /*
-        [2: [Siesta.DailyScoreRecord(id: 2F7DCFD1-44C8-4C6B-851C-04BAC72BCA4B, date: "04.01.24", score: 2), Siesta.DailyScoreRecord(id: D161E428-7C18-4F0C-A9E2-12F0A18BCE3F, date: "07.01.24", score: 2), Siesta.DailyScoreRecord(id: 0C810096-75F5-478D-BA9C-53CF65C28120, date: "10.01.24", score: 2)],
-         1: [Siesta.DailyScoreRecord(id: 71C38BF5-E4E7-47E9-8BBE-7EEDD8A8DBBA, date: "05.01.24", score: 1), Siesta.DailyScoreRecord(id: D7AB9AC0-416A-4D70-9015-B0F972E49D9D, date: "15.01.24", score: 1)],
-         5: [Siesta.DailyScoreRecord(id: 3CEC9EBF-FD7D-448B-AC73-B79BB135BCD8, date: "06.01.24", score: 5)]]
-        
-        */
-
-        
-        
-        createPieChartItems(with: groups)
-    }
-    
-    private func createPieChartItems(with group: [Int: [DailyScoreRecord]]) {
-        
-        
-        for item in group {
-            let records = item.value
-            
-            let total = records.count
-            
-            let data = PieChartItem(group: item.key, total: total)
-            
-            pieChartData.append(data)
-        }
-        
-        print(pieChartData)
-      
-        
-//        for record in records {
-//            let score = record.score
-//            total += score
-//        }
-        
-//        -------
-//        for (key, value) in data {
-//            let item = PieChartItem(group: key, total: value)
-//            pieChartData.append(item)
-//        }
-//        print(pieChartData)
-//        
-//        var dictionary = Dictionary(grouping: pieChartData, by: { $0.group })
-//        print(dictionary)
-        
-        
-        // --------
-//        let dogData: [PetData] = [PetData(year: 2000, population: 5),
-//                                  PetData(year: 2010, population: 5.3),
-//                                  PetData(year: 2015, population: 7.9),
-//                                  PetData(year: 2022, population: 10.6)]
-//       
-//       
-//            var catTotal: Double {
-//                catData.reduce(0) { $0 + $1.population }
-//            }
-//
-//            var dogTotal: Double {
-//                dogData.reduce(0) { $0 + $1.population }
-//            }
-//
-//            var data: [(type: String, amount: Double)] {
-//                [(type: "cat", amount: catTotal),
-//                 (type: "dog", amount: dogTotal)
-//                ]
-//            }
-//
-//            var maxPet: String? {
-//                data.max { $0.amount < $1.amount }?.type
-//            }
-
     }
     
     // MARK: - USER FAILED

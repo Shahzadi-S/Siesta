@@ -20,6 +20,8 @@
 		E686DC502B27AE7800140B36 /* ExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686DC4F2B27AE7800140B36 /* ExternalLink.swift */; };
 		E6A742452B471AAC00BEAF8D /* HapticsManagerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A742442B471AAC00BEAF8D /* HapticsManagerWatch.swift */; };
 		E6A742482B471CF800BEAF8D /* GameViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A742472B471CF800BEAF8D /* GameViewWatch.swift */; };
+		E6A7424C2B487F3C00BEAF8D /* DailyScoreRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7424B2B487F3C00BEAF8D /* DailyScoreRecord.swift */; };
+		E6A7424E2B487F7C00BEAF8D /* ChartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7424D2B487F7C00BEAF8D /* ChartDataManager.swift */; };
 		E6D0136A2B2E37D5004BEEE9 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */; };
 		E6D0136C2B2E5339004BEEE9 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */; };
 		E6D0136E2B2F62C2004BEEE9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */; };
@@ -129,6 +131,8 @@
 		E686DC4F2B27AE7800140B36 /* ExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLink.swift; sourceTree = "<group>"; };
 		E6A742442B471AAC00BEAF8D /* HapticsManagerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManagerWatch.swift; sourceTree = "<group>"; };
 		E6A742472B471CF800BEAF8D /* GameViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewWatch.swift; sourceTree = "<group>"; };
+		E6A7424B2B487F3C00BEAF8D /* DailyScoreRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScoreRecord.swift; sourceTree = "<group>"; };
+		E6A7424D2B487F7C00BEAF8D /* ChartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataManager.swift; sourceTree = "<group>"; };
 		E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		E6D0136B2B2E5339004BEEE9 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		E6D0136D2B2F62C2004BEEE9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -469,6 +473,7 @@
 				E6F28C1B2B0EBF6A0007DDC1 /* StatusType.swift */,
 				E686DC4F2B27AE7800140B36 /* ExternalLink.swift */,
 				E6D013692B2E37D5004BEEE9 /* OnboardingItem.swift */,
+				E6A7424B2B487F3C00BEAF8D /* DailyScoreRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */,
 				E6D6451E2B15573300E4790A /* UserDefaults.swift */,
 				E64A8DF02B169BDE00803E6B /* SessionManager.swift */,
+				E6A7424D2B487F7C00BEAF8D /* ChartDataManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -716,6 +722,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A7424C2B487F3C00BEAF8D /* DailyScoreRecord.swift in Sources */,
 				E6F28BF82B0EB71F0007DDC1 /* GameViewModel.swift in Sources */,
 				E6D6451F2B15573300E4790A /* UserDefaults.swift in Sources */,
 				E6D0136C2B2E5339004BEEE9 /* OnboardingCardView.swift in Sources */,
@@ -729,6 +736,7 @@
 				E6D013802B30A3EB004BEEE9 /* TapMeButton.swift in Sources */,
 				E6F28C132B0EBB850007DDC1 /* GameView.swift in Sources */,
 				E6F28C192B0EBE550007DDC1 /* PanelColor.swift in Sources */,
+				E6A7424E2B487F7C00BEAF8D /* ChartDataManager.swift in Sources */,
 				E6F28BFE2B0EB8560007DDC1 /* StatsView.swift in Sources */,
 				E6F28C0A2B0EB9980007DDC1 /* GameMessageView.swift in Sources */,
 				E6F28C0D2B0EB9AA0007DDC1 /* SettingsView.swift in Sources */,

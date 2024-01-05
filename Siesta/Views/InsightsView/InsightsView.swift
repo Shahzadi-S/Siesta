@@ -18,7 +18,7 @@ struct InsightsView: View {
                 .navigationTitle("Insights")
                 .navigationBarTitleDisplayMode(.inline)
             
-            var data = viewModel.pieChartData
+            var data = viewModel.chartDataManager.pieChartData
             
             Chart(data, id: \.id) { element in
                 SectorMark(angle:
