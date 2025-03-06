@@ -12,12 +12,12 @@ struct SiestaApp: App {
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
     
     var body: some Scene {
-        WindowGroup { 
+        WindowGroup {
             if isOnboarding {
                 OnboardingView().environmentObject(ViewModel())
-          } else {
-              ContentView().environmentObject(ViewModel())
-          }
+            } else {
+                ContentView().environmentObject(ViewModel())
+            }
         }
     }
 }

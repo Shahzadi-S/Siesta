@@ -6,434 +6,257 @@
 //
 
 import SwiftUI
-import Combine
 import StoreKit
 
 final class ViewModel: ObservableObject {
+    // Shared between iOS and WatchOS
     
-    private let hapticsManager = HapticsManager()
-    private let reviewManager = ReviewManager()
-    let chartDataManager = ChartDataManager()
-    let sessionManager = SessionManager()
-    
-    // MARK: - USING COMBINE
-    // Using Combine's CurrentValueSubject to pass the state as a value
-    var status = CurrentValueSubject<StatusType, Error>(.start)
-    
-    // Cancellables ensure subsciptions are stored if a view is recreated
-    // but can be removed aka cancelled at a later time to release memory
-    // Therefore storing them prevents accidental memory leaks
-    private var cancellables = Set<AnyCancellable>()
-    
-    // MARK: - USING USERDEFAULTS
-    // SwiftUI uses appStorage for User Default similarly to an ObservableObject
-    // Any changes to the value are automatically stored and can reload the view
-    @AppStorage("userScore") var userScore = 0
-    @AppStorage("highScore") var highScore = 0
-    
-    // The most recent app version that prompts for a review.
-    @AppStorage("lastVersionPromptedForReview") var lastVersionPromptedForReview = ""
-    
-    // MARK: - GAME SEQUENCE FUNCTIONALITY
-    private var timer: Timer?
-    
-    // THE COLORS OPTIONS USED TO CREATE THE RANDOM DEMO SEQUENCE
-    private var colorOptions: [PanelColor] = [.red, .green, .yellow, .blue]
-    
-    // THE DEMO SEQUENCE WHICH WILL BE FLASHED
-    private var sequence: [PanelColor] = [.red, .green, .yellow, .blue]
-    
-    // THE SEQUENCE OF COLORS THAT THE USER HAS SELECTED
-    private var userInput: [PanelColor] = []
-
-    private var currentIndexOfSequence = 0
-    
-    @Published var redFlashed = false
-    @Published var greenFlashed = false
-    @Published var yellowFlashed = false
-    @Published var blueFlashed = false
-    
-    @Published var panelEnabled = false
-    
-    @Published var statusLabel = ""
-    
-    @Published var didStartGame = false
+    @Published private var timer: Timer? = nil
+    @Published var opacities: [Double] = Array(repeating: 0.1, count: 4)
+    @Published private var demoSequencePanelIndex = 0 // Index of the current panel being animated
+    @Published var isTappable = false
+    @Published var wiggle = false
+    @Published var demoMode = false
     @Published var showMessage = false
-    
-    
-    //MARK: -  SUBSCRIBING TO THE CURRENTVALUESUBJECT
-    init() {
-        addSubscriptions()
+    @Published var messageText: Message = .youLost {
+        didSet {
+            announceVoiceOverText(messageText.message)
+        }
     }
+    let themeColors: [Color] = [.blue, .green, .yellow, .red]
+    private var sequence: [Int] = [0, 1, 2, 3]  // The sequence of colors to be animated in order
+    private var userGamePlay: [Int] = [] // Indices of colors the user has tapped
+    private var userTappedIndex = 0 // Index of the current panel user has tapped
+    private let animationDuration: TimeInterval = 2.0 // Duration of fade-in/fade-out cycle
     
-    private func addSubscriptions() {
-        status
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .finished:
-                    print("Completion Finished and Received")
-                case .failure(let error):
-                    print("Completion Failed with Error: \(error)")
-                }
-            } receiveValue: { status in
-                switch status {
-                case .start:
-                    self.startGame()
-                case .demo:
-                    self.demoMode()
-                case .yourTurn:
-                    self.yourTurnMessageIsShown()
-                case .playing:
-                    break
-                case .success:
-                    self.userIsSuccessfull()
-                case .failed:
-                    self.userDidFail()
-                case .score:
-                    self.userScoreMessageIsShown()
-                case .again:
-                    self.tryAgainMessageIsShown()
-                case .stopped:
-                    self.stoppedGame()
-                case .resume:
-                    self.resumeGame()
-                }
-            }
-            .store(in: &cancellables)
-    }
-    
-    // MARK: - START GAME
-    // Is called before the game has started as the .start status is set be default
-    // It checks if a user has already played and retrieves the last sequence the user was shown
-    func startGame() {
-        if UserDefaults.getUserScoreValue() >= 1 {
+    func startDemo() {
+        if UserDefaults.userScoreValue > 0 {
             getDemoSequenceFromUserDefaults()
         }
+        
+        demoMode = true
+        isTappable = false
+        showMessage = false
+        startAnimationSequence()
     }
     
-    // MARK: - DEMO SEQUENCE IS STARTED
-    // In charge of starting the game demo sequence
-    // which then proceeds to flash the next colour in the sequence
-    // and finally ends the sequence before telling the user it's their turn now.
-    private func demoMode() {
-        didStartGame = true
-        sessionManager.startSession()
-        gameDemoSequenceStarted()
-    }
-    
-    // MARK: - YOUR TURN MESSAGE IS SHOWN
-    // Tells the user they need to start selecting panels
-    // Allows the user to play the game by enabling the panels
-    private func yourTurnMessageIsShown() {
-        showMessage = true
-        statusLabel = Constants.yourTurnText
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.showMessage = false
-            self.status.value = .playing
-            self.panelEnabled = true
+    private func startAnimationSequence() {
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { _ in
+                self.animateNextColor()
+            }
         }
     }
     
-    // MARK: - USER IS SUCCESSFULL
-    // The success path is started here
-    // The next sequence is generated and stored to user defaults
-    // The users previous activity is cleared and the current score is incremented
-    // The well done message is shown
-    private func userIsSuccessfull() {
-        panelEnabled = false
-        turnAllPanelsOff()
-        generateNextSequenceAndStoreToUserDefaults()
-        
-        userInput = []
-        userScore += 1
-        chartDataManager.userCreatedNewScore(userScore)
-        if hasCreatedNewHighScore(userScore) {
-            highScore = userScore
-        }
-        
-        wellDoneMessageIsShown()
-    }
-    
-    // MARK: - USER FAILED
-    // The user selected the wrong panel
-    // Their previous activity is cleared and you lost message is shown
-    private func userDidFail() {
-        panelEnabled = false
-        userInput = []
-        youLoseMessageIsShown()
-    }
-    
-    // MARK: - WELL DONE MESSAGE IS SHOWN
-    // User is shown the well done message
-    // After a delay the users new score is shown
-    private func wellDoneMessageIsShown() {
-        showMessage = true
-        statusLabel = Constants.successText
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.status.value = .score
-        }
-    }
-    
-    // MARK: - YOU LOSE MESSAGE IS SHOWN
-    // User is told they have lost
-    // after a delay they are shown the try again message which they can tap
-    private func youLoseMessageIsShown() {
-        showMessage = true
-        statusLabel = Constants.failedText
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.status.value = .again
-        }
-    }
-    
-    // MARK: - USER SCORE MESSAGE IS SHOWN
-    // User is told their current score as per the value stored in UserDefaults
-    // After the message the next demo is started immediately.
-    private func userScoreMessageIsShown() {
-        showMessage = true
-        statusLabel = "Score is: \(userScore)"
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.showMessage = false
-            self.status.value = .demo
-        }
-    }
-    
-    // MARK: - TRY AGAIN MESSAGE IS SHOWN
-    // If the user has lost they are shown the try again message
-    // If tapped a the same demo is played again
-    private func tryAgainMessageIsShown() {
-        showMessage = true
-        statusLabel = Constants.tryAgainText
-    }
-    
-    // MARK: - MESSAGE WAS TAPPED
-    // Only the try again message can be tapped
-    // if it is tapped the message is turned off and the demo is started
-    func messageWasTapped() {
-        if status.value == .again {
-            showMessage = false
-            self.status.value = .demo
-        } else {
+    private func animateNextColor() {
+        guard demoSequencePanelIndex < sequence.count else {
+            endGame()
+            updateMessage(.yourTurn)
+            withAnimation(.easeIn(duration: 0.5)) {
+                showMessage = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                self.isTappable = true
+            }
             return
         }
+        
+        let indexToAnimate = sequence[demoSequencePanelIndex]
+        
+#if os(watchOS)
+        // WatchOS only due to the Always-On function by Apple
+        // Which reduces animations and dims screen
+        showNextColor_WatchOS(indexToAnimate: indexToAnimate)
+#else
+        let colorName = getColorName(for: themeColors[indexToAnimate])
+        announceVoiceOverText(colorName)
+        showNextColor_iOS(indexToAnimate: indexToAnimate)
+#endif
+        
     }
     
-    // MARK: - GAME WAS STOPPED
-    // All activity is stopped e.g. timer and panel flashing
-    // All values are reset e.g. message, labels, indexOfsequence
-    // Method is called when a user returns from inactive or background state
-    // Therefore the game can be immediately resumed
-    private func stoppedGame() {
-        sessionManager.stopSession()
-        timer?.invalidate()
-        currentIndexOfSequence = sequence.count
-        turnAllPanelsOff()
-        userInput = []
+    private func showNextColor_WatchOS(indexToAnimate: Int) {
+        // Change opacity without animation
+        
+        self.opacities[indexToAnimate] = 1.0
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.opacities[indexToAnimate] = 0.1
+        }
+        
+        demoSequencePanelIndex += 1
+    }
+    
+    private func showNextColor_iOS(indexToAnimate: Int) {
+        // With animation change opacity
+        
+        withAnimation(.easeIn(duration: 1)) {
+            opacities[indexToAnimate] = 1.0
+        }
+        
+        withAnimation(.easeOut(duration: 1).delay(2.0)) {
+            opacities[indexToAnimate] = 0.1
+        }
+        
+        demoSequencePanelIndex += 1
+    }
+    
+    func panelTapped(at index: Int) {
+        withAnimation(.easeIn(duration: 0.4)) {
+            opacities[index] = 1.0
+        }
+        
+        withAnimation(.easeOut(duration: 0.4).delay(0.6)) {
+            opacities[index] = 0.1
+        }
+        
+        userGamePlay.append(index)
+        verify()
+    }
+    
+    private func verify() {
+        if userTappedIndex < sequence.count - 1 {
+            if sequence[userTappedIndex] == userGamePlay[userTappedIndex] {
+                userTappedIndex += 1
+            } else {
+                gameLost()
+            }
+        } else if userTappedIndex == sequence.count - 1 {
+            if sequence[userTappedIndex] == userGamePlay[userTappedIndex] {
+                // last match
+                clearGame()
+                generateNewDemoSequence()
+                updateMessage(.youWin)
+                UserDefaults.userScoreValue += 1
+                withAnimation(.easeIn(duration: 0.5).delay(0.6)) {
+                    showMessage = true
+                }
+                print("🏆")
+            } else {
+                gameLost()
+            }
+        }
+    }
+    
+    private func gameLost() {
+        clearGame()
+        updateMessage(.youLost)
+        withAnimation(.easeIn(duration: 0.5).delay(0.6)) {
+            showMessage = true
+        }
+        print("💔")
+    }
+    
+    private func clearGame() {
+        demoSequencePanelIndex = 0
+        userTappedIndex = 0
+        userGamePlay = []
+        isTappable = false
+    }
+    
+    func endGame() {
+        clearGame()
         showMessage = false
-        statusLabel = ""
-        currentIndexOfSequence = 0
-        
-        status.value = .resume
-        
-    }
-    
-    // MARK: - RESUME GAME
-    // If a user returns after stopping a game, it is resumed
-    // The last sequence is retrieved if the user had managed to complete the first level
-    // The demo of the last sequence is played
-    private func resumeGame() {
-        if UserDefaults.getUserScoreValue() >= 1 {
-            getDemoSequenceFromUserDefaults()
-        }
-        
-        self.status.value = .demo
-        
-    }
-    
-    // MARK: - USER TAPPED A PANEL
-    // Checks the sound and haptics settings in user defaults
-    // Tracks when a user has actually started playing and stores the input
-    // Matches the input with the stored sequence
-    func panelWasTapped(panelColor: PanelColor) {
-        hapticsManager.playSoundsAndVibrations()
-        flashNextColor(panelColor)
-        userInput.append(panelColor)
-        validateUserInput()
-    }
-    
-    // MARK: - INPUT VALIDATION
-    // Checks what the user has tapped on against the stored sequence array
-    // if correct then checks if the entire sequence has been completed
-    // if it has it starts the success journey
-    // if the user has tapped incorrectly then the fail journey starts
-    private func validateUserInput() {
-        if userInput.last == sequence[userInput.endIndex-1] {
-            if userInput.count == sequence.count {
-                status.value = .success
-                panelEnabled = false
-            }
-        } else {
-            panelEnabled = false
-            status.value = .failed
-            turnAllPanelsOff()
-        }
-    }
-}
-
-// MARK: - EXTENTION - DEMO SEQUENCE LOGIC
-private extension ViewModel {
-    
-    // TIMER IS STARTED TO START PLAYING THE DEMO SEQUENCE
-    func gameDemoSequenceStarted() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(newColorInDemoSequence), userInfo: nil, repeats: true)
-    }
-    
-    // RETRIEVES AND FLASHES EACH COLOR FROM THE SEQUENCE
-    @objc func newColorInDemoSequence() {
-        if currentIndexOfSequence >= sequence.count {
-            demoSequenceEnded()
-        } else {
-            let nextColor = sequence[currentIndexOfSequence]
-            turnAllPanelsOff()
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                self.flashNextColor(nextColor)
-            }
-            
-            currentIndexOfSequence += 1
-        }
-    }
-    
-    // ENDS THE TIMER FOR THE DEMO SO THE USER CAN START PLAYING
-    func demoSequenceEnded() {
-        sessionManager.stopSession()
         timer?.invalidate()
-        turnAllPanelsOff()
-        currentIndexOfSequence = 0
-        status.value = .yourTurn
+        timer = nil
+        demoMode = false
     }
     
-    // ADDS ANOTHER COLOR TO THE SEQUENCE AND SHUFFLES, THEN SAVES TO USER DEFAULTS
-    func generateNextSequenceAndStoreToUserDefaults() {
-        guard let randomPanelColor = colorOptions.randomElement() else { return }
-        sequence.append(randomPanelColor)
-        sequence.shuffle()
-        
-        storeDemoSequenceToUserDefaults()
-    }
-    
-}
-
-// MARK: -  EXTENTION - FLASH NEXT PANEL
-private extension ViewModel {
-    
-    // IS TOLD WHICH COLOR NEEDS TO BE TURNED ON OR OFF
-    func flashNextColor(_ currentColor: PanelColor) {
-        if currentColor == .red {
-            redFlashed = true
-            greenFlashed = false
-            yellowFlashed = false
-            blueFlashed = false
-        } else if currentColor == .green {
-            redFlashed = false
-            greenFlashed = true
-            yellowFlashed = false
-            blueFlashed = false
-        } else if currentColor == .yellow {
-            redFlashed = false
-            greenFlashed = false
-            yellowFlashed = true
-            blueFlashed = false
-        } else if currentColor == .blue {
-            redFlashed = false
-            greenFlashed = false
-            yellowFlashed = false
-            blueFlashed = true
+    func handleLoseMessage() {
+        if messageText == .youLost {
+            withAnimation(.linear(duration: 0.2).delay(2.0)) {
+                messageText = .tryAgain
+            } completion: {
+                withAnimation(.linear(duration: 0.4).delay(4.0)) {
+                    self.startDemo()
+                }
+            }
         }
     }
-}
-
-// MARK: -  EXTENTION - TURN ALL PANELS OFF
-private extension ViewModel {
     
-    // TELLS THE VIEW THE OPACITY OFF ALL PANELS NEEDS TO BE REDUCED
-    func turnAllPanelsOff() {
-        redFlashed = false
-        greenFlashed = false
-        yellowFlashed = false
-        blueFlashed = false
+    func handleWinMessage() {
+        if messageText == .youWin {
+            withAnimation(.linear(duration: 0.2).delay(0.2)) {
+                opacities[0] = 0.3
+                opacities[1] = 0.3
+                opacities[2] = 0.3
+                opacities[3] = 0.3
+                wiggle = true
+            }
+            completion: {
+                withAnimation(.linear(duration: 0.2).delay(1.5)) {
+                    self.wiggle = false
+                    self.opacities[0] = 0.1
+                    self.opacities[1] = 0.1
+                    self.opacities[2] = 0.1
+                    self.opacities[3] = 0.1
+                }
+            }
+            
+            withAnimation(.linear(duration: 0.2).delay(2.0)) {
+                messageText = .nextLevel
+            } completion: {
+                withAnimation {
+                    self.startDemo()
+                }
+            }
+        }
+    }
+    
+    private func generateNewDemoSequence() {
+        let randomInt = Int.random(in: 0...3)
+        sequence.append(randomInt)
+        sequence.shuffle()
+        storeSequenceToUserDefaults()
     }
 }
 
-
-// MARK: - EXTENTION - USER DEFAULTS SET/GET SEQUENCE
-private extension ViewModel {
-    
-    // GETS THE LAST CREATED SEQUENCE SO THE USER CAN PLAY THE SAME LEVEL AGAIN
-    func getDemoSequenceFromUserDefaults() {
+// MARK: - EXTENSION - User Defaults Get/Set Sequence Methods
+extension ViewModel {
+    private func getDemoSequenceFromUserDefaults() {
         do {
-            if let data = UserDefaults.standard.data(forKey: Constants.dataSequenceKey) {
-                let array = try JSONDecoder().decode([PanelColor].self, from: data)
+            if let data = UserDefaults.standard.data(forKey: Constants.gameSequenceKey) {
+                let array = try JSONDecoder().decode([Int].self, from: data)
                 sequence = array
             }
         } catch {
-            print(error)
+            print("🚨 \(error)")
         }
     }
     
-    // NEW SEQUENCE IS STORED TO USER DEFAULTS SO IT CAN BE RETRIEVED AGAIN IF THE USER FAILS
-    func storeDemoSequenceToUserDefaults() {
+    private func storeSequenceToUserDefaults() {
         let data = try! JSONEncoder().encode(sequence)
-        UserDefaults.standard.set(data, forKey: Constants.dataSequenceKey)
+        UserDefaults.standard.set(data, forKey: Constants.gameSequenceKey)
+        print("💾 Sequence")
     }
 }
 
-// MARK: - CHECKS IF A USER HAS CREATED A NEW HIGHSCORE - CURRENTLY NOT SHOWING
-private extension ViewModel {
-    
-    // COMPARES THE PREVIOUSLY STORED SCORE WITH THE NEW SCORE
-    func hasCreatedNewHighScore(_ currentScore: Int) -> Bool {
-        let previousScore = UserDefaults.getHighScoreValue()
-        
-        if currentScore > previousScore {
-            return true
-        } else {
-            return false
+// MARK: - EXTENSION - Voice Over Methods
+extension ViewModel {
+    private func updateMessage(_ newMessage: Message) {
+        messageText = newMessage
+        // Ensure message is announced even if it's the same as before
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.announceVoiceOverText(newMessage.message)
         }
     }
+    
+    private func announceVoiceOverText(_ message: String) {
+#if os(iOS)
+        UIAccessibility.post(notification: .announcement, argument: message)
+#endif
+    }
 }
 
-// MARK: - CHECKS IF A USER HAS SCORED 15+ & IS ON A NEW APPVERSION BEFORE ASKING FOR FEEDBACK
+// MARK: - EXTENSION - GetColorName for Voice Over
 extension ViewModel {
-    
-    // FOR WHEN THE USER TAPS THE BUTTON TO REQUEST A REVIEW
-    func requestReviewManually() {
-      let url = "https://apps.apple.com/app/id6474789649?action=write-review"
-      guard let writeReviewURL = URL(string: url)
-          else { fatalError("Expected a valid URL") }
-      UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
-    }
-    
-    // REQUESTS THE USER TO LEAVE A REVIEW ON THE APPSTORE
-    func requestReview() {
-        // Checks what the current user score is. This should only appear if the score is 15+
-        let currentScore = UserDefaults.getUserScoreValue()
-        guard currentScore > 14 else { return }
-        
-        // Gets the current app version
-        let infoDictionaryKey = kCFBundleVersionKey as String
-        guard let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: infoDictionaryKey) as? String
-        else { fatalError("Expected to find a bundle version in the info dictionary") }
-        
-        // Checks the last tiem a review was requested, and if it was for the same version
-        // If it's a different version then the review screen is presented
-        // The last Version Prompted For Review is updated
-        if currentAppVersion != lastVersionPromptedForReview {
-            reviewManager.presentReview()
-            lastVersionPromptedForReview = currentAppVersion
+    func getColorName(for color: Color) -> String {
+        switch color {
+        case .red: return "Red"
+        case .green: return "Green"
+        case .blue: return "Blue"
+        case .yellow: return "Yellow"
+        default: return ""
         }
     }
 }
@@ -441,14 +264,6 @@ extension ViewModel {
 // MARK: - CONSTANTS
 private extension ViewModel {
     enum Constants {
-        // STATUS MESSAGE TEXTS
-        static let failedText = "You Lose!"
-        static let successText = "Well Done!"
-        static let yourTurnText = "Your Turn Now"
-        static let resumeText = "Tap to Resume"
-        static let tryAgainText = "Tap to Try Again"
-        
-        // USER DEFAULT KEYS
-        static let dataSequenceKey = "dataSequence"
+        static let gameSequenceKey = "gameSequence"
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    var onboarding: [OnboardingItem] = onboardingData
+    private var onboarding: [OnboardingItem] = onboardingData
     
     var body: some View {
         TabView() {

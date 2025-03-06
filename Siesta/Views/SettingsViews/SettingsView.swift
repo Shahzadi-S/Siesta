@@ -12,8 +12,10 @@ struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.openURL) var openURL
     
-    @AppStorage("vibrationsKey") var vibrationsValue = false
-    @AppStorage("soundKey") var soundValue = false
+    @AppStorage("vibrationsKey") var vibrationsValue = true
+    @AppStorage("soundKey") var soundValue = true
+    
+    private var reviewManager = ReviewManager()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,67 +24,55 @@ struct SettingsView: View {
                 .navigationBarTitleDisplayMode(.inline)
             
             List {
+                // MARK: Sound & Vibrations
                 Section {
-                    Label(
-                        title: {
-                            Toggle("Vibrations", isOn: $vibrationsValue)
-                                .onChange(of: vibrationsValue) { oldValue, newValue in
-                                    if newValue == false {
-                                        soundValue = false
-                                    }
+                    Label(title: {
+                        Toggle("Vibrations", isOn: $vibrationsValue)
+                            .onChange(of: vibrationsValue) { oldValue, newValue in
+                                if newValue == false {
+                                    soundValue = false
                                 }
-                        },
-                        icon: { Image(systemName: "iphone.radiowaves.left.and.right") }
-                    )
-                    Label(
-                        title: {
-                            Toggle("Sound", isOn: $soundValue)
-                                .onChange(of: soundValue) { oldValue, newValue in
-                                    if newValue == true {
-                                        vibrationsValue = true
-                                    }
+                            }
+                    }, icon: { Image(systemName: "iphone.radiowaves.left.and.right") })
+                    Label(title: {
+                        Toggle("Sound", isOn: $soundValue)
+                            .onChange(of: soundValue) { oldValue, newValue in
+                                if newValue == true {
+                                    vibrationsValue = true
                                 }
-                        },
-                        icon: { Image(systemName: "speaker.wave.2.fill") }
-                    )
+                            }
+                    }, icon: { Image(systemName: "speaker.wave.2.fill") })
                 } header: {
                     Text("Sound")
                 }
                 
+                // MARK: Social Media & Reviews
                 Section {
                     Button {
-                        viewModel.requestReviewManually()
+                        reviewManager.requestReviewManually()
                     } label: {
-                        Label(
-                            title: {
-                                Text(reviewLink.title)
-                                    .foregroundStyle(colorScheme == .light ? .black : .white)
-                            },
-                            icon: {
-                                Image(systemName: reviewLink.icon)
-                            }
-                        )
+                        Label(title: {
+                            Text(reviewLink.title)
+                                .foregroundStyle(colorScheme == .light ? .black : .white)
+                        }, icon: { Image(systemName: reviewLink.icon) })
                     }
-                    
                     ForEach(socialLinks) { link in
                         Button {
                             openURL(URL(string: link.url)!)
                         } label: {
-                            Label(
-                                title: {
-                                    Text(link.title)
-                                        .foregroundStyle(colorScheme == .light ? .black : .white)
-                                },
-                                icon: {
-                                    Image(link.icon)
-                                        .resizable()
-                                        .frame(width: 30, height: 30, alignment: .center)
-                                }
-                            )
+                            Label(title: {
+                                Text(link.title)
+                                    .foregroundStyle(colorScheme == .light ? .black : .white)
+                            }, icon: {
+                                Image(link.icon)
+                                    .resizable()
+                                    .frame(width: 30, height: 30, alignment: .center)
+                            })
                         }
                     }
                 }
                 
+                //MARK: App Version & Details
                 Section {
                     HStack {
                         Image(colorScheme == .dark ? "bannerDark" : "bannerLight")
@@ -92,7 +82,7 @@ struct SettingsView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8.0))
                         VStack(alignment: .leading) {
                             Text("Siesta ©")
-                            Text("Version 1.0.0")
+                            Text("Version 2.0.0")
                                 .font(.footnote)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .foregroundStyle(.gray)
@@ -112,10 +102,6 @@ struct SettingsView: View {
             }
         }
     }
-}
-
-extension SettingsView {
-    
 }
 
 #Preview {

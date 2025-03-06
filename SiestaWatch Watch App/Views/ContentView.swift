@@ -8,22 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel: ViewModelWatch
+    @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
         NavigationStack {
-            ScrollView(.vertical) {
-                StartButtonViewWatch()
-                StatsViewWatch()
-                SettingsButtonViewWatch()
-            }
-        }
-        .onAppear {
-            viewModel.userScore = 0
+            StartButtonViewWatch()
         }
     }
 }
 
 #Preview {
-    ContentView().environmentObject(ViewModelWatch())
+    ContentView().environmentObject(ViewModel())
 }

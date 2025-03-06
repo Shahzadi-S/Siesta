@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct SettingsViewWatch: View {
-    @AppStorage("vibrationsKey") var vibrationsValue = false
-    @AppStorage("soundKey") var soundValue = false
+    @AppStorage("vibrationsKey") var vibrationsValue = true
+    @AppStorage("soundKey") var soundValue = true
     
     var body: some View {
-        ScrollView(.vertical) {
+        VStack {
+            Text("Settings")
+                .font(.callout)
+                .fontDesign(.monospaced)
+                .fontWeight(.bold)
+                .padding(.top, -10)
+            Spacer()
             VStack(alignment: .leading) {
-                Text("")
-                    .navigationTitle("Settings")
-                    .navigationBarTitleDisplayMode(.inline)
-                
                 Toggle("Vibrations", isOn: $vibrationsValue)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 2))
                     .accessibilityHint("Turn vibrations on or off.")
@@ -40,7 +42,7 @@ struct SettingsViewWatch: View {
                 .frame(height: 30)
             
             VStack(alignment: .center) {
-                Text("Siesta © v1.0.0")
+                Text("Siesta © v2.0.0")
                     .font(.footnote)
                 Text("Sanaa Shahzadi")
                     .font(.footnote)

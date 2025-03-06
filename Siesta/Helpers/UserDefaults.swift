@@ -7,40 +7,41 @@
 
 import Foundation
 
-// SHARED WITH WATCH APP 
-// GET STORED VALUES FROM USER DEFAULTS
+
 extension UserDefaults {
+    // SHARED WITH WATCH APP
     
-    // GETS USERS CURRENT SCORE
-    static func getUserScoreValue() -> Int {
-        return UserDefaults.standard.integer(forKey: Constants.userScoreKey)
+    static var userScoreValue: Int {
+        get {
+            UserDefaults.standard.integer(forKey: Constants.userScoreKey)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Constants.userScoreKey)
+        }
     }
     
-    // GETS USERS HIGH SCORE - NOT CURRENTLY USED
-    static func getHighScoreValue() -> Int {
-        return UserDefaults.standard.integer(forKey: Constants.highScoreKey)
+    static var isVibrationOn: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: Constants.vibrationsKey)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Constants.vibrationsKey)
+        }
     }
     
-    // GETS THE VALUE FOR VIBRATION SETTINGS
-    static func getVibrationValue() -> Bool {
-        return UserDefaults.standard.bool(forKey: Constants.vibrationsKey)
+    static var isSoundOn: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: Constants.soundKey)
+        } set {
+            UserDefaults.standard.set(newValue, forKey: Constants.soundKey)
+        }
     }
-    
-    // GETS THE VALUE FOR SOUND SETTINGS
-    static func getSoundValue() -> Bool {
-        return UserDefaults.standard.bool(forKey: Constants.soundKey)
-    }
+
 }
 
 
 // MARK: - CONSTANTS
 private extension UserDefaults {
     enum Constants {
-        // USER DEFAULT KEYS
         static let userScoreKey = "userScore"
-        static let highScoreKey = "highScore"
-        static let silentKey = "silentKey"
-        static let loudKey = "loudKey"
         static let vibrationsKey = "vibrationsKey"
         static let soundKey = "soundKey"
     }

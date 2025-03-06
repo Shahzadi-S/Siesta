@@ -8,54 +8,39 @@
 import SwiftUI
 
 struct GameSquaresViewWatch: View {
-    @EnvironmentObject var viewModel: ViewModelWatch
+    @EnvironmentObject var viewModel: ViewModel
+    var hapticsManager = HapticsManagerWatch()
+    private let numberOfRows: CGFloat = 2
+    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
-        VStack {
-            HStack {
-                RoundedRectangle(cornerRadius: 6)
-                    .foregroundColor(Color.red)
-                    .onTapGesture {
-                        viewModel.panelWasTapped(panelColor: .red)
+            VStack {
+                TimelineView(.periodic(from: .now, by: 0.2)) { context in
+                GeometryReader { geo in
+                    LazyVGrid(columns: columns, spacing: 6) {
+                            ForEach(0..<viewModel.themeColors.count, id: \.self) { index in
+                                RoundedRectangle(cornerRadius: 6)
+                                    .fill(viewModel.themeColors[index])
+                                    .opacity(viewModel.opacities[index])
+                                    .frame(height: (geo.size.height / numberOfRows).rounded())
+                                    .allowsHitTesting(viewModel.isTappable)
+                                    .scaleEffect(viewModel.wiggle ? 0.8 : 1)
+                                    .onTapGesture {
+                                        hapticsManager.playSoundsAndVibrations()
+                                        viewModel.panelTapped(at: index)
+                                    }
+                            }
+                        }
                     }
-                    .allowsHitTesting(viewModel.panelEnabled)
-                    .opacity(viewModel.redFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.redFlashed)
-                
-                
-                RoundedRectangle(cornerRadius: 6)
-                    .foregroundColor(Color.green)
-                    .onTapGesture {
-                        viewModel.panelWasTapped(panelColor: .green)
-                    }
-                    .allowsHitTesting(viewModel.panelEnabled)
-                    .opacity(viewModel.greenFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.greenFlashed)
+                }
             }
-            HStack {
-                RoundedRectangle(cornerRadius: 6)
-                    .foregroundColor(Color.yellow)
-                    .onTapGesture {
-                        viewModel.panelWasTapped(panelColor: .yellow)
-                    }
-                    .allowsHitTesting(viewModel.panelEnabled)
-                    .opacity(viewModel.yellowFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.yellowFlashed)
-                
-                
-                RoundedRectangle(cornerRadius: 6)
-                    .foregroundColor(Color.blue)
-                    .onTapGesture {
-                        viewModel.panelWasTapped(panelColor: .blue)
-                    }
-                    .allowsHitTesting(viewModel.panelEnabled)
-                    .opacity(viewModel.blueFlashed ? 1 : 0.3)
-                    .animation(Animation.linear(duration: 0.3).repeatCount(1), value: viewModel.blueFlashed)
+            .padding()
+            .onAppear {
+                viewModel.startDemo()
             }
-        }
     }
 }
 
 #Preview {
-    GameSquaresViewWatch().environmentObject(ViewModelWatch())
+    GameSquaresViewWatch().environmentObject(ViewModel())
 }

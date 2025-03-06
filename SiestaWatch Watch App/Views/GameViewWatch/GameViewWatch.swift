@@ -7,27 +7,39 @@
 
 import SwiftUI
 
+
 struct GameViewWatch: View {
-    @EnvironmentObject var viewModel: ViewModelWatch
-    @Environment(\.scenePhase) var scenePhase
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var viewModel: ViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
-            ZStack {
-                GameSquaresViewWatch()
+        ZStack {
+            GameSquaresViewWatch()
+            if viewModel.showMessage {
                 GameMessageViewWatch()
             }
         }
-        .onChange(of: scenePhase) { _, newPhase in
-            if newPhase != .active {
-                self.presentationMode.wrappedValue.dismiss()
-                viewModel.sessionManager.stopSession()
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    self.presentationMode.wrappedValue.dismiss()
+                    viewModel.endGame()
+                } label: {
+                    Image(systemName: "figure.walk.arrival")
+                }
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Text("Level: \(UserDefaults.userScoreValue + 1)")
+                    .font(.callout)
+                    .fontDesign(.monospaced)
+                    .fontWeight(.light)
             }
         }
     }
 }
 
 #Preview {
-    GameViewWatch().environmentObject(ViewModelWatch())
+    GameViewWatch().environmentObject(ViewModel())
 }
