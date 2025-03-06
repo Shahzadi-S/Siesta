@@ -9,20 +9,27 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var viewModel: ViewModel
-    @Environment(\.scenePhase) var scenePhase
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-        VStack {
-            ZStack {
-                GameSquaresView()
+        ZStack {
+            GameSquaresView()
+            if viewModel.showMessage {
                 GameMessageView()
             }
         }
-        .onChange(of: scenePhase) { _, newPhase in
-            if newPhase != .active {
-                self.presentationMode.wrappedValue.dismiss()
-                viewModel.sessionManager.stopSession()
+        .navigationBarBackButtonHidden(true)
+        .toolbarTitleDisplayMode(.inline)
+        .toolbar {
+            // MARK: Exit Button
+            ToolbarItem(placement: .topBarTrailing) {
+                ExitGameAlertView()
+            }
+            // MARK: Level/User Score
+            ToolbarItem(placement: .principal) {
+                Text("Level \(UserDefaults.userScoreValue + 1)")
+                    .font(.title2)
+                    .fontDesign(.monospaced)
+                    .fontWeight(.bold)
             }
         }
     }

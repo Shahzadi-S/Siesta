@@ -14,10 +14,9 @@ struct SettingsButtonView: View {
                 Image(systemName: "gear")
                     .tint(.secondary)
                     .font(.system(size: 25))
-                    .frame(width: 44, height: 44)
+                    .frame(width: 50, height: 50)
             }
         }
-        .padding(.top)
     }
 }
 

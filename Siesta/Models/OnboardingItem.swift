@@ -15,7 +15,7 @@ struct OnboardingItem: Identifiable {
     var headline: String
 }
 
-let onboardingData: [OnboardingItem] = [OnboardingItem(count: 0, title: "Welcome to Siesta", headline: "Time to clear your head."),
+let onboardingData: [OnboardingItem] = [OnboardingItem(count: 0, title: "Welcome to Siesta", headline: "Time to clear your mind."),
                                         OnboardingItem(count: 1, title: "Focus", headline: "Watch the sequence playing on screen."),
                                         OnboardingItem(count: 2, title: "Memorise", headline: "Wait till it's your turn."),
                                         OnboardingItem(count: 3, title: "Play", headline: "Tap each color to repeat the sequence and win."),

@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct SiestaWatch_Watch_AppApp: App {
+    @State private var selectedTab = 2
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(ViewModelWatch())
+            TabView(selection: $selectedTab) {
+                SettingsViewWatch()
+                    .tag(1)
+                ContentView().environmentObject(ViewModel())
+                    .tag(2)
+            }
+            .tabViewStyle(PageTabViewStyle())
         }
     }
 }

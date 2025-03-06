@@ -9,43 +9,40 @@ import SwiftUI
 
 struct GameMessageView: View {
     @EnvironmentObject var viewModel: ViewModel
-    
     @State private var animationAmount = 1.0
     
     var body: some View {
-        if viewModel.showMessage {
-            Text(viewModel.statusLabel)
-                .font(.title2)
-                .foregroundStyle(.white)
-                .frame(alignment: .center)
-                .padding(15)
-                .background(RoundedRectangle(cornerRadius: 6.0)
-                    .fill(Color.black.opacity(0.7)).shadow(radius: 3))
-                .onTapGesture {
-                    viewModel.messageWasTapped()
-                }
-                .accessibilityLabel(viewModel.statusLabel)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 6.0)
-                        .stroke(.white)
-                        .scaleEffect(animationAmount)
-                        .opacity(2 - animationAmount)
-                        .animation(
-                            .easeInOut(duration: 1)
-                            .repeatCount(1, autoreverses: false),
-                            value: animationAmount
-                        )
-                ).onAppear {
-                    animationAmount = 2
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        animationAmount = 1
-                    }
-                }
+        ZStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 12)
+                    .frame(width: 300, height: 90)
+                    .foregroundStyle(.black)
+                Text(viewModel.messageText.message)
+                    .foregroundStyle(.white)
+                    .fontWeight(.thin)
+                    .kerning(8.0)
+                    .font(.custom("Copperplate", size: 30))
+            }
+            
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(lineWidth: 6)
+                .foregroundStyle(.primary)
+                .frame(width: 320, height: 120)
+                .scaleEffect(animationAmount)
+            
+        }
+        .onAppear {
+            withAnimation(.easeInOut(duration: 1).repeatForever()) {
+                animationAmount = 1.1
+            }
+            viewModel.handleLoseMessage()
+            viewModel.handleWinMessage()
+            withAnimation(.linear(duration: 1).delay(3.5)) {
+                viewModel.showMessage = false
+            }
         }
     }
-    
 }
-
 
 #Preview {
     GameMessageView().environmentObject(ViewModel())

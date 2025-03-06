@@ -8,38 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @EnvironmentObject var viewModel: ViewModel
-    @Environment(\.colorScheme) var colorScheme
+    @State private var isLoading: Bool = true
+    private var reviewManager = ReviewManager()
     
     var body: some View {
-        NavigationStack {
-            Spacer()
-            Image(colorScheme == .dark ? "bannerDark" : "bannerLight")
-                .resizable()
-                .frame(width: 200, height: 200, alignment: .center)
-                .accessibilityHidden(true)
-            
-            Spacer()
-            
-            VStack {
-                StartButtonView()
-                StatsView()
-                HistoryButtonView()
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    SettingsButtonView()
+        ZStack {
+            if self.isLoading {
+                SplashScreenView()
+            } else {
+                NavigationStack {
+                    Spacer()
+                    VStack {
+                        StartButtonView()
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            SettingsButtonView()
+                                .padding(5)
+                        }
+                    }
+                    Spacer()
+                    Text("Level: \(UserDefaults.userScoreValue + 1)")
+                        .font(.callout)
+                        .fontDesign(.monospaced)
+                        .fontWeight(.light)
+                    
+                    Spacer()
                 }
             }
-            
-            Spacer()
-            
         }
         .onAppear {
-            viewModel.userScore = 0
-            // save user score and date
-            // create a new user score of zero 
-            viewModel.requestReview()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                withAnimation(.linear(duration: 2)) {
+                    self.isLoading = false
+                }
+            }
+            reviewManager.requestReview()
         }
     }
 }

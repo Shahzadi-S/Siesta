@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct StartButtonViewWatch: View {
-    @EnvironmentObject var viewModel: ViewModelWatch
+    @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
-        VStack() {
-            NavigationLink("Start", destination: GameViewWatch().onAppear {
-                if viewModel.didStartGame {
-                    viewModel.status.value = .stopped
-                } else {
-                    viewModel.status.value = .demo
+        VStack(alignment: .center) {
+            ButtonColorPanelView(isWatch: true)
+            ZStack {
+                NavigationLink(destination: GameViewWatch()) {
+                    Text(" START")
+                        .foregroundStyle(.white)
+                        .fontWeight(.heavy)
+                        .kerning(10.0)
+                        .font(.custom("Copperplate", size: 16))
                 }
-            })
-            .padding()
-            .tint(.green)
+            }
+            ButtonColorPanelView(isWatch: true)
         }
     }
 }
 
 #Preview {
-    StartButtonViewWatch()
+    StartButtonViewWatch().environmentObject(ViewModel())
 }
