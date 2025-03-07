@@ -18,6 +18,8 @@ final class ViewModel: ObservableObject {
     @Published var wiggle = false
     @Published var demoMode = false
     @Published var showMessage = false
+    @Published var numberOfLives = 3
+    @Published var didRunOutOfLives = false
     @Published var messageText: Message = .youLost {
         didSet {
             announceVoiceOverText(messageText.message)
@@ -139,12 +141,13 @@ final class ViewModel: ObservableObject {
     }
     
     private func gameLost() {
+        removeALife()
         clearGame()
         updateMessage(.youLost)
         withAnimation(.easeIn(duration: 0.5).delay(0.6)) {
             showMessage = true
         }
-        print("💔")
+        print("💣")
     }
     
     private func clearGame() {
@@ -162,13 +165,33 @@ final class ViewModel: ObservableObject {
         demoMode = false
     }
     
+    func removeALife() {
+        if numberOfLives == 1 {
+            numberOfLives -= 1
+            ranOutOfLives()
+        } else {
+            numberOfLives -= 1
+        }
+    }
+    
+    func ranOutOfLives() {
+        endGame()
+        print("💔 Ran out of lives")
+    }
+    
     func handleLoseMessage() {
         if messageText == .youLost {
-            withAnimation(.linear(duration: 0.2).delay(2.0)) {
-                messageText = .tryAgain
-            } completion: {
-                withAnimation(.linear(duration: 0.4).delay(4.0)) {
-                    self.startDemo()
+            if numberOfLives == 0 {
+                withAnimation(.linear(duration: 0.2).delay(2.0)) {
+                    didRunOutOfLives = true
+                }
+            } else {
+                withAnimation(.linear(duration: 0.2).delay(2.0)) {
+                    messageText = .tryAgain
+                } completion: {
+                    withAnimation(.linear(duration: 0.4).delay(4.0)) {
+                        self.startDemo()
+                    }
                 }
             }
         }
