@@ -75,7 +75,7 @@ struct SettingsView: View {
                 //MARK: App Version & Details
                 Section {
                     HStack {
-                        Image(colorScheme == .dark ? "bannerDark" : "bannerLight")
+                        Image("logo")
                             .resizable()
                             .frame(width: 100, height: 100, alignment: .center)
                             .accessibilityHidden(true)

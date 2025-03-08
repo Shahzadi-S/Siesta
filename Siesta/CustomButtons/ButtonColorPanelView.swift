@@ -20,7 +20,7 @@ struct ButtonColorPanelView: View {
                     .opacity(0.7)
                     .frame(width: isWatch ? 35 : 75,
                            height: isWatch ? 60 : 200)
-                    .scaleEffect(isAnimating ? 0.95 : 1)
+                    .scaleEffect(isAnimating ? 0.90 : 1)
             }
         }.onAppear {
             withAnimation(.easeIn(duration: 1.0).repeatForever(autoreverses: true)) {

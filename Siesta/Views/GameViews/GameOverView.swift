@@ -26,15 +26,16 @@ struct GameOverView: View {
                     .font(.title3)
                     ZStack {
                         RoundedRectangle(cornerRadius: 16)
-                            .foregroundStyle(.placeholder)
                             .frame(width: 300, height: 100)
+                            .foregroundStyle(Color(red: 1, green: 0.569, blue: 0.302))
                         Text(countdownTimer.isComplete ? "WATCH AD ♥️" : "\(countdownTimer.timeLeft)")
                             .fontWeight(.semibold)
                             .kerning(5.0)
                             .font(.title)
+                            .foregroundStyle(.white)
                     }.onTapGesture {
                         adsManager.showAd()
-                        viewModel.numberOfLives += 1
+                        viewModel.numberOfLives += 3
                         beforeAdWatch = false
                         print("📺 Watching Ad")
                     }
@@ -49,12 +50,13 @@ struct GameOverView: View {
                     .font(.title3)
                     ZStack {
                         RoundedRectangle(cornerRadius: 16)
-                            .foregroundStyle(.placeholder)
                             .frame(width: 300, height: 100)
+                            .foregroundStyle(Color(red: 1, green: 0.569, blue: 0.302))
                         Text("RESUME")
                             .fontWeight(.semibold)
                             .kerning(5.0)
                             .font(.title)
+                            .foregroundStyle(.white)
                     }.onTapGesture {
                         viewModel.didRunOutOfLives = false
                         viewModel.startDemo()

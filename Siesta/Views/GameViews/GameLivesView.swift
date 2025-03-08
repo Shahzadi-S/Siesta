@@ -17,7 +17,9 @@ struct GameLivesView: View {
                 .font(.system(size: 24, design: .rounded))
                 .foregroundStyle(.red)
             Text(livesCountText)
-                .font(.title3)
+                .font(.custom("Callout", size: 18))
+                .fontDesign(.monospaced)
+                .fontWeight(.medium)
         }
     }
 }

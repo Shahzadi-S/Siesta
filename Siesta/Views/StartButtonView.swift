@@ -17,17 +17,17 @@ struct StartButtonView: View {
                     ButtonColorPanelView(isWatch: false)
                         .padding(-7)
                     ZStack {
+                        RoundedRectangle(cornerRadius: 16)
+                            .frame(width: 300, height: 100)
+                            .foregroundStyle(Color(red: 1, green: 0.569, blue: 0.302))
+                            .padding(20)
                         Text(" START")
-                            .foregroundStyle(.yellow)
-                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                            .fontWeight(.bold)
                             .kerning(30.0)
-                            .font(.custom("Copperplate", size: 52))
-                        Text(" START")
-                            .foregroundStyle(.primary)
-                            .fontWeight(.semibold)
-                            .kerning(30.0)
-                            .font(.custom("Copperplate", size: 50))
+                            .font(.largeTitle)
                     }
+                    
                     ButtonColorPanelView(isWatch: false)
                         .padding(-20)
                 }
