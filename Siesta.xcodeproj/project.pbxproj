@@ -14,6 +14,8 @@
 		E622BD512D7981E9006B93DA /* ButtonColorPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E622BD4F2D7981E9006B93DA /* ButtonColorPanelView.swift */; };
 		E622BD532D798F1E006B93DA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E622BD522D798F1E006B93DA /* SplashScreenView.swift */; };
 		E63A3A5B2D7ABD2100DCE3DC /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A3A5A2D7ABD2100DCE3DC /* CountdownTimer.swift */; };
+		E63A3A5F2D7D839100DCE3DC /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63A3A5E2D7D839100DCE3DC /* AppTrackingTransparency.framework */; };
+		E63A3A612D7D87FE00DCE3DC /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A3A602D7D87FE00DCE3DC /* TrackingManager.swift */; };
 		E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */; };
 		E64A8DFE2B1BDCB600803E6B /* SettingsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */; };
 		E65C81C52D6CD8A20066EB52 /* ExitGameAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C81C42D6CD8A20066EB52 /* ExitGameAlertView.swift */; };
@@ -122,6 +124,8 @@
 		E622BD522D798F1E006B93DA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		E622BD572D79CEE1006B93DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E63A3A5A2D7ABD2100DCE3DC /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		E63A3A5E2D7D839100DCE3DC /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = DEVELOPER_DIR; };
+		E63A3A602D7D87FE00DCE3DC /* TrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
 		E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		E64A8DFD2B1BDCB600803E6B /* SettingsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewWatch.swift; sourceTree = "<group>"; };
 		E65C81C42D6CD8A20066EB52 /* ExitGameAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitGameAlertView.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D304D042D94292D2AB2D4BB /* Pods_Siesta.framework in Frameworks */,
+				E63A3A5F2D7D839100DCE3DC /* AppTrackingTransparency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +227,7 @@
 		2CFE0EA7D8B14E212508AD11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E63A3A5E2D7D839100DCE3DC /* AppTrackingTransparency.framework */,
 				1CFE277292AA0E8CD08F5DE0 /* Pods_Siesta.framework */,
 			);
 			name = Frameworks;
@@ -460,6 +466,7 @@
 				E6D6451B2B15555A00E4790A /* HapticsManager.swift */,
 				E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */,
 				E6D6451E2B15573300E4790A /* UserDefaults.swift */,
+				E63A3A602D7D87FE00DCE3DC /* TrackingManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -764,6 +771,7 @@
 				E6D013772B309F71004BEEE9 /* ReadyView.swift in Sources */,
 				E65C81C52D6CD8A20066EB52 /* ExitGameAlertView.swift in Sources */,
 				E65C81C72D6CE5430066EB52 /* StatusMessage.swift in Sources */,
+				E63A3A612D7D87FE00DCE3DC /* TrackingManager.swift in Sources */,
 				E6F28C2C2B1001E80007DDC1 /* StartButtonView.swift in Sources */,
 				E6F28B9D2B0EB4500007DDC1 /* ContentView.swift in Sources */,
 				E6D013732B2F9A60004BEEE9 /* MemoriseView.swift in Sources */,

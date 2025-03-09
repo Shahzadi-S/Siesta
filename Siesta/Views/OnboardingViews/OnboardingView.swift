@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     private var onboarding: [OnboardingItem] = onboardingData
+    var trackingManager: TrackingManager = TrackingManager()
     
     var body: some View {
         TabView() {
@@ -20,6 +21,9 @@ struct OnboardingView: View {
         .indexViewStyle(.page(backgroundDisplayMode: .always))
         .padding(.vertical, 20)
         .tint(.black)
+        .onAppear {
+            trackingManager.requestATTTracking()
+        }
     }
 }
 
