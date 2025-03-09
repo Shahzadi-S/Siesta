@@ -16,7 +16,7 @@ struct OnboardingCardView: View {
             VStack {
                 switch onboarding.count {
                 case 0:
-                    Image("logoCircle")
+                    Image("logo")
                         .resizable()
                         .scaledToFit()
                         .accessibilityHidden(true)

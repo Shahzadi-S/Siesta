@@ -13,7 +13,7 @@ struct ReadyView: View {
     var body: some View {
         VStack {
             Image(systemName: "checkmark.circle.fill")
-                .foregroundStyle(.foreground)
+                .foregroundStyle(Color(red: 1, green: 0.569, blue: 0.302))
                 .frame(width: 100, height: 100, alignment: .center)
                 .padding()
                 .font(.system(size: 100))
