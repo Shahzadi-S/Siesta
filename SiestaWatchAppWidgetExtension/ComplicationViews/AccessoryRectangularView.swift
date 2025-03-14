@@ -19,18 +19,16 @@ struct AccessoryRectangularView: View {
             HStack {
                 ForEach(0..<themeColors.count, id: \.self) { index in
                     RoundedRectangle(cornerRadius: 1)
+                        .widgetAccentable()
                         .foregroundStyle(themeColors[index])
-                        .opacity(0.7)
                         .overlay(
                             RoundedRectangle(cornerRadius: 1)
-                                .stroke(.white, lineWidth: 0.5)
-                                .widgetAccentable()
+                                .stroke(.white, lineWidth: 0.75)
                         )
                         .padding(0)
                 }
             }
             .frame(width: 40, height: 40)
-            .widgetAccentable()
             
             VStack() {
                 Text(name)

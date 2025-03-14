@@ -23,16 +23,16 @@ struct AccessoryCircularView: View {
             HStack {
                 ForEach(0..<themeColors.count, id: \.self) { index in
                     RoundedRectangle(cornerRadius: 1)
+                        .widgetAccentable()
                         .foregroundStyle(themeColors[index])
                         .opacity(0.7)
-                        .frame(width: 6, height: 25)
+                        .frame(width: 6, height: 20)
                         .overlay(
                             RoundedRectangle(cornerRadius: 1)
                                 .stroke(.white, lineWidth: 0.5)
-                                .widgetAccentable()
                         ).padding(-1)
                 }
-            }.widgetAccentable()
+            }
         }
         .widgetLabel(name)
         .containerBackground(for: .widget) { }

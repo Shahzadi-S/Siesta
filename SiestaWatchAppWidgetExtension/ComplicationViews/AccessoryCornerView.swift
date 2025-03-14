@@ -17,25 +17,44 @@ struct AccessoryCornerView: View {
     
     var body: some View {
         ZStack {
-            Circle()
-                .foregroundStyle(Color(red: 1, green: 0.569, blue: 0.302))
-                .opacity(widgetRenderingMode != .fullColor ? 0.2 : 1)
-            HStack {
-                ForEach(0..<themeColors.count, id: \.self) { index in
-                    RoundedRectangle(cornerRadius: 1)
-                        .foregroundStyle(themeColors[index])
-                        .opacity(0.7)
-                        .frame(width: 4, height: 15)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 1)
-                                .stroke(.white, lineWidth: 0.5)
-                                .widgetAccentable()
-                        ).padding(-1)
-                }
-            }.widgetAccentable()
-        }
-        .widgetLabel(name)
-        .containerBackground(for: .widget) {
+               switch widgetRenderingMode {
+               case .fullColor:
+                   ZStack {
+                       Circle()
+                           .foregroundStyle(Color(red: 1, green: 0.569, blue: 0.302))
+                           .opacity(0.9)
+                       HStack {
+                           ForEach(0..<themeColors.count, id: \.self) { index in
+                               RoundedRectangle(cornerRadius: 1)
+                                   .foregroundStyle(themeColors[index])
+                                   .frame(width: 4, height: 15)
+                                   .overlay(
+                                       RoundedRectangle(cornerRadius: 1)
+                                        .stroke(.white, lineWidth: 0.75)
+                                           .widgetAccentable()
+                                   ).padding(-1)
+                           }
+                       }
+                   }
+                   .widgetLabel(name)
+                   .containerBackground(for: .widget) { }
+               default:
+                   ZStack {
+                       Circle()
+                       HStack {
+                           ForEach(0..<themeColors.count, id: \.self) { index in
+                               RoundedRectangle(cornerRadius: 1)
+                                   .blendMode(.destinationOut)
+                                   .frame(width: 4, height: 15)
+                                   .padding(-1)
+                           }
+                       }
+                   }
+                   .compositingGroup()
+                   .widgetAccentable()
+                   .widgetLabel(name)
+                   .containerBackground(for: .widget) { }
+               }
         }
     }
 }
