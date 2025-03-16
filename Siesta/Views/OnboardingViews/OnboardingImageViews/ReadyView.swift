@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReadyView: View {
     @AppStorage("isOnboarding") var isOnboarding: Bool?
+    var notificationManager: NotificationManager = NotificationManager()
     
     var body: some View {
         VStack {
@@ -31,6 +32,7 @@ struct ReadyView: View {
         .contentShape(Rectangle())
         .onTapGesture {
             isOnboarding = false
+            notificationManager.requestNotificationPermission()
         }
     }
 }

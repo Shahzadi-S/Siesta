@@ -16,6 +16,7 @@
 		E63727662D7DAF36002F909A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63727652D7DAF36002F909A /* WidgetKit.framework */; };
 		E63727682D7DAF36002F909A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63727672D7DAF36002F909A /* SwiftUI.framework */; };
 		E63727732D7DAF37002F909A /* SiestaWatchAppWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E63727642D7DAF36002F909A /* SiestaWatchAppWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E63727D22D872851002F909A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63727D12D872851002F909A /* NotificationManager.swift */; };
 		E63A3A5B2D7ABD2100DCE3DC /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A3A5A2D7ABD2100DCE3DC /* CountdownTimer.swift */; };
 		E63A3A5F2D7D839100DCE3DC /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63A3A5E2D7D839100DCE3DC /* AppTrackingTransparency.framework */; };
 		E63A3A612D7D87FE00DCE3DC /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A3A602D7D87FE00DCE3DC /* TrackingManager.swift */; };
@@ -147,6 +148,7 @@
 		E63727642D7DAF36002F909A /* SiestaWatchAppWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiestaWatchAppWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63727652D7DAF36002F909A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		E63727672D7DAF36002F909A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E63727D12D872851002F909A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		E63A3A5A2D7ABD2100DCE3DC /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		E63A3A5E2D7D839100DCE3DC /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = DEVELOPER_DIR; };
 		E63A3A602D7D87FE00DCE3DC /* TrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 				E64A8DFA2B1A9F6C00803E6B /* ReviewManager.swift */,
 				E6D6451E2B15573300E4790A /* UserDefaults.swift */,
 				E63A3A602D7D87FE00DCE3DC /* TrackingManager.swift */,
+				E63727D12D872851002F909A /* NotificationManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 				E6D0136E2B2F62C2004BEEE9 /* OnboardingView.swift in Sources */,
 				E64A8DFB2B1A9F6C00803E6B /* ReviewManager.swift in Sources */,
 				E6D013772B309F71004BEEE9 /* ReadyView.swift in Sources */,
+				E63727D22D872851002F909A /* NotificationManager.swift in Sources */,
 				E65C81C52D6CD8A20066EB52 /* ExitGameAlertView.swift in Sources */,
 				E65C81C72D6CE5430066EB52 /* StatusMessage.swift in Sources */,
 				E63A3A612D7D87FE00DCE3DC /* TrackingManager.swift in Sources */,
