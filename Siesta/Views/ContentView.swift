@@ -12,6 +12,8 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
     @State private var isLoading: Bool = true
     private var reviewManager = ReviewManager()
+    var trackingManager: TrackingManager = TrackingManager()
+    var notificationManager: NotificationManager = NotificationManager()
     
     var body: some View {
         ZStack {
@@ -46,6 +48,8 @@ struct ContentView: View {
                 }
             }
             reviewManager.requestReview()
+            trackingManager.checkATTTrackingStatus()
+            notificationManager.checkNotificationPermissionStatus()
         }
     }
 }

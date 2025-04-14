@@ -9,6 +9,24 @@ import Foundation
 import UserNotifications
 
 class NotificationManager {
+    
+    // For users who weren't prompted in 1.0 but have since updated
+    func checkNotificationPermissionStatus() {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            switch settings.authorizationStatus {
+            case .notDetermined:
+                // Never asked before — safe to request now
+                self.requestNotificationPermission()
+            case .denied:
+                print("🔕 Notifications denied – maybe show a prompt to enable in Settings")
+            case .authorized, .provisional, .ephemeral:
+                print("🔔 Notifications already enabled")
+            @unknown default:
+                print("❓ Unknown notification state")
+            }
+        }
+    }
+    
     func requestNotificationPermission() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {

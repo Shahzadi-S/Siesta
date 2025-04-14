@@ -13,7 +13,7 @@ class AdsManager: NSObject, ObservableObject, FullScreenContentDelegate {
     func loadAd() async {
         do {
             rewardedAd = try await RewardedAd.load(
-                with: "ca-app-pub-3940256099942544/1712485313", request: Request())
+                with: "ca-app-pub-8922825973656519/5593151142", request: Request())
             rewardedAd?.fullScreenContentDelegate = self
         } catch {
             print("Failed to load rewarded ad with error: \(error.localizedDescription)")
