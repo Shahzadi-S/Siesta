@@ -5,7 +5,11 @@ target 'Siesta' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Siesta
+  # Pods for Google AdMob
   pod 'Google-Mobile-Ads-SDK'
+
+  # Pods for IronSource Ads
+  pod 'IronSourceSDK', '~> 7.6'
+  pod 'IronSourceUnityAdsAdapter'
 
 end

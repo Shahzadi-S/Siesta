@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -203,7 +203,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E63727772D7DAF37002F909A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		E63727772D7DAF37002F909A /* Exceptions for "SiestaWatchAppWidgetExtension" folder in "SiestaWatchAppWidgetExtensionExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -213,7 +213,14 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E63727692D7DAF36002F909A /* SiestaWatchAppWidgetExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E63727772D7DAF37002F909A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SiestaWatchAppWidgetExtension; sourceTree = "<group>"; };
+		E63727692D7DAF36002F909A /* SiestaWatchAppWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E63727772D7DAF37002F909A /* Exceptions for "SiestaWatchAppWidgetExtension" folder in "SiestaWatchAppWidgetExtensionExtension" target */,
+			);
+			path = SiestaWatchAppWidgetExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -710,7 +717,6 @@
 				};
 			};
 			buildConfigurationList = E6F28B922B0EB4500007DDC1 /* Build configuration list for PBXProject "Siesta" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -718,6 +724,7 @@
 				Base,
 			);
 			mainGroup = E6F28B8E2B0EB4500007DDC1;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = E6F28B982B0EB4500007DDC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

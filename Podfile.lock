@@ -2,19 +2,32 @@ PODS:
   - Google-Mobile-Ads-SDK (12.1.0):
     - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleUserMessagingPlatform (2.7.0)
+  - IronSourceSDK (7.9.1.0)
+  - IronSourceUnityAdsAdapter (4.3.37.0):
+    - IronSourceSDK (= 7.9.1.0)
+    - UnityAds (= 4.10.0)
+  - UnityAds (4.10.0)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
+  - IronSourceSDK (~> 7.6)
+  - IronSourceUnityAdsAdapter
 
 SPEC REPOS:
   trunk:
     - Google-Mobile-Ads-SDK
     - GoogleUserMessagingPlatform
+    - IronSourceSDK
+    - IronSourceUnityAdsAdapter
+    - UnityAds
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: c9e5722cac79b39241d13b911f9f1eb21bdd0802
   GoogleUserMessagingPlatform: a8b56893477f67212fbc8411c139e61d463349f5
+  IronSourceSDK: 4c3c24265e83ca1e4e8fdc5a499d9a5772b5040c
+  IronSourceUnityAdsAdapter: 6bb358f732db07a11ed20565a918493ace16c741
+  UnityAds: 5601f6397b0e02ed3ed6ee92827f5177a523aab6
 
-PODFILE CHECKSUM: f3a0974b0b482868ee01e0f40b2f93f70463f8d9
+PODFILE CHECKSUM: 4db0f639221d4fff211eadcae4de238f2abd979d
 
 COCOAPODS: 1.16.2

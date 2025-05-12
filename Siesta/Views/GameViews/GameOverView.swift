@@ -10,7 +10,6 @@ import SwiftUI
 
 struct GameOverView: View {
     @EnvironmentObject var viewModel: ViewModel
-    @StateObject private var adsManager = AdsManager()
     @StateObject private var countdownTimer = CountdownTimer(5) // Provided by AdMob
     @State private var beforeAdWatch = true
     
@@ -34,7 +33,10 @@ struct GameOverView: View {
                             .font(.title)
                             .foregroundStyle(.white)
                     }.onTapGesture {
-                        adsManager.showAd()
+                        if let rootVC = getRootViewController() {
+                            //                            AdsManager.shared.showAdsTestSuite(from: rootVC)
+                            AdsManager.shared.showAd(from: rootVC)
+                        }
                         viewModel.numberOfLives += 3
                         beforeAdWatch = false
                         print("📺 Watching Ad")
@@ -66,11 +68,18 @@ struct GameOverView: View {
             }
         }.onAppear {
             countdownTimer.start()
-            Task {
-                await adsManager.loadAd()
-            }
         }
     }
+    
+    /// Helper function to get the root view controller when showing ads
+    func getRootViewController() -> UIViewController? {
+        // Using UIWindowScene to get the root view controller
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            return windowScene.windows.first?.rootViewController
+        }
+        return nil
+    }
+    
 }
 
 #Preview {

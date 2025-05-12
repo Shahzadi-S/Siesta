@@ -18,10 +18,10 @@ struct GameMessageView: View {
                     .frame(width: 300, height: 90)
                     .foregroundStyle(.black)
                 Text(viewModel.messageText.message)
+                    .font(.custom("Copperplate", fixedSize: 24))
+                    .fontWeight(.light)
+                    .kerning(10.0)
                     .foregroundStyle(.white)
-                    .fontWeight(.thin)
-                    .kerning(8.0)
-                    .font(.custom("Copperplate", size: 30))
             }
             
             RoundedRectangle(cornerRadius: 12)
