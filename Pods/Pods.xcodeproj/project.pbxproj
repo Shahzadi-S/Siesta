@@ -3,122 +3,485 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */ = {
+		205EFBEF86DA6E7E3D5B9BABED8872EE /* IronSourceSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 779A19B3F408B19BC681275E540240E8 /* Build configuration list for PBXAggregateTarget "GoogleUserMessagingPlatform" */;
+			buildConfigurationList = 5B626D7BB173B12B2721104053676CC6 /* Build configuration list for PBXAggregateTarget "IronSourceSDK" */;
 			buildPhases = (
-				28B29EDE6F5CA8FE68523DA69BE2F299 /* [CP] Copy XCFrameworks */,
+				F5A86915C1FB9E1C192ACD1D15D8FE7A /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				267EA03E042DBAE643D90C3AE386BF1F /* PBXTargetDependency */,
+				5D90FE8C76F0772EBEB5C448A0206693 /* PBXTargetDependency */,
+			);
+			name = IronSourceSDK;
+			productName = IronSourceSDK;
+		};
+		458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B89FA0AE5FBDE8572C377868D2333BA0 /* Build configuration list for PBXAggregateTarget "GoogleUserMessagingPlatform" */;
+			buildPhases = (
+				F964805EB6342573757C6A9184C6328B /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				1CD59004D429B88153AFCE7D36926BC1 /* PBXTargetDependency */,
 			);
 			name = GoogleUserMessagingPlatform;
+			productName = GoogleUserMessagingPlatform;
+		};
+		93D529076BA2F81743BF6033A35532F2 /* UnityAds */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4123BDB12FD1D1AAA5BCE4354989049C /* Build configuration list for PBXAggregateTarget "UnityAds" */;
+			buildPhases = (
+				0A49A4E8FABAAF6143806486189308B5 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				76C8853A97770E5A65646F01D23EAAB4 /* PBXTargetDependency */,
+			);
+			name = UnityAds;
+			productName = UnityAds;
+		};
+		FAB0F19BE9FFC4EED7E99DF31D5FE145 /* IronSourceUnityAdsAdapter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 76E06FC61262EEFE8F239936A529A07A /* Build configuration list for PBXAggregateTarget "IronSourceUnityAdsAdapter" */;
+			buildPhases = (
+				F6CC45D22510902EACA359CBA8809209 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				DA441E478ED608BA5B3FD3C6BC028335 /* PBXTargetDependency */,
+				250BCEE90681E1E232918C8E7768D8FD /* PBXTargetDependency */,
+			);
+			name = IronSourceUnityAdsAdapter;
+			productName = IronSourceUnityAdsAdapter;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1493DD91336DE7675C83360B987057DD /* GoogleMobileAdsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837746640689795BB54F973086CE1EAE /* GoogleMobileAdsPlaceholder.swift */; };
-		216D63835C8887DDCC66561389712B22 /* Pods-Siesta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26E395523B6191DE682957E0D9AF3B79 /* Pods-Siesta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3317DC9751692475C7BF6CA18EE999CE /* Google-Mobile-Ads-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C82CB052E442BE450E1415431F9A60D4 /* Google-Mobile-Ads-SDK-dummy.m */; };
+		1493DD91336DE7675C83360B987057DD /* GoogleMobileAdsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B09E89EADD569C5032FC99FAFE79F4 /* GoogleMobileAdsPlaceholder.swift */; };
+		220A2674D5D9EB8D9D8CB7A5379D02AA /* Pods-Siesta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 434CC366718BFF8EC0B0305DE147FB49 /* Pods-Siesta-dummy.m */; };
+		3317DC9751692475C7BF6CA18EE999CE /* Google-Mobile-Ads-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A97885F75B8B10276576C0D7C56D3A /* Google-Mobile-Ads-SDK-dummy.m */; };
 		510E3750BD2A8E80DD85CF7549003D38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		A7888B6977A7C6C5B379A55369CE64CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 50A18E109306BAF831541AA5B4E47979 /* PrivacyInfo.xcprivacy */; };
-		BD90468037AC7AC384A68A4EABE27F84 /* Google-Mobile-Ads-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87421B0407F2349DB2D5C82CA3794AD6 /* Google-Mobile-Ads-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD3D14413E9FE0D1601735B5BAE88AD7 /* Pods-Siesta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 434CC366718BFF8EC0B0305DE147FB49 /* Pods-Siesta-dummy.m */; };
-		F3E2E4F930EAA4CDB6A3C1716056B10A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DE66624D7FB7B06FF2E3D35C4D711082 /* PrivacyInfo.xcprivacy */; };
-		FF990F6BE89122EEA9291DE6900F7041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		625BE71179D802765EB760D6B906AFBB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = D030267972323B77A6E68AF51CE6262C /* PrivacyInfo.xcprivacy */; };
+		79A644C8D183EF048104F674F350624F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		79C2C84F8B4F9EDFF40DF68598D2A94C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = EC978FC9400F11168D5E81921C21A7D0 /* PrivacyInfo.xcprivacy */; };
+		9EAC6DBD241EAEB2AD5E1C325E748739 /* Pods-Siesta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26E395523B6191DE682957E0D9AF3B79 /* Pods-Siesta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA2D5786A5AC74FCEA64CCD755C9D7A4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1E5C592A747326FF7FA1D5ECA955A774 /* PrivacyInfo.xcprivacy */; };
+		BD90468037AC7AC384A68A4EABE27F84 /* Google-Mobile-Ads-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 323E0F2A1BA212D068EA377B8E4A41CA /* Google-Mobile-Ads-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9C4E6DCDFDBBAFEA944A22769C5996A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 27B66644256B6CAE4B506398CA724255 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2F779C0EA01BBC9D28F5117561CAA50A /* PBXContainerItemProxy */ = {
+		0B0669F24FE0BEFE1793B9580F16A49C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FEA3B3A570634836C0457F3D7CEF1699;
-			remoteInfo = "Google-Mobile-Ads-SDK";
+			remoteGlobalIDString = 458B188365A307B3C128ABF524D1A3E3;
+			remoteInfo = GoogleUserMessagingPlatform;
 		};
-		4EE90504A00288E507BAD6C5B5888AFE /* PBXContainerItemProxy */ = {
+		153A21F24F44497B9BB4987C40E51EF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 205EFBEF86DA6E7E3D5B9BABED8872EE;
+			remoteInfo = IronSourceSDK;
+		};
+		320131231A231E2301F7E8C153736E6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 458B188365A307B3C128ABF524D1A3E3;
+			remoteInfo = GoogleUserMessagingPlatform;
+		};
+		47B0DCE85DDF11D2A8A97ED06C345D7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 36FD0958A0EC4A0FCF599E9B22719B03;
 			remoteInfo = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources";
 		};
-		7AA980F299872C49DC15F928B4B3FBFF /* PBXContainerItemProxy */ = {
+		49B82E0650B59A12D778F7D2CA96066F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 63A7C675C13F87669AF56006D943998B;
 			remoteInfo = "GoogleUserMessagingPlatform-UserMessagingPlatformResources";
 		};
-		8EE085802180F384C6C8CA267D472C59 /* PBXContainerItemProxy */ = {
+		5DA4D701138E7C570A68DC010C0BFB5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 458B188365A307B3C128ABF524D1A3E3;
-			remoteInfo = GoogleUserMessagingPlatform;
+			remoteGlobalIDString = AF4066D13B4DC667FB970ABF861B2B47;
+			remoteInfo = "IronSourceSDK-IronSourcePrivacyInfo";
 		};
-		F5BEF61A1926A464D2D8A07AF18E604D /* PBXContainerItemProxy */ = {
+		7E4CC909FE8638A5C164A5F9DCFBD885 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 458B188365A307B3C128ABF524D1A3E3;
-			remoteInfo = GoogleUserMessagingPlatform;
+			remoteGlobalIDString = 93D529076BA2F81743BF6033A35532F2;
+			remoteInfo = UnityAds;
+		};
+		A6D126A268B295460CD01EAF956E6163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FCD9A95708E51D3B877DF5BD54E6524;
+			remoteInfo = "UnityAds-UnityAds";
+		};
+		CDB2ABA065E6ADC746D7D2B4A08DD274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 205EFBEF86DA6E7E3D5B9BABED8872EE;
+			remoteInfo = IronSourceSDK;
+		};
+		F1A3917F511A1AD9AD314446B63B2279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93D529076BA2F81743BF6033A35532F2;
+			remoteInfo = UnityAds;
+		};
+		FA969E1C527250897B805B4B1E56347E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEA3B3A570634836C0457F3D7CEF1699;
+			remoteInfo = "Google-Mobile-Ads-SDK";
+		};
+		FD682BD7EBD3EEBEF2C172E939BC689F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB0F19BE9FFC4EED7E99DF31D5FE145;
+			remoteInfo = IronSourceUnityAdsAdapter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		058DA9643E3EAD4930586CB78E3E1F64 /* ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist"; sourceTree = "<group>"; };
+		01FD96B22A128A33A1685530CFAAFE65 /* ISConcurrentMutableSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConcurrentMutableSet.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISConcurrentMutableSet.h"; sourceTree = "<group>"; };
+		021F88C48C7546AEFB378747ACCE1236 /* ISNEventTrackerWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNEventTrackerWrapper.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNEventTrackerWrapper.h"; sourceTree = "<group>"; };
+		0274771A42D5C193A8C1895082A96DD2 /* ISAdapterAdFullscreenProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdFullscreenProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterAdFullscreenProtocol.h"; sourceTree = "<group>"; };
+		040F2CBC0C6A5476FC75FFAE18727F3F /* ISBaseInterstitialAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseInterstitialAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseInterstitialAdapter.h"; sourceTree = "<group>"; };
+		049879865020C0256919641D4F6D8102 /* ISDataKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDataKeys.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISDataKeys.h"; sourceTree = "<group>"; };
+		04A4235FCB8AF4336812B83A723DFE28 /* ISImpressionData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISImpressionData.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISImpressionData.h"; sourceTree = "<group>"; };
+		053B2CFFA401BD8AF31699BE242D5D78 /* ISNetworkInitCallbackProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNetworkInitCallbackProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNetworkInitCallbackProtocol.h"; sourceTree = "<group>"; };
+		05A20F4AD682A7DC3548D4421D2464AB /* ISNativeAdViewBinderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdViewBinderProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdViewBinderProtocol.h"; sourceTree = "<group>"; };
+		074F553B469142FBAAD792A31C2CF289 /* ISAdapterAdViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdViewDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterAdViewDelegate.h"; sourceTree = "<group>"; };
+		08DFEAAA1901B9FF8345827FDA56939E /* IronSourcePrivacyInfo.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IronSourcePrivacyInfo.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E11631E5F8E934B5F06AE140A8784A /* ISNativeAdDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdDataProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdDataProtocol.h"; sourceTree = "<group>"; };
+		09E70DE728E64355FFDE5BB30DDE508B /* Google-Mobile-Ads-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		0A867B06B705F063579B5AC9D5E2BAA4 /* ISBaseBannerAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseBannerAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseBannerAdapter.h"; sourceTree = "<group>"; };
+		0AB9ACC67A637F2FCC8BCBAD5781BDED /* ISSegment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSegment.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISSegment.h"; sourceTree = "<group>"; };
+		0B426DD9DFF3FB8D04B1A623207C817A /* ISDemandOnlyBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyBannerView.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISDemandOnlyBannerView.h"; sourceTree = "<group>"; };
+		0CFB56C6392E32042DD354AD3FD29AC0 /* IronSourceSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IronSourceSDK.release.xcconfig; sourceTree = "<group>"; };
+		0E915C130D830EDC1B59545755848909 /* IronSourceUnityAdsAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IronSourceUnityAdsAdapter.debug.xcconfig; sourceTree = "<group>"; };
+		0F431595116D30BD52C943B6B1983B63 /* ISBannerSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerSize.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBannerSize.h"; sourceTree = "<group>"; };
+		0FE2861EF817203A124931DA32A95AF2 /* ISAdapterAdFullscreenProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdFullscreenProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterAdFullscreenProtocol.h"; sourceTree = "<group>"; };
+		11D405F664E6E95808C96EED941BD53E /* ISInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInterstitialDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISInterstitialDelegate.h"; sourceTree = "<group>"; };
+		12B5969902E3E9E385C777BE2E24FC18 /* ISPlacementInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISPlacementInfo.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISPlacementInfo.h"; sourceTree = "<group>"; };
+		12CFC9466F73476EC86BF21898DE8009 /* ISBaseInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseInterstitial.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseInterstitial.h"; sourceTree = "<group>"; };
+		12E54ACAECAE2454CA90967C73C8A7C3 /* ISRewardedVideoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISRewardedVideoDelegate.h"; sourceTree = "<group>"; };
+		1421D92BF2D28F5D82EBC009D5299FAA /* Google-Mobile-Ads-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		14417973268B32FB15C9D69771F5B83D /* ISBaseAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseAdapter.h"; sourceTree = "<group>"; };
+		15035881D0C04D174807EE5FD327646C /* SupersonicLogManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SupersonicLogManager.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/SupersonicLogManager.h"; sourceTree = "<group>"; };
+		158C0108F85E5E6386A9A1A778641D8A /* LevelPlayNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayNativeAd.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayNativeAd.h"; sourceTree = "<group>"; };
+		158CFE857F714394F64EB0F6D7C01D94 /* ISNEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNEvent.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNEvent.h"; sourceTree = "<group>"; };
 		16357F1194F6BBF0FDC8F44190C5B3FC /* Pods-Siesta-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Siesta-acknowledgements.markdown"; sourceTree = "<group>"; };
+		189F954BC21130B60C9775E035CE6D4A /* ISBaseAdUnitAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdUnitAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseAdUnitAdapter.h"; sourceTree = "<group>"; };
+		190F608850D147782FC21FFE59D4EC1E /* ISNativeAdAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdAdapterDelegate.h"; sourceTree = "<group>"; };
+		1ACF4BD608CECB9C2F36CD0767A69E6C /* ISBaseInterstitialAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseInterstitialAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseInterstitialAdapter.h"; sourceTree = "<group>"; };
+		1C7296803828B199ACEF6B2938E930D5 /* ISAdapterBaseProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterBaseProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterBaseProtocol.h"; sourceTree = "<group>"; };
+		1C92A835CE43F011DA2CFBA553310E64 /* ISAdapterSettingsProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterSettingsProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterSettingsProtocol.h"; sourceTree = "<group>"; };
+		1D13482BBB7F2988D97C548880FFF1B7 /* ISPlacementInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISPlacementInfo.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISPlacementInfo.h"; sourceTree = "<group>"; };
+		1E1EC12B6FEE91EF8853B95523916D69 /* UnityAds.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnityAds.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5C592A747326FF7FA1D5ECA955A774 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework/ios-arm64/GoogleMobileAds.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		1EC570AAC919DFC1A5367AD1D7707C9A /* ISNAppStoreVCRootViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNAppStoreVCRootViewDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNAppStoreVCRootViewDelegate.h"; sourceTree = "<group>"; };
+		1F206EB8C22CFC35DA9530684AF2314C /* UIView+ISNativeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ISNativeView.h"; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/UIView+ISNativeView.h"; sourceTree = "<group>"; };
+		1FF0226B372F803BE5E5446C6340D0FA /* ISEventsReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISEventsReporting.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISEventsReporting.h"; sourceTree = "<group>"; };
+		21A1FDBC1E9D6DA93816B9F89D3B178F /* ISAdData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdData.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdData.h"; sourceTree = "<group>"; };
+		21EDE35336E9758FB3CD145B719B1CB7 /* ISLogDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLogDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISLogDelegate.h"; sourceTree = "<group>"; };
+		239026B6B71ABC3F436D62ED7176DBD2 /* ISLoadWhileShowSupportState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLoadWhileShowSupportState.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISLoadWhileShowSupportState.h"; sourceTree = "<group>"; };
 		23EA9D244740C960186846971AA5A950 /* Pods-Siesta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Siesta.modulemap"; sourceTree = "<group>"; };
+		24B5F607B83C9CA65FE7F37250D10034 /* ISAdOptionsPosition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdOptionsPosition.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdOptionsPosition.h"; sourceTree = "<group>"; };
 		26E395523B6191DE682957E0D9AF3B79 /* Pods-Siesta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Siesta-umbrella.h"; sourceTree = "<group>"; };
-		28EC0D6B45622794297A1133DA37EAEC /* ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist"; sourceTree = "<group>"; };
-		31ABF05F4F720C8E40F38BAD866EBDC0 /* GoogleUserMessagingPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.release.xcconfig; sourceTree = "<group>"; };
+		27646FB29D000550EF4D5A26C3CA49BF /* LevelPlayRewardedVideoManualDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayRewardedVideoManualDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayRewardedVideoManualDelegate.h"; sourceTree = "<group>"; };
+		27B66644256B6CAE4B506398CA724255 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "Frameworks/Release/UserMessagingPlatform.xcframework/ios-arm64/UserMessagingPlatform.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		27C423B671C9078900CEF0DD00FA769D /* GoogleUserMessagingPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.release.xcconfig; sourceTree = "<group>"; };
+		2948F9A1823AEAB5A943008DD9D4EA71 /* ISAppStoreErrorDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAppStoreErrorDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAppStoreErrorDelegate.h"; sourceTree = "<group>"; };
+		29670645F1CB71F238C61625FE388BD6 /* ISBaseBannerAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseBannerAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseBannerAdapter.h"; sourceTree = "<group>"; };
+		2AA2AB3FBA593899E291BD95A1623B66 /* ISBaseRewardedVideoAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseRewardedVideoAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseRewardedVideoAdapter.h"; sourceTree = "<group>"; };
+		2BDD5FCF97358B3F00CBCEECE52E5A59 /* IronSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IronSource.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/IronSource.h"; sourceTree = "<group>"; };
+		2CBD2B8410703679AF001E5335361CEC /* ISNetworkInitCallbackProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNetworkInitCallbackProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNetworkInitCallbackProtocol.h"; sourceTree = "<group>"; };
+		2E40964305DB9BEEF68074E3CC1784D6 /* ISAdapterAdViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdViewDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterAdViewDelegate.h"; sourceTree = "<group>"; };
+		2E58859A3F3A1B7C540C2B28C99D8F66 /* ISMetaData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISMetaData.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISMetaData.h"; sourceTree = "<group>"; };
+		2F5B478AD2AA6AEA93D8EC385645A5B8 /* ISBaseAdAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseAdAdapter.h"; sourceTree = "<group>"; };
+		300B0568402E4266FCDE476CDAC515AC /* ISNativeAdAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdAdapterDelegate.h"; sourceTree = "<group>"; };
+		3074554F07FD8B98DCE294FA380643EA /* ISBaseAdUnitAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdUnitAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseAdUnitAdapter.h"; sourceTree = "<group>"; };
+		31211521ED6A820E5432D9C199C07C47 /* ISAdapterBannerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterBannerProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterBannerProtocol.h"; sourceTree = "<group>"; };
+		31589D9E24EF0655D51C8F54CB20F001 /* ISNativeAdProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdProtocol.h"; sourceTree = "<group>"; };
+		31E71C27D32DCDE162FF9B99D4ED3B19 /* ISAdapterAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterAdDelegate.h"; sourceTree = "<group>"; };
+		323E0F2A1BA212D068EA377B8E4A41CA /* Google-Mobile-Ads-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Google-Mobile-Ads-SDK-umbrella.h"; sourceTree = "<group>"; };
+		326A2171FF8BD63A597B0936A0FC47CD /* ISAdapterAdInteractionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdInteractionDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterAdInteractionDelegate.h"; sourceTree = "<group>"; };
+		336A6680723C39A296E99027B369A87C /* IronSourceSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "IronSourceSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		34A522302CA86004B476C7C027BCB150 /* ISAdapterAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterAdDelegate.h"; sourceTree = "<group>"; };
+		34B10F17EB37660E04E9CF0B70F418F5 /* ISBaseAdapter+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ISBaseAdapter+Internal.h"; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseAdapter+Internal.h"; sourceTree = "<group>"; };
+		3591E866133E459E8FBA190F2D18075B /* ISAdapterBaseProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterBaseProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterBaseProtocol.h"; sourceTree = "<group>"; };
+		364B9B98F7312A78CF41B6DB416D4A82 /* ISBannerAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerAdDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBannerAdDelegate.h"; sourceTree = "<group>"; };
+		379EC9FD1E75F9F2D446A7D51A593813 /* ISNControllerMessageListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNControllerMessageListener.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNControllerMessageListener.h"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3998091512768CD07733CB4F02B4BD9F /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources"; path = GoogleMobileAdsResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BD97D982CAB87B29E6846F927335BF3 /* Google-Mobile-Ads-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.release.xcconfig"; sourceTree = "<group>"; };
-		3CB2870152A11C8D7854F09D9999E402 /* Google-Mobile-Ads-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.debug.xcconfig"; sourceTree = "<group>"; };
-		401D11B08750DA485EB700F945EBF734 /* Pods-Siesta */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Siesta"; path = Pods_Siesta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3998091512768CD07733CB4F02B4BD9F /* GoogleMobileAdsResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleMobileAdsResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB275B83A30AF1D5633D4505966FE3F /* ISBaseNetworkAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseNetworkAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseNetworkAdapter.h"; sourceTree = "<group>"; };
+		3B165B4B59C3EC66E5CB35D8271F483C /* ISConfigurations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConfigurations.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISConfigurations.h"; sourceTree = "<group>"; };
+		3B9C47FF85B5308225363CC26CC0AE41 /* IronSourceSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IronSourceSDK.debug.xcconfig; sourceTree = "<group>"; };
+		3BD287BED292FC51E8B4A19047061F07 /* ISDemandOnlyBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyBannerDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISDemandOnlyBannerDelegate.h"; sourceTree = "<group>"; };
+		3C8E8FDD493D55E4CF3D025969B03BBD /* IronSourceNetworkSwiftBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IronSourceNetworkSwiftBridge.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/IronSourceNetworkSwiftBridge.h"; sourceTree = "<group>"; };
+		3D5D2621A89F3DBB49E6051EEC9F271A /* ISBannerAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBannerAdapterDelegate.h"; sourceTree = "<group>"; };
+		3E95E8128A6DB7B1D6AD21824B85CFF6 /* ISMetaDataUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISMetaDataUtils.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISMetaDataUtils.h"; sourceTree = "<group>"; };
+		3EB67EFCC09525360B38C17B18F8A27C /* ISAdapterConsentProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterConsentProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterConsentProtocol.h"; sourceTree = "<group>"; };
+		401D11B08750DA485EB700F945EBF734 /* Pods_Siesta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Siesta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		407B0806A9C186320D92F92586089106 /* ISOfferwallAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISOfferwallAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISOfferwallAdapterDelegate.h"; sourceTree = "<group>"; };
+		41E8BF232B45C44FD4F82328D95A127E /* ISBannerAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerAdDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBannerAdDelegate.h"; sourceTree = "<group>"; };
+		4316A53453EFF3B10A0A3C1D17996133 /* ISMetaDataConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISMetaDataConstants.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISMetaDataConstants.h"; sourceTree = "<group>"; };
 		434CC366718BFF8EC0B0305DE147FB49 /* Pods-Siesta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Siesta-dummy.m"; sourceTree = "<group>"; };
-		50A18E109306BAF831541AA5B4E47979 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = "Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework/ios-arm64/GoogleMobileAds.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		45ADDEFCC7B18114AE63430B9E83FE7A /* ISAdapterDebugProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterDebugProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterDebugProtocol.h"; sourceTree = "<group>"; };
+		466517C10B94D3A95481FBE1A269CBF0 /* ISBannerSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerSize.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBannerSize.h"; sourceTree = "<group>"; };
+		46B9FDF2FD343AE87F88E9302BB91CE7 /* ISInterstitialAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInterstitialAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISInterstitialAdapterProtocol.h"; sourceTree = "<group>"; };
+		47B28CB95C81AF7ADE59641552B37BE1 /* ISDemandOnlyInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyInterstitialDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISDemandOnlyInterstitialDelegate.h"; sourceTree = "<group>"; };
+		482A0DEE5B3E9BCEA354328C86716A8D /* LevelPlayInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayInterstitialDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayInterstitialDelegate.h"; sourceTree = "<group>"; };
+		484BCE2D98AC09D566FA766A153FE2C4 /* LevelPlayBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayBannerDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayBannerDelegate.h"; sourceTree = "<group>"; };
+		4A9250AD3E8BF6FDBB3C89B264F50EF0 /* ISNControllerManagerSwiftFacade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNControllerManagerSwiftFacade.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNControllerManagerSwiftFacade.h"; sourceTree = "<group>"; };
+		4D0E628E367C0E0A8E0A81164DE4A10C /* ISBiddingDataDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBiddingDataDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBiddingDataDelegate.h"; sourceTree = "<group>"; };
+		4E881352178772DBB86FC39C8AE49F5C /* ISGender.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISGender.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISGender.h"; sourceTree = "<group>"; };
+		4F4B04BDCE48A8BEAFE71B272BD6F578 /* ISConfigurations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConfigurations.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISConfigurations.h"; sourceTree = "<group>"; };
+		4FCBB27679C90EFA259479F2CD0E9AFE /* ISNativeAdDataImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdDataImage.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdDataImage.h"; sourceTree = "<group>"; };
+		5080792769B31A9E89D0B551530D9BB0 /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = UserMessagingPlatform.xcframework; path = Frameworks/Release/UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
+		50C9CB5F26CB60C1F2F3F9CE03D63F59 /* ISError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISError.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISError.h"; sourceTree = "<group>"; };
 		50E426CD5B8BB5B7F81715201B29CB26 /* Pods-Siesta-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Siesta-acknowledgements.plist"; sourceTree = "<group>"; };
+		51690D5C8E63D3543BFCE841E7E6E901 /* ISDemandOnlyInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyInterstitialDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISDemandOnlyInterstitialDelegate.h"; sourceTree = "<group>"; };
+		51879D88CBA3C9A60D2E98CBA4CF17CF /* ISBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBannerDelegate.h"; sourceTree = "<group>"; };
+		53543533C087FA5F787B94C89A29BD18 /* ISAdapterAdRewardedDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdRewardedDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterAdRewardedDelegate.h"; sourceTree = "<group>"; };
+		56D5E1E8C926DEF539A60369A5D03A88 /* ISOfferwallAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISOfferwallAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISOfferwallAdapterProtocol.h"; sourceTree = "<group>"; };
+		57A08133D1521563E8F8717B4CA4F535 /* ISInitializationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInitializationDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISInitializationDelegate.h"; sourceTree = "<group>"; };
+		5AEE23806BD8343A08C4EAAAE9E6E086 /* ISNativeAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdView.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdView.h"; sourceTree = "<group>"; };
+		5B2B37BA28C079DB18C4AF730EEEF669 /* ISBannerAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBannerAdapterProtocol.h"; sourceTree = "<group>"; };
+		5C3EC514F4E4B19C3C23F4ACACEADAD8 /* ISBaseRewardedVideoAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseRewardedVideoAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseRewardedVideoAdapter.h"; sourceTree = "<group>"; };
+		5C9D51586810567C8CF18B30D2157F1A /* ISBiddingDataAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBiddingDataAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBiddingDataAdapterProtocol.h"; sourceTree = "<group>"; };
+		5FBFC0BA0F54AC66C4AEEE7179AF4AC7 /* ISInitializationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInitializationDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISInitializationDelegate.h"; sourceTree = "<group>"; };
+		60AEEC602750F233A5B5D4D91ECA91B0 /* ResourceBundle-UnityAds-UnityAds-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UnityAds-UnityAds-Info.plist"; sourceTree = "<group>"; };
+		62BF91CC36B04F036FB3F7CE90A2FF76 /* ISBiddingDataDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBiddingDataDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBiddingDataDelegate.h"; sourceTree = "<group>"; };
+		635D087834F63A435CC927B886B07682 /* ISNSupersonicAdsPublisherSwiftFacade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNSupersonicAdsPublisherSwiftFacade.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNSupersonicAdsPublisherSwiftFacade.h"; sourceTree = "<group>"; };
+		650A87886FC6E7CBC3DDB43D3A5BFE84 /* ISBaseNetworkAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseNetworkAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseNetworkAdapter.h"; sourceTree = "<group>"; };
+		655BABE65D68E42AB7BBEFED89FC13C9 /* ISOfferwallDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISOfferwallDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISOfferwallDelegate.h"; sourceTree = "<group>"; };
+		66547072C722707D897CD915B1748A20 /* IronSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IronSource.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/IronSource.h"; sourceTree = "<group>"; };
+		6692702AB5C9FBCF04A10893FD5FD891 /* ISBaseNativeAdAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseNativeAdAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseNativeAdAdapter.h"; sourceTree = "<group>"; };
+		669E2664E9A393FB8E6F1C1A13B237E3 /* ISRewardedVideoAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISRewardedVideoAdapterProtocol.h"; sourceTree = "<group>"; };
+		69F23A8D91ED1670CC8ED31D05DA51A1 /* ISLoadWhileShowSupportState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLoadWhileShowSupportState.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISLoadWhileShowSupportState.h"; sourceTree = "<group>"; };
+		6A599A743B4EE610FCBEC914B9562693 /* ISNEventTrackerWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNEventTrackerWrapper.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNEventTrackerWrapper.h"; sourceTree = "<group>"; };
+		6AE1496511274C63F595A7725E72BEF6 /* UnityAds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UnityAds.debug.xcconfig; sourceTree = "<group>"; };
+		6BE751EF34AA41597D4C1E9FE3D4A96D /* ISDemandOnlyBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyBannerView.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISDemandOnlyBannerView.h"; sourceTree = "<group>"; };
+		6CCE0CBD97AB1B0495D7C49143BEA28E /* ISNEventTrackerInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNEventTrackerInterface.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNEventTrackerInterface.h"; sourceTree = "<group>"; };
+		6D161F1B7C6D59DE5EA79E42AB8CB552 /* LevelPlayRewardedVideoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayRewardedVideoDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayRewardedVideoDelegate.h"; sourceTree = "<group>"; };
+		6E7A52921A3782C742760B628419F064 /* LevelPlayNativeAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayNativeAdDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayNativeAdDelegate.h"; sourceTree = "<group>"; };
+		6ECD6465A19D7DA28763F5CBB933B24C /* ISAdapterNativeAdViewBinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterNativeAdViewBinder.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterNativeAdViewBinder.h"; sourceTree = "<group>"; };
+		71502E54EC76530AEFDE3BED13B68530 /* ISLoggerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLoggerManager.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISLoggerManager.h"; sourceTree = "<group>"; };
+		718851529FFDB9FA4E552BFB0730F2DC /* ISAdapterAdRewardedDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdRewardedDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterAdRewardedDelegate.h"; sourceTree = "<group>"; };
+		73EADA0F02025A009606118867C5BC1B /* ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist"; sourceTree = "<group>"; };
+		744575703D81E1922E6EE4065DA0814F /* ISBaseBanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseBanner.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseBanner.h"; sourceTree = "<group>"; };
+		7448996426D02751BB8270B376F4359E /* ISAdapterConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterConfig.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterConfig.h"; sourceTree = "<group>"; };
+		7494E883681E41699DCD1D097EB2D72D /* ISBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerView.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBannerView.h"; sourceTree = "<group>"; };
+		74C9694036B63D5FBFA17270FFC5B147 /* ISMetaDataUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISMetaDataUtils.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISMetaDataUtils.h"; sourceTree = "<group>"; };
+		7509111B75A99D6FD2EB9D1310AF5940 /* ISDemandOnlyRewardedVideoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyRewardedVideoDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISDemandOnlyRewardedVideoDelegate.h"; sourceTree = "<group>"; };
+		762AE81616A8056E5C824DED92337630 /* ISNControllerManagerSwiftFacade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNControllerManagerSwiftFacade.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNControllerManagerSwiftFacade.h"; sourceTree = "<group>"; };
+		768AEBB20A0B1B885399C35E68218C95 /* ISSetAPSDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSetAPSDataProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISSetAPSDataProtocol.h"; sourceTree = "<group>"; };
+		77A0D9F43B7CCA3350538284A239F7D0 /* ISBaseAdInteractionAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdInteractionAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseAdInteractionAdapter.h"; sourceTree = "<group>"; };
+		77F58CBE3B069A2E42560B8E4AA57678 /* ISAdapterAdInteractionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterAdInteractionDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterAdInteractionDelegate.h"; sourceTree = "<group>"; };
 		781FC9783D4806FDC6A016703AB237FB /* Pods-Siesta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Siesta.release.xcconfig"; sourceTree = "<group>"; };
-		7BBE2B0C28630C727E998777ED1DCF4B /* Google-Mobile-Ads-SDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Google-Mobile-Ads-SDK-Info.plist"; sourceTree = "<group>"; };
+		79654BDF44785C182848CC9CD068C4BA /* ISWaterfallConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISWaterfallConfiguration.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISWaterfallConfiguration.h"; sourceTree = "<group>"; };
+		799AA3F1CE88E03AB7F98F289FAC94FB /* LevelPlayInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayInterstitialDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayInterstitialDelegate.h"; sourceTree = "<group>"; };
+		7B82A53C9FBDB3C5CE8AE865FE8DE2E3 /* ISNativeAdProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdProperties.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdProperties.h"; sourceTree = "<group>"; };
+		7C8DBD9D7CFC401A73A5CD517989184E /* ISLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLog.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISLog.h"; sourceTree = "<group>"; };
 		7D30DCF00DB32560D2CF475833733E12 /* Pods-Siesta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Siesta.debug.xcconfig"; sourceTree = "<group>"; };
-		837746640689795BB54F973086CE1EAE /* GoogleMobileAdsPlaceholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GoogleMobileAdsPlaceholder.swift; path = Sources/GoogleMobileAdsPlaceholder.swift; sourceTree = "<group>"; };
-		87421B0407F2349DB2D5C82CA3794AD6 /* Google-Mobile-Ads-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Google-Mobile-Ads-SDK-umbrella.h"; sourceTree = "<group>"; };
+		7D47272394A3B3B8065DFBCBFDCD4856 /* ISAdapterNativeAdData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterNativeAdData.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterNativeAdData.h"; sourceTree = "<group>"; };
+		7D5852454C0723F2370387ACC911050E /* ISAppStoreErrorDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAppStoreErrorDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAppStoreErrorDelegate.h"; sourceTree = "<group>"; };
+		7D8BD3EDFF8838634C8ADB020C9342DC /* LevelPlayNativeAdBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayNativeAdBuilder.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayNativeAdBuilder.h"; sourceTree = "<group>"; };
+		7DDE62667523EA9F2FC50C07B704AAC0 /* ISBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBannerDelegate.h"; sourceTree = "<group>"; };
+		7F794715C313220AEED2F335730FADF7 /* ISBaseInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseInterstitial.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseInterstitial.h"; sourceTree = "<group>"; };
+		81A97885F75B8B10276576C0D7C56D3A /* Google-Mobile-Ads-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Google-Mobile-Ads-SDK-dummy.m"; sourceTree = "<group>"; };
+		82D422F4668E545191A695A1C0C92E3F /* Google-Mobile-Ads-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Google-Mobile-Ads-SDK-prefix.pch"; sourceTree = "<group>"; };
+		84E1160632DBF2CBAD994FCEED5C0E12 /* ISConsentViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConsentViewDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISConsentViewDelegate.h"; sourceTree = "<group>"; };
+		853D58694FFA9CC459D71744072F532E /* UnityAds-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "UnityAds-xcframeworks.sh"; sourceTree = "<group>"; };
+		87905C72258BA89298DE851CD2EEF5CD /* ISNativeAdViewHolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdViewHolder.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdViewHolder.h"; sourceTree = "<group>"; };
+		87AE63E6475B0A9D840DC04B6B18237A /* ResourceBundle-IronSourcePrivacyInfo-IronSourceSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-IronSourcePrivacyInfo-IronSourceSDK-Info.plist"; sourceTree = "<group>"; };
+		87FD772CE0BC8418BAB08C1E6D40E67C /* ISInterstitialAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInterstitialAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISInterstitialAdapterDelegate.h"; sourceTree = "<group>"; };
+		89287F2D09B082C3D886796AB0DD946E /* ISOfferwallAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISOfferwallAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISOfferwallAdapterProtocol.h"; sourceTree = "<group>"; };
+		89545ECA1E9F7D6783FB3135AB9A93B2 /* ISConcurrentMutableSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConcurrentMutableSet.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISConcurrentMutableSet.h"; sourceTree = "<group>"; };
 		89BAB73DDE6CFC3CAD1EDD3309DEA30F /* Pods-Siesta-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Siesta-resources.sh"; sourceTree = "<group>"; };
-		8A377C18F92A8A511869ADA54B5652D2 /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "GoogleUserMessagingPlatform-UserMessagingPlatformResources"; path = UserMessagingPlatformResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FBCE96FF45F89EB473BBEC6521C7C7E /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = UserMessagingPlatform.xcframework; path = Frameworks/Release/UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
-		94E58860FE9DF20A35AACB84AF645624 /* Google-Mobile-Ads-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Google-Mobile-Ads-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		8A377C18F92A8A511869ADA54B5652D2 /* UserMessagingPlatformResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserMessagingPlatformResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A62ECBAC8BFEFC7994DD86C0075B440 /* ISNativeAdViewHolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdViewHolder.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdViewHolder.h"; sourceTree = "<group>"; };
+		8B4EF38C312F25FF746B924583C67296 /* ISMetaDataConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISMetaDataConstants.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISMetaDataConstants.h"; sourceTree = "<group>"; };
+		8F0D1730601F99B91F2575BF191B418A /* ISNativeAdViewBinderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdViewBinderProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdViewBinderProtocol.h"; sourceTree = "<group>"; };
+		9082E1FE43BA7A87E89E7451A3C02BC6 /* LevelPlayNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayNativeAd.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayNativeAd.h"; sourceTree = "<group>"; };
+		90E493E5CE472C26728751EA206EA66B /* LevelPlayRewardedVideoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayRewardedVideoDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayRewardedVideoDelegate.h"; sourceTree = "<group>"; };
+		91223C97C1730875D114567ECCB7491A /* ISAdapterNativeAdData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterNativeAdData.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterNativeAdData.h"; sourceTree = "<group>"; };
+		91C583044521E2068F2438FE9F43D4B1 /* ISSupersonicAdsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSupersonicAdsConfiguration.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISSupersonicAdsConfiguration.h"; sourceTree = "<group>"; };
+		91C6EF6FFA5530F10EB82F264DA13B37 /* ISAdapterErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterErrors.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterErrors.h"; sourceTree = "<group>"; };
+		9204681F63B1B42BAA7A882D5672FD25 /* ISIronSourceAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISIronSourceAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISIronSourceAdapter.h"; sourceTree = "<group>"; };
+		922034AC685CA03979875ECD8CE6AB17 /* GoogleUserMessagingPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.debug.xcconfig; sourceTree = "<group>"; };
+		9271DAFD12AA68C2B83E552D24B4FF3D /* IronSource.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = IronSource.xcframework; path = IronSource/IronSource.xcframework; sourceTree = "<group>"; };
+		930F43E1BB3436642F7B785195F3CADD /* ISReleaseMemoryAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISReleaseMemoryAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISReleaseMemoryAdapterProtocol.h"; sourceTree = "<group>"; };
+		9419548BBE15B3ABDFCBF63B8DDFB303 /* ISNAppStoreVCRootViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNAppStoreVCRootViewDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNAppStoreVCRootViewDelegate.h"; sourceTree = "<group>"; };
+		94B09E89EADD569C5032FC99FAFE79F4 /* GoogleMobileAdsPlaceholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GoogleMobileAdsPlaceholder.swift; path = Sources/GoogleMobileAdsPlaceholder.swift; sourceTree = "<group>"; };
+		94B5941A3604B01A42F843007F356FC4 /* ISIntegrationHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISIntegrationHelper.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISIntegrationHelper.h"; sourceTree = "<group>"; };
+		94D7BA4B851B262D9B4DF47C44375B30 /* LevelPlayRewardedVideoBaseDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayRewardedVideoBaseDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayRewardedVideoBaseDelegate.h"; sourceTree = "<group>"; };
+		95EE023588A83A042C656C9B59FAE43E /* ISBaseNativeAdAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseNativeAdAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseNativeAdAdapter.h"; sourceTree = "<group>"; };
+		96E1DEEC7B7EB421988EF2D4AE4E6278 /* ISBaseBanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseBanner.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseBanner.h"; sourceTree = "<group>"; };
+		9842CFC56B2EFD95BC59132C15A4D4B9 /* IronSourceUnityAdsAdapter-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "IronSourceUnityAdsAdapter-xcframeworks.sh"; sourceTree = "<group>"; };
+		995EBBBDECD6A87059A4278D04516A68 /* UnityAds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UnityAds.release.xcconfig; sourceTree = "<group>"; };
+		9A02DB0C31678E040CE8E3CF7485DC09 /* ISBiddingDataAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBiddingDataAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBiddingDataAdapterProtocol.h"; sourceTree = "<group>"; };
 		9A4396A68C4B216C0684ACA296F81EC4 /* Pods-Siesta-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Siesta-Info.plist"; sourceTree = "<group>"; };
-		9CE2B1E5F4AFF15A541642B247E71E95 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMobileAds.xcframework; path = Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C82CB052E442BE450E1415431F9A60D4 /* Google-Mobile-Ads-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Google-Mobile-Ads-SDK-dummy.m"; sourceTree = "<group>"; };
-		D10F663B298C8F5CE4AEAD11558C0C20 /* Google-Mobile-Ads-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Google-Mobile-Ads-SDK.modulemap"; sourceTree = "<group>"; };
-		DE66624D7FB7B06FF2E3D35C4D711082 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = "Frameworks/Release/UserMessagingPlatform.xcframework/ios-arm64/UserMessagingPlatform.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
-		E6AFE911BCBC86108CD1441C3F7B3756 /* Google-Mobile-Ads-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Google-Mobile-Ads-SDK-prefix.pch"; sourceTree = "<group>"; };
-		EB61DA7FFE6D9B8661EB9F7850AF655D /* GoogleUserMessagingPlatform-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleUserMessagingPlatform-xcframeworks.sh"; sourceTree = "<group>"; };
-		F8ECCB3B4E33C0FDD00B394CC2C7EA2E /* Google-Mobile-Ads-SDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Google-Mobile-Ads-SDK"; path = Google_Mobile_Ads_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE9FA647701D5D9784F7B39F699820EB /* GoogleUserMessagingPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.debug.xcconfig; sourceTree = "<group>"; };
+		9B0EB901A2087A2D7C8EB1528631781E /* ISAdapterMetaDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterMetaDataProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterMetaDataProtocol.h"; sourceTree = "<group>"; };
+		9B1F4986B4EBFBE7FCCB9A134A3FF102 /* ISRewardedVideoManualDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoManualDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISRewardedVideoManualDelegate.h"; sourceTree = "<group>"; };
+		9CEAB541177BAE75B4551DE9E3549D1E /* LevelPlayRewardedVideoManualDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayRewardedVideoManualDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayRewardedVideoManualDelegate.h"; sourceTree = "<group>"; };
+		9CFA8043A1065DE11C1120967E0AF846 /* ISInterstitialDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInterstitialDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISInterstitialDelegate.h"; sourceTree = "<group>"; };
+		9D6E331CCEDD238DE266FB6C48CE211A /* UIView+ISNativeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ISNativeView.h"; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/UIView+ISNativeView.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E51911222C709C2ACD40B22FEEF6BDD /* ISMetaData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISMetaData.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISMetaData.h"; sourceTree = "<group>"; };
+		9E755027822271424D3E307C94191931 /* ISNativeAdLoadDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdLoadDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdLoadDelegate.h"; sourceTree = "<group>"; };
+		9EF74001529BB3979B035678D08FB481 /* ISSupersonicAdsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSupersonicAdsConfiguration.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISSupersonicAdsConfiguration.h"; sourceTree = "<group>"; };
+		A0C36BCD0881E8913F9AD8DE0AB28400 /* Google-Mobile-Ads-SDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Google-Mobile-Ads-SDK-Info.plist"; sourceTree = "<group>"; };
+		A205F529A89A7D26BE2AF9684578AB36 /* ISNEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNEvent.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNEvent.h"; sourceTree = "<group>"; };
+		A35E96F30DC879FB851E3205186DEF8C /* ISBaseAdapter+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ISBaseAdapter+Internal.h"; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseAdapter+Internal.h"; sourceTree = "<group>"; };
+		A39ADEFD309169CF30D1AFE612EAA141 /* ISNativeAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdView.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdView.h"; sourceTree = "<group>"; };
+		A3BEC28B2D383114E28E67CAEFB558C3 /* ISImpressionDataDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISImpressionDataDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISImpressionDataDelegate.h"; sourceTree = "<group>"; };
+		A4BE17D2BEAFBF3C40C50235785F1945 /* ISConcurrentMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConcurrentMutableDictionary.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISConcurrentMutableDictionary.h"; sourceTree = "<group>"; };
+		A4C55273F2F3585F5CE262F7C3D8FD0D /* ISBaseAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseAdapter.h"; sourceTree = "<group>"; };
+		A5B6B163F44FA6117011E650878EFD08 /* IronSourceUnityAdsAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IronSourceUnityAdsAdapter.release.xcconfig; sourceTree = "<group>"; };
+		A6AD8C6C9018304D930E3787A061A46C /* ISRewardedVideoAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISRewardedVideoAdapterDelegate.h"; sourceTree = "<group>"; };
+		A7479F307955D5246616C56F410AA889 /* ISBaseAdInteractionAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdInteractionAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseAdInteractionAdapter.h"; sourceTree = "<group>"; };
+		AD436C3687983C5328EC306BBF6DAF03 /* ISAdapterDebugProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterDebugProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterDebugProtocol.h"; sourceTree = "<group>"; };
+		ADEE49C1245867221F143524CBA06CA2 /* Google-Mobile-Ads-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Google-Mobile-Ads-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		AEC513B5F3A779E6AADD7DF8298602D8 /* ISConcurrentMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConcurrentMutableDictionary.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISConcurrentMutableDictionary.h"; sourceTree = "<group>"; };
+		AF0D2F36F938CD9068F0C0B28B46F529 /* ISImpressionDataDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISImpressionDataDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISImpressionDataDelegate.h"; sourceTree = "<group>"; };
+		AFD09831E2CFE69640EBBFF8AAE553D0 /* ISNativeAdProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdProperties.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdProperties.h"; sourceTree = "<group>"; };
+		B3BD43BF3C52A51CFBF487A66F61CBBC /* ISBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerView.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBannerView.h"; sourceTree = "<group>"; };
+		B3D3EF7EF581F72469759A4A29DD27E6 /* ISAdapterNativeAdViewBinderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterNativeAdViewBinderProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterNativeAdViewBinderProtocol.h"; sourceTree = "<group>"; };
+		B42562D515A241285FC2E43E316A74FE /* ISBaseRewardedVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseRewardedVideo.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBaseRewardedVideo.h"; sourceTree = "<group>"; };
+		B427001D7196C70F7C4937BA2E63CE1A /* ISBannerAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISBannerAdapterProtocol.h"; sourceTree = "<group>"; };
+		B794BC3DD19756CEC7E9F078CA7F942C /* ISEventsReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISEventsReporting.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISEventsReporting.h"; sourceTree = "<group>"; };
+		B7D36680A2C08579A13E760823C47B49 /* ISRewardedVideoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISRewardedVideoDelegate.h"; sourceTree = "<group>"; };
+		B7DB2B22D6543FAF83EBDA9CA0BE835F /* LevelPlayRewardedVideoBaseDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayRewardedVideoBaseDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayRewardedVideoBaseDelegate.h"; sourceTree = "<group>"; };
+		BA04588764AE56A95276C60D1D705861 /* ISAdapterNativeAdViewBinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterNativeAdViewBinder.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterNativeAdViewBinder.h"; sourceTree = "<group>"; };
+		BAAC6759E462BDEB09E18904F13907BC /* ISNativeAdProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdProtocol.h"; sourceTree = "<group>"; };
+		BAD9E28ED5A3B60793BBC12D53D16C1F /* ISBaseAdAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseAdAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseAdAdapter.h"; sourceTree = "<group>"; };
+		BAE12F304F465110066C3EEA95064404 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework; sourceTree = "<group>"; };
+		BB7A3F3A3A6FB1364618D4BA0A54482E /* ISNSupersonicAdsPublisherSwiftFacade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNSupersonicAdsPublisherSwiftFacade.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNSupersonicAdsPublisherSwiftFacade.h"; sourceTree = "<group>"; };
+		BD034C5B0429048C47804020218E4383 /* ISNativeAdLoadDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdLoadDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdLoadDelegate.h"; sourceTree = "<group>"; };
+		BDABD0CEE7503DFB2BBE582DE676057B /* ISAdInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdInfo.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdInfo.h"; sourceTree = "<group>"; };
+		C02D161B2365B3160902179554748A77 /* Google-Mobile-Ads-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Google-Mobile-Ads-SDK.modulemap"; sourceTree = "<group>"; };
+		C2F4334D342A5DC4ACD812B9754BFB07 /* ISInterstitialAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInterstitialAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISInterstitialAdapterProtocol.h"; sourceTree = "<group>"; };
+		C5295E29E20E3BDE577DFE97C64AD8C4 /* ISIronSourceAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISIronSourceAdapter.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISIronSourceAdapter.h"; sourceTree = "<group>"; };
+		C5793C09BCAA947D1F460EFFC40C9F78 /* IronSourceNetworkSwiftBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IronSourceNetworkSwiftBridge.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/IronSourceNetworkSwiftBridge.h"; sourceTree = "<group>"; };
+		C75E84449BEBD43297F36E30A71E7CCA /* ISInterstitialAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISInterstitialAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISInterstitialAdapterDelegate.h"; sourceTree = "<group>"; };
+		C821DF516F21E55AA40509C3AEADB690 /* ISNativeAdAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdAdapterProtocol.h"; sourceTree = "<group>"; };
+		CAEE458F6AF879374AB8574CB0845C45 /* ISAdapterSettingsProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterSettingsProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterSettingsProtocol.h"; sourceTree = "<group>"; };
+		CBC80F46FFFC76567A97C7CD2D424F99 /* ISAdapterConsentProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterConsentProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterConsentProtocol.h"; sourceTree = "<group>"; };
+		CCA1A5C7B18F5199DB964353F4E7F157 /* ISBannerAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBannerAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBannerAdapterDelegate.h"; sourceTree = "<group>"; };
+		CCB3F476268E42F840088F1F94C71701 /* ISNEventTrackerInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNEventTrackerInterface.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNEventTrackerInterface.h"; sourceTree = "<group>"; };
+		CD5FF62F6406F5AF958B7F860EA9CBB3 /* ISLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLog.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISLog.h"; sourceTree = "<group>"; };
+		CD8F07BCBDBEB2619B5E823745862108 /* ISAdUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdUnit.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdUnit.h"; sourceTree = "<group>"; };
+		CD915D277A9BC89D572AEA6D43AF5C52 /* ISAdapterBannerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterBannerProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterBannerProtocol.h"; sourceTree = "<group>"; };
+		CDF232BBA0A5CECF1F2E112A85FC27D7 /* ISAdInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdInfo.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdInfo.h"; sourceTree = "<group>"; };
+		CEC0072E3C85F4734E4D168D6F133FF6 /* ISOfferwallDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISOfferwallDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISOfferwallDelegate.h"; sourceTree = "<group>"; };
+		CEDC753CD8260BD6F5B13F83962F430C /* ISUnityAdsAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISUnityAdsAdapter.h; path = "ISUnityAdsAdapter/ISUnityAdsAdapter.xcframework/ios-arm64_x86_64-simulator/ISUnityAdsAdapter.framework/Headers/ISUnityAdsAdapter.h"; sourceTree = "<group>"; };
+		D030267972323B77A6E68AF51CE6262C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "UnityAds.xcframework/ios-arm64/UnityAds.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		D3910CE497D0A49A038F2E79DFA29C83 /* ISAdUnitAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdUnitAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdUnitAdapterProtocol.h"; sourceTree = "<group>"; };
+		D475E744DEC36568AE3B236EB1EFAAC3 /* ISSegmentDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSegmentDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISSegmentDelegate.h"; sourceTree = "<group>"; };
+		D56F38D00C45AEBA5A7969D21A7E1282 /* LevelPlayNativeAdDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayNativeAdDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayNativeAdDelegate.h"; sourceTree = "<group>"; };
+		D6435C28F4BD62E0E2180DC2F93ED7C6 /* ISAdapterConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterConfig.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterConfig.h"; sourceTree = "<group>"; };
+		D681474A45D2F2B59DE85EBB12F3FA36 /* ISAdapterNativeAdViewBinderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterNativeAdViewBinderProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterNativeAdViewBinderProtocol.h"; sourceTree = "<group>"; };
+		D80A185D815EB06FF9F963436920DA6F /* ISRewardedVideoManualDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoManualDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISRewardedVideoManualDelegate.h"; sourceTree = "<group>"; };
+		D98006D704DB57490CC7E150617DA202 /* ISDemandOnlyBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyBannerDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISDemandOnlyBannerDelegate.h"; sourceTree = "<group>"; };
+		DCD36B9D3388E9F0E4F70E2F668E4720 /* ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist"; sourceTree = "<group>"; };
+		DE3F23C384F24BE11413295A8ADD10E6 /* ISNativeAdDataImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdDataImage.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdDataImage.h"; sourceTree = "<group>"; };
+		DF65ACB1B54297F7D55F0C6CF27D81A9 /* LevelPlayNativeAdBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayNativeAdBuilder.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayNativeAdBuilder.h"; sourceTree = "<group>"; };
+		E1067264F0DE002F24EA8028896B9CB5 /* ISAdapterErrorType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterErrorType.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterErrorType.h"; sourceTree = "<group>"; };
+		E11AE8B7A6CA570313A19C4EA01C3914 /* ISAdData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdData.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdData.h"; sourceTree = "<group>"; };
+		E2258F2FA8931A8B4D65414A13785BED /* ISAdapterErrorType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterErrorType.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterErrorType.h"; sourceTree = "<group>"; };
+		E24CB4478B617A2D57E0907505AA129D /* ISAdUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdUnit.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdUnit.h"; sourceTree = "<group>"; };
+		E2601E967878708DCE3F20F33A4EF599 /* ISBaseRewardedVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISBaseRewardedVideo.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISBaseRewardedVideo.h"; sourceTree = "<group>"; };
+		E2914DB1501D4034E7E354236F21F770 /* ISUnityAdsAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISUnityAdsAdapter.h; path = "ISUnityAdsAdapter/ISUnityAdsAdapter.xcframework/ios-arm64/ISUnityAdsAdapter.framework/Headers/ISUnityAdsAdapter.h"; sourceTree = "<group>"; };
+		E387F56F49372C5F34A590A5B75A225F /* ISRewardedVideoAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISRewardedVideoAdapterDelegate.h"; sourceTree = "<group>"; };
+		E4CB328A4C42F7DC7A17B3812721DAC5 /* SupersonicLogManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SupersonicLogManager.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/SupersonicLogManager.h"; sourceTree = "<group>"; };
+		E6F462C02EDD1D2D02C14F6CA8F8AE1A /* ISIntegrationHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISIntegrationHelper.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISIntegrationHelper.h"; sourceTree = "<group>"; };
+		E6F4FC66488C1A0F12A0C94FA40D90E5 /* ISRewardedVideoAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISRewardedVideoAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISRewardedVideoAdapterProtocol.h"; sourceTree = "<group>"; };
+		E81C0C84D5CCB1A020E9D3F35B5733E2 /* GoogleUserMessagingPlatform-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleUserMessagingPlatform-xcframeworks.sh"; sourceTree = "<group>"; };
+		E8D79AFAF91419A354A569458ED25172 /* ISAdapterMetaDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterMetaDataProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdapterMetaDataProtocol.h"; sourceTree = "<group>"; };
+		E97313E830DF129C3B82455EA53D8096 /* ISLoggerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLoggerManager.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISLoggerManager.h"; sourceTree = "<group>"; };
+		EBC11FED2B615D25B5242189C53768BA /* ISSegment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSegment.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISSegment.h"; sourceTree = "<group>"; };
+		EBDCC0983E3BC40EA8509EB631F82271 /* ISDemandOnlyRewardedVideoDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDemandOnlyRewardedVideoDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISDemandOnlyRewardedVideoDelegate.h"; sourceTree = "<group>"; };
+		EC978FC9400F11168D5E81921C21A7D0 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		EC9AB7AFCA291A0FEF4BE26A612E5FFB /* ISNetworkInitializationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNetworkInitializationDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNetworkInitializationDelegate.h"; sourceTree = "<group>"; };
+		EC9BE0260F2405630A2C42FC37FA0E21 /* ISNativeAdDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdDataProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdDataProtocol.h"; sourceTree = "<group>"; };
+		ED1E77E9E4FD269E390803218D61AE05 /* ISUnityAdsAdapter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = ISUnityAdsAdapter.xcframework; path = ISUnityAdsAdapter/ISUnityAdsAdapter.xcframework; sourceTree = "<group>"; };
+		ED522FB557A225B3C71692E85C52B4AF /* ISGender.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISGender.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISGender.h"; sourceTree = "<group>"; };
+		EDA47C242824CC0F613F3DC05F5A29B2 /* ISError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISError.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISError.h"; sourceTree = "<group>"; };
+		EDD62216C4983C73EE3D2C76AB342BBF /* ISConsentViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISConsentViewDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISConsentViewDelegate.h"; sourceTree = "<group>"; };
+		F0ABB1ABE00D9EB38696BF7E1F62F4CB /* ISSetAPSDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSetAPSDataProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISSetAPSDataProtocol.h"; sourceTree = "<group>"; };
+		F0AF955489F319824B718F94052789B0 /* ISContainerParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISContainerParams.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISContainerParams.h"; sourceTree = "<group>"; };
+		F307941A96E66756B3C3F47B5AE110DC /* ISLogDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISLogDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISLogDelegate.h"; sourceTree = "<group>"; };
+		F370655643EB1B685C344CBA3C396323 /* ISReleaseMemoryAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISReleaseMemoryAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISReleaseMemoryAdapterProtocol.h"; sourceTree = "<group>"; };
+		F3EB4D98D7BEA06CD6B9987C48EF2CE7 /* ISNControllerMessageListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNControllerMessageListener.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNControllerMessageListener.h"; sourceTree = "<group>"; };
+		F527C2E8CBC2FE94C39EBD23141DD4C0 /* ISAdOptionsPosition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdOptionsPosition.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdOptionsPosition.h"; sourceTree = "<group>"; };
+		F5DB6001336DE550C2712B47E4B8611F /* ISOfferwallAdapterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISOfferwallAdapterDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISOfferwallAdapterDelegate.h"; sourceTree = "<group>"; };
+		F5F65854B857B078A5F4DB5BFCF2AE4D /* ISSegmentDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISSegmentDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISSegmentDelegate.h"; sourceTree = "<group>"; };
+		F6C2EAA9790314A60DDED4AA7779301B /* ISAdUnitAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdUnitAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISAdUnitAdapterProtocol.h"; sourceTree = "<group>"; };
+		F76AE0C6A6ACD1AB83E7E8F914929DB5 /* ISNativeAdInteractionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdInteractionDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNativeAdInteractionDelegate.h"; sourceTree = "<group>"; };
+		F8ECCB3B4E33C0FDD00B394CC2C7EA2E /* Google_Mobile_Ads_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Google_Mobile_Ads_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D23EC108D327C86476F596BC7E4843 /* ISDataKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISDataKeys.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISDataKeys.h"; sourceTree = "<group>"; };
+		F9F82AA579F4BC9E479A40092F6F6BC3 /* ISNetworkInitializationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNetworkInitializationDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNetworkInitializationDelegate.h"; sourceTree = "<group>"; };
+		FACF9DA2AC59812615D56EB03B423094 /* LevelPlayBannerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayBannerDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayBannerDelegate.h"; sourceTree = "<group>"; };
+		FB3FD339494DFD367B257DF5A9768B8B /* ISNAdViewsManagerSwiftFacade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNAdViewsManagerSwiftFacade.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISNAdViewsManagerSwiftFacade.h"; sourceTree = "<group>"; };
+		FB734EB3C7EA48E1747DB1CF0680B757 /* ISImpressionData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISImpressionData.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISImpressionData.h"; sourceTree = "<group>"; };
+		FC9D9CA6BAA3B56D2EDB627C41579864 /* LevelPlayMediaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayMediaView.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/LevelPlayMediaView.h"; sourceTree = "<group>"; };
+		FEAB94141CC90A17851E043E9ECD5147 /* LevelPlayMediaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LevelPlayMediaView.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/LevelPlayMediaView.h"; sourceTree = "<group>"; };
+		FEC0362612057687FCCA44CBDCFBE3DC /* ISNativeAdInteractionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdInteractionDelegate.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdInteractionDelegate.h"; sourceTree = "<group>"; };
+		FECF74D35803D6694385F04D8479A871 /* UnityAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = UnityAds.xcframework; sourceTree = "<group>"; };
+		FF2015A6948AF0F18716649480C2B0C3 /* ISNAdViewsManagerSwiftFacade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNAdViewsManagerSwiftFacade.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNAdViewsManagerSwiftFacade.h"; sourceTree = "<group>"; };
+		FF4DE4A8729EB129A78DE58EB3BAE92F /* ISContainerParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISContainerParams.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISContainerParams.h"; sourceTree = "<group>"; };
+		FF8AED7ED7A3E0D480F7F19632288DAA /* ISNativeAdAdapterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISNativeAdAdapterProtocol.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISNativeAdAdapterProtocol.h"; sourceTree = "<group>"; };
+		FFA6E573BCF4AF54E6845007146B6A96 /* ISAdapterErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISAdapterErrors.h; path = "IronSource/IronSource.xcframework/ios-arm64/IronSource.framework/Headers/ISAdapterErrors.h"; sourceTree = "<group>"; };
+		FFB191952FA36AD406CE1F383673656C /* ISWaterfallConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISWaterfallConfiguration.h; path = "IronSource/IronSource.xcframework/ios-arm64_x86_64-simulator/IronSource.framework/Headers/ISWaterfallConfiguration.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0D71830D4540A790A9ADDC25B247B6EA /* Frameworks */ = {
+		3B8A8816D7796997E1E581C2C6B0BFB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		993ECED5BB189D6CE5A2E4A8712DE04C /* Frameworks */ = {
+		446642FB97D24FF5F7767F3067A379FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF990F6BE89122EEA9291DE6900F7041 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657C0BA3F873F108EFBC11A655F53C0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A644C8D183EF048104F674F350624F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81CE9BADBDE44A7AC3C6596B043606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABB03874F19DF6ED938F3DE8F7B8031D /* Frameworks */ = {
+		D0B72F3658ABF69A6AA0C8F02A02EC4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,51 +503,359 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		159A744447C0E7167C8631803C008071 /* Frameworks */ = {
+		002F888FAF9861989F0395E41256CBD1 /* IronSourceUnityAdsAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				9CE2B1E5F4AFF15A541642B247E71E95 /* GoogleMobileAds.xcframework */,
+				E2914DB1501D4034E7E354236F21F770 /* ISUnityAdsAdapter.h */,
+				CEDC753CD8260BD6F5B13F83962F430C /* ISUnityAdsAdapter.h */,
+				A7F77292E7F33E524B3C34200B2FC84B /* Frameworks */,
+				4A31F43368CBCB6DEBD461C103B74367 /* Support Files */,
+			);
+			path = IronSourceUnityAdsAdapter;
+			sourceTree = "<group>";
+		};
+		04F5E11621AD0ECCE8F90CACD29A46B2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E81C0C84D5CCB1A020E9D3F35B5733E2 /* GoogleUserMessagingPlatform-xcframeworks.sh */,
+				922034AC685CA03979875ECD8CE6AB17 /* GoogleUserMessagingPlatform.debug.xcconfig */,
+				27C423B671C9078900CEF0DD00FA769D /* GoogleUserMessagingPlatform.release.xcconfig */,
+				DCD36B9D3388E9F0E4F70E2F668E4720 /* ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleUserMessagingPlatform";
+			sourceTree = "<group>";
+		};
+		28184ECFCA0EC5BDF578C5E8A5891A94 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				336A6680723C39A296E99027B369A87C /* IronSourceSDK-xcframeworks.sh */,
+				3B9C47FF85B5308225363CC26CC0AE41 /* IronSourceSDK.debug.xcconfig */,
+				0CFB56C6392E32042DD354AD3FD29AC0 /* IronSourceSDK.release.xcconfig */,
+				87AE63E6475B0A9D840DC04B6B18237A /* ResourceBundle-IronSourcePrivacyInfo-IronSourceSDK-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IronSourceSDK";
+			sourceTree = "<group>";
+		};
+		431483BE0B86C25699F1095468EDA863 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE12F304F465110066C3EEA95064404 /* GoogleMobileAds.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		21E53E54DD17563DB8F4A6E18C66CDCF /* Resources */ = {
+		4A31F43368CBCB6DEBD461C103B74367 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DE66624D7FB7B06FF2E3D35C4D711082 /* PrivacyInfo.xcprivacy */,
+				9842CFC56B2EFD95BC59132C15A4D4B9 /* IronSourceUnityAdsAdapter-xcframeworks.sh */,
+				0E915C130D830EDC1B59545755848909 /* IronSourceUnityAdsAdapter.debug.xcconfig */,
+				A5B6B163F44FA6117011E650878EFD08 /* IronSourceUnityAdsAdapter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IronSourceUnityAdsAdapter";
+			sourceTree = "<group>";
+		};
+		4CD2BD3619394900D11DEFCAD487262E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9271DAFD12AA68C2B83E552D24B4FF3D /* IronSource.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F448B3C14E2C8D39E41F3838396C564 /* IronSourceSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2BDD5FCF97358B3F00CBCEECE52E5A59 /* IronSource.h */,
+				66547072C722707D897CD915B1748A20 /* IronSource.h */,
+				3C8E8FDD493D55E4CF3D025969B03BBD /* IronSourceNetworkSwiftBridge.h */,
+				C5793C09BCAA947D1F460EFFC40C9F78 /* IronSourceNetworkSwiftBridge.h */,
+				34A522302CA86004B476C7C027BCB150 /* ISAdapterAdDelegate.h */,
+				31E71C27D32DCDE162FF9B99D4ED3B19 /* ISAdapterAdDelegate.h */,
+				0274771A42D5C193A8C1895082A96DD2 /* ISAdapterAdFullscreenProtocol.h */,
+				0FE2861EF817203A124931DA32A95AF2 /* ISAdapterAdFullscreenProtocol.h */,
+				326A2171FF8BD63A597B0936A0FC47CD /* ISAdapterAdInteractionDelegate.h */,
+				77F58CBE3B069A2E42560B8E4AA57678 /* ISAdapterAdInteractionDelegate.h */,
+				718851529FFDB9FA4E552BFB0730F2DC /* ISAdapterAdRewardedDelegate.h */,
+				53543533C087FA5F787B94C89A29BD18 /* ISAdapterAdRewardedDelegate.h */,
+				2E40964305DB9BEEF68074E3CC1784D6 /* ISAdapterAdViewDelegate.h */,
+				074F553B469142FBAAD792A31C2CF289 /* ISAdapterAdViewDelegate.h */,
+				CD915D277A9BC89D572AEA6D43AF5C52 /* ISAdapterBannerProtocol.h */,
+				31211521ED6A820E5432D9C199C07C47 /* ISAdapterBannerProtocol.h */,
+				3591E866133E459E8FBA190F2D18075B /* ISAdapterBaseProtocol.h */,
+				1C7296803828B199ACEF6B2938E930D5 /* ISAdapterBaseProtocol.h */,
+				D6435C28F4BD62E0E2180DC2F93ED7C6 /* ISAdapterConfig.h */,
+				7448996426D02751BB8270B376F4359E /* ISAdapterConfig.h */,
+				3EB67EFCC09525360B38C17B18F8A27C /* ISAdapterConsentProtocol.h */,
+				CBC80F46FFFC76567A97C7CD2D424F99 /* ISAdapterConsentProtocol.h */,
+				45ADDEFCC7B18114AE63430B9E83FE7A /* ISAdapterDebugProtocol.h */,
+				AD436C3687983C5328EC306BBF6DAF03 /* ISAdapterDebugProtocol.h */,
+				FFA6E573BCF4AF54E6845007146B6A96 /* ISAdapterErrors.h */,
+				91C6EF6FFA5530F10EB82F264DA13B37 /* ISAdapterErrors.h */,
+				E1067264F0DE002F24EA8028896B9CB5 /* ISAdapterErrorType.h */,
+				E2258F2FA8931A8B4D65414A13785BED /* ISAdapterErrorType.h */,
+				9B0EB901A2087A2D7C8EB1528631781E /* ISAdapterMetaDataProtocol.h */,
+				E8D79AFAF91419A354A569458ED25172 /* ISAdapterMetaDataProtocol.h */,
+				91223C97C1730875D114567ECCB7491A /* ISAdapterNativeAdData.h */,
+				7D47272394A3B3B8065DFBCBFDCD4856 /* ISAdapterNativeAdData.h */,
+				6ECD6465A19D7DA28763F5CBB933B24C /* ISAdapterNativeAdViewBinder.h */,
+				BA04588764AE56A95276C60D1D705861 /* ISAdapterNativeAdViewBinder.h */,
+				D681474A45D2F2B59DE85EBB12F3FA36 /* ISAdapterNativeAdViewBinderProtocol.h */,
+				B3D3EF7EF581F72469759A4A29DD27E6 /* ISAdapterNativeAdViewBinderProtocol.h */,
+				1C92A835CE43F011DA2CFBA553310E64 /* ISAdapterSettingsProtocol.h */,
+				CAEE458F6AF879374AB8574CB0845C45 /* ISAdapterSettingsProtocol.h */,
+				E11AE8B7A6CA570313A19C4EA01C3914 /* ISAdData.h */,
+				21A1FDBC1E9D6DA93816B9F89D3B178F /* ISAdData.h */,
+				BDABD0CEE7503DFB2BBE582DE676057B /* ISAdInfo.h */,
+				CDF232BBA0A5CECF1F2E112A85FC27D7 /* ISAdInfo.h */,
+				24B5F607B83C9CA65FE7F37250D10034 /* ISAdOptionsPosition.h */,
+				F527C2E8CBC2FE94C39EBD23141DD4C0 /* ISAdOptionsPosition.h */,
+				CD8F07BCBDBEB2619B5E823745862108 /* ISAdUnit.h */,
+				E24CB4478B617A2D57E0907505AA129D /* ISAdUnit.h */,
+				D3910CE497D0A49A038F2E79DFA29C83 /* ISAdUnitAdapterProtocol.h */,
+				F6C2EAA9790314A60DDED4AA7779301B /* ISAdUnitAdapterProtocol.h */,
+				7D5852454C0723F2370387ACC911050E /* ISAppStoreErrorDelegate.h */,
+				2948F9A1823AEAB5A943008DD9D4EA71 /* ISAppStoreErrorDelegate.h */,
+				CCA1A5C7B18F5199DB964353F4E7F157 /* ISBannerAdapterDelegate.h */,
+				3D5D2621A89F3DBB49E6051EEC9F271A /* ISBannerAdapterDelegate.h */,
+				5B2B37BA28C079DB18C4AF730EEEF669 /* ISBannerAdapterProtocol.h */,
+				B427001D7196C70F7C4937BA2E63CE1A /* ISBannerAdapterProtocol.h */,
+				41E8BF232B45C44FD4F82328D95A127E /* ISBannerAdDelegate.h */,
+				364B9B98F7312A78CF41B6DB416D4A82 /* ISBannerAdDelegate.h */,
+				51879D88CBA3C9A60D2E98CBA4CF17CF /* ISBannerDelegate.h */,
+				7DDE62667523EA9F2FC50C07B704AAC0 /* ISBannerDelegate.h */,
+				466517C10B94D3A95481FBE1A269CBF0 /* ISBannerSize.h */,
+				0F431595116D30BD52C943B6B1983B63 /* ISBannerSize.h */,
+				B3BD43BF3C52A51CFBF487A66F61CBBC /* ISBannerView.h */,
+				7494E883681E41699DCD1D097EB2D72D /* ISBannerView.h */,
+				BAD9E28ED5A3B60793BBC12D53D16C1F /* ISBaseAdAdapter.h */,
+				2F5B478AD2AA6AEA93D8EC385645A5B8 /* ISBaseAdAdapter.h */,
+				14417973268B32FB15C9D69771F5B83D /* ISBaseAdapter.h */,
+				A4C55273F2F3585F5CE262F7C3D8FD0D /* ISBaseAdapter.h */,
+				A35E96F30DC879FB851E3205186DEF8C /* ISBaseAdapter+Internal.h */,
+				34B10F17EB37660E04E9CF0B70F418F5 /* ISBaseAdapter+Internal.h */,
+				77A0D9F43B7CCA3350538284A239F7D0 /* ISBaseAdInteractionAdapter.h */,
+				A7479F307955D5246616C56F410AA889 /* ISBaseAdInteractionAdapter.h */,
+				3074554F07FD8B98DCE294FA380643EA /* ISBaseAdUnitAdapter.h */,
+				189F954BC21130B60C9775E035CE6D4A /* ISBaseAdUnitAdapter.h */,
+				744575703D81E1922E6EE4065DA0814F /* ISBaseBanner.h */,
+				96E1DEEC7B7EB421988EF2D4AE4E6278 /* ISBaseBanner.h */,
+				0A867B06B705F063579B5AC9D5E2BAA4 /* ISBaseBannerAdapter.h */,
+				29670645F1CB71F238C61625FE388BD6 /* ISBaseBannerAdapter.h */,
+				12CFC9466F73476EC86BF21898DE8009 /* ISBaseInterstitial.h */,
+				7F794715C313220AEED2F335730FADF7 /* ISBaseInterstitial.h */,
+				1ACF4BD608CECB9C2F36CD0767A69E6C /* ISBaseInterstitialAdapter.h */,
+				040F2CBC0C6A5476FC75FFAE18727F3F /* ISBaseInterstitialAdapter.h */,
+				95EE023588A83A042C656C9B59FAE43E /* ISBaseNativeAdAdapter.h */,
+				6692702AB5C9FBCF04A10893FD5FD891 /* ISBaseNativeAdAdapter.h */,
+				650A87886FC6E7CBC3DDB43D3A5BFE84 /* ISBaseNetworkAdapter.h */,
+				3AB275B83A30AF1D5633D4505966FE3F /* ISBaseNetworkAdapter.h */,
+				E2601E967878708DCE3F20F33A4EF599 /* ISBaseRewardedVideo.h */,
+				B42562D515A241285FC2E43E316A74FE /* ISBaseRewardedVideo.h */,
+				2AA2AB3FBA593899E291BD95A1623B66 /* ISBaseRewardedVideoAdapter.h */,
+				5C3EC514F4E4B19C3C23F4ACACEADAD8 /* ISBaseRewardedVideoAdapter.h */,
+				5C9D51586810567C8CF18B30D2157F1A /* ISBiddingDataAdapterProtocol.h */,
+				9A02DB0C31678E040CE8E3CF7485DC09 /* ISBiddingDataAdapterProtocol.h */,
+				62BF91CC36B04F036FB3F7CE90A2FF76 /* ISBiddingDataDelegate.h */,
+				4D0E628E367C0E0A8E0A81164DE4A10C /* ISBiddingDataDelegate.h */,
+				A4BE17D2BEAFBF3C40C50235785F1945 /* ISConcurrentMutableDictionary.h */,
+				AEC513B5F3A779E6AADD7DF8298602D8 /* ISConcurrentMutableDictionary.h */,
+				01FD96B22A128A33A1685530CFAAFE65 /* ISConcurrentMutableSet.h */,
+				89545ECA1E9F7D6783FB3135AB9A93B2 /* ISConcurrentMutableSet.h */,
+				4F4B04BDCE48A8BEAFE71B272BD6F578 /* ISConfigurations.h */,
+				3B165B4B59C3EC66E5CB35D8271F483C /* ISConfigurations.h */,
+				EDD62216C4983C73EE3D2C76AB342BBF /* ISConsentViewDelegate.h */,
+				84E1160632DBF2CBAD994FCEED5C0E12 /* ISConsentViewDelegate.h */,
+				F0AF955489F319824B718F94052789B0 /* ISContainerParams.h */,
+				FF4DE4A8729EB129A78DE58EB3BAE92F /* ISContainerParams.h */,
+				049879865020C0256919641D4F6D8102 /* ISDataKeys.h */,
+				F9D23EC108D327C86476F596BC7E4843 /* ISDataKeys.h */,
+				D98006D704DB57490CC7E150617DA202 /* ISDemandOnlyBannerDelegate.h */,
+				3BD287BED292FC51E8B4A19047061F07 /* ISDemandOnlyBannerDelegate.h */,
+				0B426DD9DFF3FB8D04B1A623207C817A /* ISDemandOnlyBannerView.h */,
+				6BE751EF34AA41597D4C1E9FE3D4A96D /* ISDemandOnlyBannerView.h */,
+				51690D5C8E63D3543BFCE841E7E6E901 /* ISDemandOnlyInterstitialDelegate.h */,
+				47B28CB95C81AF7ADE59641552B37BE1 /* ISDemandOnlyInterstitialDelegate.h */,
+				EBDCC0983E3BC40EA8509EB631F82271 /* ISDemandOnlyRewardedVideoDelegate.h */,
+				7509111B75A99D6FD2EB9D1310AF5940 /* ISDemandOnlyRewardedVideoDelegate.h */,
+				50C9CB5F26CB60C1F2F3F9CE03D63F59 /* ISError.h */,
+				EDA47C242824CC0F613F3DC05F5A29B2 /* ISError.h */,
+				1FF0226B372F803BE5E5446C6340D0FA /* ISEventsReporting.h */,
+				B794BC3DD19756CEC7E9F078CA7F942C /* ISEventsReporting.h */,
+				4E881352178772DBB86FC39C8AE49F5C /* ISGender.h */,
+				ED522FB557A225B3C71692E85C52B4AF /* ISGender.h */,
+				FB734EB3C7EA48E1747DB1CF0680B757 /* ISImpressionData.h */,
+				04A4235FCB8AF4336812B83A723DFE28 /* ISImpressionData.h */,
+				A3BEC28B2D383114E28E67CAEFB558C3 /* ISImpressionDataDelegate.h */,
+				AF0D2F36F938CD9068F0C0B28B46F529 /* ISImpressionDataDelegate.h */,
+				57A08133D1521563E8F8717B4CA4F535 /* ISInitializationDelegate.h */,
+				5FBFC0BA0F54AC66C4AEEE7179AF4AC7 /* ISInitializationDelegate.h */,
+				94B5941A3604B01A42F843007F356FC4 /* ISIntegrationHelper.h */,
+				E6F462C02EDD1D2D02C14F6CA8F8AE1A /* ISIntegrationHelper.h */,
+				87FD772CE0BC8418BAB08C1E6D40E67C /* ISInterstitialAdapterDelegate.h */,
+				C75E84449BEBD43297F36E30A71E7CCA /* ISInterstitialAdapterDelegate.h */,
+				C2F4334D342A5DC4ACD812B9754BFB07 /* ISInterstitialAdapterProtocol.h */,
+				46B9FDF2FD343AE87F88E9302BB91CE7 /* ISInterstitialAdapterProtocol.h */,
+				11D405F664E6E95808C96EED941BD53E /* ISInterstitialDelegate.h */,
+				9CFA8043A1065DE11C1120967E0AF846 /* ISInterstitialDelegate.h */,
+				9204681F63B1B42BAA7A882D5672FD25 /* ISIronSourceAdapter.h */,
+				C5295E29E20E3BDE577DFE97C64AD8C4 /* ISIronSourceAdapter.h */,
+				239026B6B71ABC3F436D62ED7176DBD2 /* ISLoadWhileShowSupportState.h */,
+				69F23A8D91ED1670CC8ED31D05DA51A1 /* ISLoadWhileShowSupportState.h */,
+				7C8DBD9D7CFC401A73A5CD517989184E /* ISLog.h */,
+				CD5FF62F6406F5AF958B7F860EA9CBB3 /* ISLog.h */,
+				F307941A96E66756B3C3F47B5AE110DC /* ISLogDelegate.h */,
+				21EDE35336E9758FB3CD145B719B1CB7 /* ISLogDelegate.h */,
+				71502E54EC76530AEFDE3BED13B68530 /* ISLoggerManager.h */,
+				E97313E830DF129C3B82455EA53D8096 /* ISLoggerManager.h */,
+				2E58859A3F3A1B7C540C2B28C99D8F66 /* ISMetaData.h */,
+				9E51911222C709C2ACD40B22FEEF6BDD /* ISMetaData.h */,
+				8B4EF38C312F25FF746B924583C67296 /* ISMetaDataConstants.h */,
+				4316A53453EFF3B10A0A3C1D17996133 /* ISMetaDataConstants.h */,
+				3E95E8128A6DB7B1D6AD21824B85CFF6 /* ISMetaDataUtils.h */,
+				74C9694036B63D5FBFA17270FFC5B147 /* ISMetaDataUtils.h */,
+				FB3FD339494DFD367B257DF5A9768B8B /* ISNAdViewsManagerSwiftFacade.h */,
+				FF2015A6948AF0F18716649480C2B0C3 /* ISNAdViewsManagerSwiftFacade.h */,
+				1EC570AAC919DFC1A5367AD1D7707C9A /* ISNAppStoreVCRootViewDelegate.h */,
+				9419548BBE15B3ABDFCBF63B8DDFB303 /* ISNAppStoreVCRootViewDelegate.h */,
+				190F608850D147782FC21FFE59D4EC1E /* ISNativeAdAdapterDelegate.h */,
+				300B0568402E4266FCDE476CDAC515AC /* ISNativeAdAdapterDelegate.h */,
+				C821DF516F21E55AA40509C3AEADB690 /* ISNativeAdAdapterProtocol.h */,
+				FF8AED7ED7A3E0D480F7F19632288DAA /* ISNativeAdAdapterProtocol.h */,
+				DE3F23C384F24BE11413295A8ADD10E6 /* ISNativeAdDataImage.h */,
+				4FCBB27679C90EFA259479F2CD0E9AFE /* ISNativeAdDataImage.h */,
+				EC9BE0260F2405630A2C42FC37FA0E21 /* ISNativeAdDataProtocol.h */,
+				09E11631E5F8E934B5F06AE140A8784A /* ISNativeAdDataProtocol.h */,
+				F76AE0C6A6ACD1AB83E7E8F914929DB5 /* ISNativeAdInteractionDelegate.h */,
+				FEC0362612057687FCCA44CBDCFBE3DC /* ISNativeAdInteractionDelegate.h */,
+				9E755027822271424D3E307C94191931 /* ISNativeAdLoadDelegate.h */,
+				BD034C5B0429048C47804020218E4383 /* ISNativeAdLoadDelegate.h */,
+				AFD09831E2CFE69640EBBFF8AAE553D0 /* ISNativeAdProperties.h */,
+				7B82A53C9FBDB3C5CE8AE865FE8DE2E3 /* ISNativeAdProperties.h */,
+				BAAC6759E462BDEB09E18904F13907BC /* ISNativeAdProtocol.h */,
+				31589D9E24EF0655D51C8F54CB20F001 /* ISNativeAdProtocol.h */,
+				5AEE23806BD8343A08C4EAAAE9E6E086 /* ISNativeAdView.h */,
+				A39ADEFD309169CF30D1AFE612EAA141 /* ISNativeAdView.h */,
+				8F0D1730601F99B91F2575BF191B418A /* ISNativeAdViewBinderProtocol.h */,
+				05A20F4AD682A7DC3548D4421D2464AB /* ISNativeAdViewBinderProtocol.h */,
+				87905C72258BA89298DE851CD2EEF5CD /* ISNativeAdViewHolder.h */,
+				8A62ECBAC8BFEFC7994DD86C0075B440 /* ISNativeAdViewHolder.h */,
+				762AE81616A8056E5C824DED92337630 /* ISNControllerManagerSwiftFacade.h */,
+				4A9250AD3E8BF6FDBB3C89B264F50EF0 /* ISNControllerManagerSwiftFacade.h */,
+				379EC9FD1E75F9F2D446A7D51A593813 /* ISNControllerMessageListener.h */,
+				F3EB4D98D7BEA06CD6B9987C48EF2CE7 /* ISNControllerMessageListener.h */,
+				2CBD2B8410703679AF001E5335361CEC /* ISNetworkInitCallbackProtocol.h */,
+				053B2CFFA401BD8AF31699BE242D5D78 /* ISNetworkInitCallbackProtocol.h */,
+				EC9AB7AFCA291A0FEF4BE26A612E5FFB /* ISNetworkInitializationDelegate.h */,
+				F9F82AA579F4BC9E479A40092F6F6BC3 /* ISNetworkInitializationDelegate.h */,
+				A205F529A89A7D26BE2AF9684578AB36 /* ISNEvent.h */,
+				158CFE857F714394F64EB0F6D7C01D94 /* ISNEvent.h */,
+				CCB3F476268E42F840088F1F94C71701 /* ISNEventTrackerInterface.h */,
+				6CCE0CBD97AB1B0495D7C49143BEA28E /* ISNEventTrackerInterface.h */,
+				021F88C48C7546AEFB378747ACCE1236 /* ISNEventTrackerWrapper.h */,
+				6A599A743B4EE610FCBEC914B9562693 /* ISNEventTrackerWrapper.h */,
+				BB7A3F3A3A6FB1364618D4BA0A54482E /* ISNSupersonicAdsPublisherSwiftFacade.h */,
+				635D087834F63A435CC927B886B07682 /* ISNSupersonicAdsPublisherSwiftFacade.h */,
+				F5DB6001336DE550C2712B47E4B8611F /* ISOfferwallAdapterDelegate.h */,
+				407B0806A9C186320D92F92586089106 /* ISOfferwallAdapterDelegate.h */,
+				56D5E1E8C926DEF539A60369A5D03A88 /* ISOfferwallAdapterProtocol.h */,
+				89287F2D09B082C3D886796AB0DD946E /* ISOfferwallAdapterProtocol.h */,
+				CEC0072E3C85F4734E4D168D6F133FF6 /* ISOfferwallDelegate.h */,
+				655BABE65D68E42AB7BBEFED89FC13C9 /* ISOfferwallDelegate.h */,
+				12B5969902E3E9E385C777BE2E24FC18 /* ISPlacementInfo.h */,
+				1D13482BBB7F2988D97C548880FFF1B7 /* ISPlacementInfo.h */,
+				F370655643EB1B685C344CBA3C396323 /* ISReleaseMemoryAdapterProtocol.h */,
+				930F43E1BB3436642F7B785195F3CADD /* ISReleaseMemoryAdapterProtocol.h */,
+				A6AD8C6C9018304D930E3787A061A46C /* ISRewardedVideoAdapterDelegate.h */,
+				E387F56F49372C5F34A590A5B75A225F /* ISRewardedVideoAdapterDelegate.h */,
+				669E2664E9A393FB8E6F1C1A13B237E3 /* ISRewardedVideoAdapterProtocol.h */,
+				E6F4FC66488C1A0F12A0C94FA40D90E5 /* ISRewardedVideoAdapterProtocol.h */,
+				12E54ACAECAE2454CA90967C73C8A7C3 /* ISRewardedVideoDelegate.h */,
+				B7D36680A2C08579A13E760823C47B49 /* ISRewardedVideoDelegate.h */,
+				D80A185D815EB06FF9F963436920DA6F /* ISRewardedVideoManualDelegate.h */,
+				9B1F4986B4EBFBE7FCCB9A134A3FF102 /* ISRewardedVideoManualDelegate.h */,
+				EBC11FED2B615D25B5242189C53768BA /* ISSegment.h */,
+				0AB9ACC67A637F2FCC8BCBAD5781BDED /* ISSegment.h */,
+				D475E744DEC36568AE3B236EB1EFAAC3 /* ISSegmentDelegate.h */,
+				F5F65854B857B078A5F4DB5BFCF2AE4D /* ISSegmentDelegate.h */,
+				768AEBB20A0B1B885399C35E68218C95 /* ISSetAPSDataProtocol.h */,
+				F0ABB1ABE00D9EB38696BF7E1F62F4CB /* ISSetAPSDataProtocol.h */,
+				9EF74001529BB3979B035678D08FB481 /* ISSupersonicAdsConfiguration.h */,
+				91C583044521E2068F2438FE9F43D4B1 /* ISSupersonicAdsConfiguration.h */,
+				79654BDF44785C182848CC9CD068C4BA /* ISWaterfallConfiguration.h */,
+				FFB191952FA36AD406CE1F383673656C /* ISWaterfallConfiguration.h */,
+				484BCE2D98AC09D566FA766A153FE2C4 /* LevelPlayBannerDelegate.h */,
+				FACF9DA2AC59812615D56EB03B423094 /* LevelPlayBannerDelegate.h */,
+				482A0DEE5B3E9BCEA354328C86716A8D /* LevelPlayInterstitialDelegate.h */,
+				799AA3F1CE88E03AB7F98F289FAC94FB /* LevelPlayInterstitialDelegate.h */,
+				FEAB94141CC90A17851E043E9ECD5147 /* LevelPlayMediaView.h */,
+				FC9D9CA6BAA3B56D2EDB627C41579864 /* LevelPlayMediaView.h */,
+				158C0108F85E5E6386A9A1A778641D8A /* LevelPlayNativeAd.h */,
+				9082E1FE43BA7A87E89E7451A3C02BC6 /* LevelPlayNativeAd.h */,
+				7D8BD3EDFF8838634C8ADB020C9342DC /* LevelPlayNativeAdBuilder.h */,
+				DF65ACB1B54297F7D55F0C6CF27D81A9 /* LevelPlayNativeAdBuilder.h */,
+				D56F38D00C45AEBA5A7969D21A7E1282 /* LevelPlayNativeAdDelegate.h */,
+				6E7A52921A3782C742760B628419F064 /* LevelPlayNativeAdDelegate.h */,
+				B7DB2B22D6543FAF83EBDA9CA0BE835F /* LevelPlayRewardedVideoBaseDelegate.h */,
+				94D7BA4B851B262D9B4DF47C44375B30 /* LevelPlayRewardedVideoBaseDelegate.h */,
+				90E493E5CE472C26728751EA206EA66B /* LevelPlayRewardedVideoDelegate.h */,
+				6D161F1B7C6D59DE5EA79E42AB8CB552 /* LevelPlayRewardedVideoDelegate.h */,
+				27646FB29D000550EF4D5A26C3CA49BF /* LevelPlayRewardedVideoManualDelegate.h */,
+				9CEAB541177BAE75B4551DE9E3549D1E /* LevelPlayRewardedVideoManualDelegate.h */,
+				15035881D0C04D174807EE5FD327646C /* SupersonicLogManager.h */,
+				E4CB328A4C42F7DC7A17B3812721DAC5 /* SupersonicLogManager.h */,
+				1F206EB8C22CFC35DA9530684AF2314C /* UIView+ISNativeView.h */,
+				9D6E331CCEDD238DE266FB6C48CE211A /* UIView+ISNativeView.h */,
+				4CD2BD3619394900D11DEFCAD487262E /* Frameworks */,
+				ABBA8063951E6151DA019F7FF339588B /* Resources */,
+				28184ECFCA0EC5BDF578C5E8A5891A94 /* Support Files */,
+			);
+			path = IronSourceSDK;
+			sourceTree = "<group>";
+		};
+		67390753A2EF92AD87B656E9F8D61071 /* GoogleUserMessagingPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				B1F8B8920974EE8C2A31182E22329C72 /* Frameworks */,
+				CB907354A841379FBF6BDEC5A73E6EE1 /* Resources */,
+				04F5E11621AD0ECCE8F90CACD29A46B2 /* Support Files */,
+			);
+			path = GoogleUserMessagingPlatform;
+			sourceTree = "<group>";
+		};
+		6F5ED5B7E9C92B2D899260C1D61F2490 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C02D161B2365B3160902179554748A77 /* Google-Mobile-Ads-SDK.modulemap */,
+				81A97885F75B8B10276576C0D7C56D3A /* Google-Mobile-Ads-SDK-dummy.m */,
+				A0C36BCD0881E8913F9AD8DE0AB28400 /* Google-Mobile-Ads-SDK-Info.plist */,
+				82D422F4668E545191A695A1C0C92E3F /* Google-Mobile-Ads-SDK-prefix.pch */,
+				323E0F2A1BA212D068EA377B8E4A41CA /* Google-Mobile-Ads-SDK-umbrella.h */,
+				ADEE49C1245867221F143524CBA06CA2 /* Google-Mobile-Ads-SDK-xcframeworks.sh */,
+				1421D92BF2D28F5D82EBC009D5299FAA /* Google-Mobile-Ads-SDK.debug.xcconfig */,
+				09E70DE728E64355FFDE5BB30DDE508B /* Google-Mobile-Ads-SDK.release.xcconfig */,
+				73EADA0F02025A009606118867C5BC1B /* ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		70C7C505B2544FD488822188EF75196C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E5C592A747326FF7FA1D5ECA955A774 /* PrivacyInfo.xcprivacy */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		25011FCB89030BA8E597E2F596E9537A /* Products */ = {
+		76D1D23EEB23F7CB4B73CE0B166C1FE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F8ECCB3B4E33C0FDD00B394CC2C7EA2E /* Google-Mobile-Ads-SDK */,
-				3998091512768CD07733CB4F02B4BD9F /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */,
-				8A377C18F92A8A511869ADA54B5652D2 /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */,
-				401D11B08750DA485EB700F945EBF734 /* Pods-Siesta */,
+				FECF74D35803D6694385F04D8479A871 /* UnityAds.xcframework */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		65DDB6807CC970EF9AC78C515C678942 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				50A18E109306BAF831541AA5B4E47979 /* PrivacyInfo.xcprivacy */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		77AAD7F4D03FF9C1285BDDA1091F64F8 /* Google-Mobile-Ads-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				837746640689795BB54F973086CE1EAE /* GoogleMobileAdsPlaceholder.swift */,
-				159A744447C0E7167C8631803C008071 /* Frameworks */,
-				65DDB6807CC970EF9AC78C515C678942 /* Resources */,
-				E3858A10F7518C7CDDEBF0AC3778E891 /* Support Files */,
-			);
-			name = "Google-Mobile-Ads-SDK";
-			path = "Google-Mobile-Ads-SDK";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		932B4C0E97B1566AD8DB54DA92B774B9 /* Pods-Siesta */ = {
@@ -204,16 +875,70 @@
 			path = "Target Support Files/Pods-Siesta";
 			sourceTree = "<group>";
 		};
-		C899256EE1C959A4EBC9F48E72A6528D /* Support Files */ = {
+		9766B0B05DE2C7013841ED8A3BC78F94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB61DA7FFE6D9B8661EB9F7850AF655D /* GoogleUserMessagingPlatform-xcframeworks.sh */,
-				FE9FA647701D5D9784F7B39F699820EB /* GoogleUserMessagingPlatform.debug.xcconfig */,
-				31ABF05F4F720C8E40F38BAD866EBDC0 /* GoogleUserMessagingPlatform.release.xcconfig */,
-				28EC0D6B45622794297A1133DA37EAEC /* ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist */,
+				F8ECCB3B4E33C0FDD00B394CC2C7EA2E /* Google_Mobile_Ads_SDK.framework */,
+				3998091512768CD07733CB4F02B4BD9F /* GoogleMobileAdsResources.bundle */,
+				8A377C18F92A8A511869ADA54B5652D2 /* UserMessagingPlatformResources.bundle */,
+				08DFEAAA1901B9FF8345827FDA56939E /* IronSourcePrivacyInfo.bundle */,
+				401D11B08750DA485EB700F945EBF734 /* Pods_Siesta.framework */,
+				1E1EC12B6FEE91EF8853B95523916D69 /* UnityAds.bundle */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleUserMessagingPlatform";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7F77292E7F33E524B3C34200B2FC84B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED1E77E9E4FD269E390803218D61AE05 /* ISUnityAdsAdapter.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABBA8063951E6151DA019F7FF339588B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC978FC9400F11168D5E81921C21A7D0 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B1F8B8920974EE8C2A31182E22329C72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5080792769B31A9E89D0B551530D9BB0 /* UserMessagingPlatform.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA4B379498FA069C97B1838E563EAF6F /* UnityAds */ = {
+			isa = PBXGroup;
+			children = (
+				76D1D23EEB23F7CB4B73CE0B166C1FE8 /* Frameworks */,
+				D401F7810FE835733F1E3B9FA89CF175 /* Resources */,
+				E062A5E7B010B55B085A15425C7726A9 /* Support Files */,
+			);
+			path = UnityAds;
+			sourceTree = "<group>";
+		};
+		BFAB8297760C517D5EB5B6F5635D79C9 /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				94B09E89EADD569C5032FC99FAFE79F4 /* GoogleMobileAdsPlaceholder.swift */,
+				431483BE0B86C25699F1095468EDA863 /* Frameworks */,
+				70C7C505B2544FD488822188EF75196C /* Resources */,
+				6F5ED5B7E9C92B2D899260C1D61F2490 /* Support Files */,
+			);
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		CB907354A841379FBF6BDEC5A73E6EE1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27B66644256B6CAE4B506398CA724255 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -221,21 +946,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				FA8C76703EDBF6E7F7BFB2AF887CBFCC /* Pods */,
-				25011FCB89030BA8E597E2F596E9537A /* Products */,
+				EE3019FEEDA67E1D89D9A405681F94DD /* Pods */,
+				9766B0B05DE2C7013841ED8A3BC78F94 /* Products */,
 				E475E02A98B210E9257AEDAD8CF38312 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D10D9F51B04C4F71D5F6FE8642D33CA1 /* GoogleUserMessagingPlatform */ = {
-			isa = PBXGroup;
-			children = (
-				FCEA4B2426F7DD3AF7E0A37381C6947A /* Frameworks */,
-				21E53E54DD17563DB8F4A6E18C66CDCF /* Resources */,
-				C899256EE1C959A4EBC9F48E72A6528D /* Support Files */,
-			);
-			name = GoogleUserMessagingPlatform;
-			path = GoogleUserMessagingPlatform;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -246,21 +960,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E3858A10F7518C7CDDEBF0AC3778E891 /* Support Files */ = {
+		D401F7810FE835733F1E3B9FA89CF175 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D10F663B298C8F5CE4AEAD11558C0C20 /* Google-Mobile-Ads-SDK.modulemap */,
-				C82CB052E442BE450E1415431F9A60D4 /* Google-Mobile-Ads-SDK-dummy.m */,
-				7BBE2B0C28630C727E998777ED1DCF4B /* Google-Mobile-Ads-SDK-Info.plist */,
-				E6AFE911BCBC86108CD1441C3F7B3756 /* Google-Mobile-Ads-SDK-prefix.pch */,
-				87421B0407F2349DB2D5C82CA3794AD6 /* Google-Mobile-Ads-SDK-umbrella.h */,
-				94E58860FE9DF20A35AACB84AF645624 /* Google-Mobile-Ads-SDK-xcframeworks.sh */,
-				3CB2870152A11C8D7854F09D9999E402 /* Google-Mobile-Ads-SDK.debug.xcconfig */,
-				3BD97D982CAB87B29E6846F927335BF3 /* Google-Mobile-Ads-SDK.release.xcconfig */,
-				058DA9643E3EAD4930586CB78E3E1F64 /* ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist */,
+				D030267972323B77A6E68AF51CE6262C /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E062A5E7B010B55B085A15425C7726A9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				60AEEC602750F233A5B5D4D91ECA91B0 /* ResourceBundle-UnityAds-UnityAds-Info.plist */,
+				853D58694FFA9CC459D71744072F532E /* UnityAds-xcframeworks.sh */,
+				6AE1496511274C63F595A7725E72BEF6 /* UnityAds.debug.xcconfig */,
+				995EBBBDECD6A87059A4278D04516A68 /* UnityAds.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Google-Mobile-Ads-SDK";
+			path = "../Target Support Files/UnityAds";
 			sourceTree = "<group>";
 		};
 		E475E02A98B210E9257AEDAD8CF38312 /* Targets Support Files */ = {
@@ -279,34 +996,21 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		FA8C76703EDBF6E7F7BFB2AF887CBFCC /* Pods */ = {
+		EE3019FEEDA67E1D89D9A405681F94DD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				77AAD7F4D03FF9C1285BDDA1091F64F8 /* Google-Mobile-Ads-SDK */,
-				D10D9F51B04C4F71D5F6FE8642D33CA1 /* GoogleUserMessagingPlatform */,
+				BFAB8297760C517D5EB5B6F5635D79C9 /* Google-Mobile-Ads-SDK */,
+				67390753A2EF92AD87B656E9F8D61071 /* GoogleUserMessagingPlatform */,
+				5F448B3C14E2C8D39E41F3838396C564 /* IronSourceSDK */,
+				002F888FAF9861989F0395E41256CBD1 /* IronSourceUnityAdsAdapter */,
+				BA4B379498FA069C97B1838E563EAF6F /* UnityAds */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		FCEA4B2426F7DD3AF7E0A37381C6947A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8FBCE96FF45F89EB473BBEC6521C7C7E /* UserMessagingPlatform.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4991DB17E2E27EC4C801201C50B170CC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				216D63835C8887DDCC66561389712B22 /* Pods-Siesta-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B23F9353E3148B809D4BA25A333D0F47 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,16 +1019,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FEE600264ADD3EC1D78D7C96BD750CEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EAC6DBD241EAEB2AD5E1C325E748739 /* Pods-Siesta-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		36FD0958A0EC4A0FCF599E9B22719B03 /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 783DCCC873B6BC72C8DA9CF78DA3CF6F /* Build configuration list for PBXNativeTarget "Google-Mobile-Ads-SDK-GoogleMobileAdsResources" */;
+			buildConfigurationList = C2C194C2DB07F3AFEBD1D4316E554F9E /* Build configuration list for PBXNativeTarget "Google-Mobile-Ads-SDK-GoogleMobileAdsResources" */;
 			buildPhases = (
-				9589CE036E1F6FB0B202DC4A1ACE5E70 /* Sources */,
-				0D71830D4540A790A9ADDC25B247B6EA /* Frameworks */,
-				775AC3C01FBBBA10940E57F89657188E /* Resources */,
+				6E04C0E0AD61D63CF30F3BB756AE2DBF /* Sources */,
+				3B8A8816D7796997E1E581C2C6B0BFB7 /* Frameworks */,
+				C04BD3C6679FF8797E48EFD82EE82069 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -332,16 +1044,16 @@
 			);
 			name = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources";
 			productName = GoogleMobileAdsResources;
-			productReference = 3998091512768CD07733CB4F02B4BD9F /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */;
+			productReference = 3998091512768CD07733CB4F02B4BD9F /* GoogleMobileAdsResources.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		63A7C675C13F87669AF56006D943998B /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B99B03ABB42BA5B48B6DBAFD36B91EF5 /* Build configuration list for PBXNativeTarget "GoogleUserMessagingPlatform-UserMessagingPlatformResources" */;
+			buildConfigurationList = 8313C42C3CB9E85C512EC73C6EEBBA52 /* Build configuration list for PBXNativeTarget "GoogleUserMessagingPlatform-UserMessagingPlatformResources" */;
 			buildPhases = (
-				DD9327EB56E88F33D29247E137390701 /* Sources */,
-				ABB03874F19DF6ED938F3DE8F7B8031D /* Frameworks */,
-				C3BDC111C2A96C3FC9C6F81D364F13F7 /* Resources */,
+				21D77E985E23B1EC48260A5CC6C8D33D /* Sources */,
+				D0B72F3658ABF69A6AA0C8F02A02EC4F /* Frameworks */,
+				1A1506ED277D9437DEC2E48D08DEA7A4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -349,28 +1061,65 @@
 			);
 			name = "GoogleUserMessagingPlatform-UserMessagingPlatformResources";
 			productName = UserMessagingPlatformResources;
-			productReference = 8A377C18F92A8A511869ADA54B5652D2 /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */;
+			productReference = 8A377C18F92A8A511869ADA54B5652D2 /* UserMessagingPlatformResources.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		710F4EF3A131B2F4FBA49F934DB87C60 /* Pods-Siesta */ = {
+		6FCD9A95708E51D3B877DF5BD54E6524 /* UnityAds-UnityAds */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9556B8BE9EADC8D44F86C8925A6D3740 /* Build configuration list for PBXNativeTarget "Pods-Siesta" */;
+			buildConfigurationList = 382F63D1D98C731AD32AF28BEC44E120 /* Build configuration list for PBXNativeTarget "UnityAds-UnityAds" */;
 			buildPhases = (
-				4991DB17E2E27EC4C801201C50B170CC /* Headers */,
-				28AAAEFA2D60C27F11B9605A2282DC3C /* Sources */,
-				993ECED5BB189D6CE5A2E4A8712DE04C /* Frameworks */,
-				52D08B72D0BA674557FF045100D6A2B0 /* Resources */,
+				141C04C8C70F3BB69557284D182799AE /* Sources */,
+				446642FB97D24FF5F7767F3067A379FE /* Frameworks */,
+				33DE3F27E55C5B57570097432B1A6878 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8E17386E9719571A7A743B9F1E7B8544 /* PBXTargetDependency */,
-				5A2A95F262B5ECEEB0B08EAA90F27D65 /* PBXTargetDependency */,
+			);
+			name = "UnityAds-UnityAds";
+			productName = UnityAds;
+			productReference = 1E1EC12B6FEE91EF8853B95523916D69 /* UnityAds.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		710F4EF3A131B2F4FBA49F934DB87C60 /* Pods-Siesta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E142A9ABA7E5B92931D0B6CA196A87C /* Build configuration list for PBXNativeTarget "Pods-Siesta" */;
+			buildPhases = (
+				FEE600264ADD3EC1D78D7C96BD750CEB /* Headers */,
+				7CFF760BE85CE8CC2ADCFEA83C324F1E /* Sources */,
+				657C0BA3F873F108EFBC11A655F53C0B /* Frameworks */,
+				C8D3AF8082E031496579232E9E232BDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BD3189DCB5209AB74BC4EA161BE3ACC /* PBXTargetDependency */,
+				B3BBE271EB4D4BA7148D31E8CA8A132E /* PBXTargetDependency */,
+				3304D111FEB503E9CFDAC8B717AA7D38 /* PBXTargetDependency */,
+				31030B5CD58E54D0C32CC8D91B1CB1E3 /* PBXTargetDependency */,
+				F1B9113F6DF7ABFBDAE6C12FFEB615EC /* PBXTargetDependency */,
 			);
 			name = "Pods-Siesta";
 			productName = Pods_Siesta;
-			productReference = 401D11B08750DA485EB700F945EBF734 /* Pods-Siesta */;
+			productReference = 401D11B08750DA485EB700F945EBF734 /* Pods_Siesta.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		AF4066D13B4DC667FB970ABF861B2B47 /* IronSourceSDK-IronSourcePrivacyInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95FB8E7E3B4A52F68D24958324BB71DB /* Build configuration list for PBXNativeTarget "IronSourceSDK-IronSourcePrivacyInfo" */;
+			buildPhases = (
+				39FA267DF81EB20E33528EC677FB1546 /* Sources */,
+				9B81CE9BADBDE44A7AC3C6596B043606 /* Frameworks */,
+				EB564F5A9D2015A3BFDA546B794ED9F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IronSourceSDK-IronSourcePrivacyInfo";
+			productName = IronSourcePrivacyInfo;
+			productReference = 08DFEAAA1901B9FF8345827FDA56939E /* IronSourcePrivacyInfo.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXNativeTarget;
@@ -385,12 +1134,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				CCBB3989376DD2F6C3AFAFD5A9A3A5AA /* PBXTargetDependency */,
-				2A8EE9F042F9B9CC43D926DCEE9FD681 /* PBXTargetDependency */,
+				50F0F73C92A37FCEBD5C763BCA716956 /* PBXTargetDependency */,
+				3FF9BC574E8E815325CFE028E9ACEA6B /* PBXTargetDependency */,
 			);
 			name = "Google-Mobile-Ads-SDK";
 			productName = Google_Mobile_Ads_SDK;
-			productReference = F8ECCB3B4E33C0FDD00B394CC2C7EA2E /* Google-Mobile-Ads-SDK */;
+			productReference = F8ECCB3B4E33C0FDD00B394CC2C7EA2E /* Google_Mobile_Ads_SDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -403,7 +1152,7 @@
 				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 16.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -411,9 +1160,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = 25011FCB89030BA8E597E2F596E9537A /* Products */;
+			productRefGroup = 9766B0B05DE2C7013841ED8A3BC78F94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -421,12 +1168,25 @@
 				36FD0958A0EC4A0FCF599E9B22719B03 /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */,
 				458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */,
 				63A7C675C13F87669AF56006D943998B /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */,
+				205EFBEF86DA6E7E3D5B9BABED8872EE /* IronSourceSDK */,
+				AF4066D13B4DC667FB970ABF861B2B47 /* IronSourceSDK-IronSourcePrivacyInfo */,
+				FAB0F19BE9FFC4EED7E99DF31D5FE145 /* IronSourceUnityAdsAdapter */,
 				710F4EF3A131B2F4FBA49F934DB87C60 /* Pods-Siesta */,
+				93D529076BA2F81743BF6033A35532F2 /* UnityAds */,
+				6FCD9A95708E51D3B877DF5BD54E6524 /* UnityAds-UnityAds */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1A1506ED277D9437DEC2E48D08DEA7A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C4E6DCDFDBBAFEA944A22769C5996A /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CF44B3B9ECB7DB1FE1C8B3C244E4EAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,47 +1194,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D08B72D0BA674557FF045100D6A2B0 /* Resources */ = {
+		33DE3F27E55C5B57570097432B1A6878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				625BE71179D802765EB760D6B906AFBB /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04BD3C6679FF8797E48EFD82EE82069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA2D5786A5AC74FCEA64CCD755C9D7A4 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D3AF8082E031496579232E9E232BDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		775AC3C01FBBBA10940E57F89657188E /* Resources */ = {
+		EB564F5A9D2015A3BFDA546B794ED9F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7888B6977A7C6C5B379A55369CE64CD /* PrivacyInfo.xcprivacy in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3BDC111C2A96C3FC9C6F81D364F13F7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3E2E4F930EAA4CDB6A3C1716056B10A /* PrivacyInfo.xcprivacy in Resources */,
+				79C2C84F8B4F9EDFF40DF68598D2A94C /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28B29EDE6F5CA8FE68523DA69BE2F299 /* [CP] Copy XCFrameworks */ = {
+		0A49A4E8FABAAF6143806486189308B5 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/UnityAds/UnityAds-xcframeworks-input-files.xcfilelist",
 			);
 			name = "[CP] Copy XCFrameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/UnityAds/UnityAds-xcframeworks-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/UnityAds/UnityAds-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		62A1CB4E7755DF23F645AE7F4B214347 /* [CP] Copy XCFrameworks */ = {
@@ -494,21 +1262,93 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F5A86915C1FB9E1C192ACD1D15D8FE7A /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/IronSourceSDK/IronSourceSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/IronSourceSDK/IronSourceSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/IronSourceSDK/IronSourceSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6CC45D22510902EACA359CBA8809209 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/IronSourceUnityAdsAdapter/IronSourceUnityAdsAdapter-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/IronSourceUnityAdsAdapter/IronSourceUnityAdsAdapter-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/IronSourceUnityAdsAdapter/IronSourceUnityAdsAdapter-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F964805EB6342573757C6A9184C6328B /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		28AAAEFA2D60C27F11B9605A2282DC3C /* Sources */ = {
+		141C04C8C70F3BB69557284D182799AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD3D14413E9FE0D1601735B5BAE88AD7 /* Pods-Siesta-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9589CE036E1F6FB0B202DC4A1ACE5E70 /* Sources */ = {
+		21D77E985E23B1EC48260A5CC6C8D33D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39FA267DF81EB20E33528EC677FB1546 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E04C0E0AD61D63CF30F3BB756AE2DBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CFF760BE85CE8CC2ADCFEA83C324F1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220A2674D5D9EB8D9D8CB7A5379D02AA /* Pods-Siesta-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,45 +1361,80 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD9327EB56E88F33D29247E137390701 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		267EA03E042DBAE643D90C3AE386BF1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GoogleUserMessagingPlatform-UserMessagingPlatformResources";
-			target = 63A7C675C13F87669AF56006D943998B /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */;
-			targetProxy = 7AA980F299872C49DC15F928B4B3FBFF /* PBXContainerItemProxy */;
-		};
-		2A8EE9F042F9B9CC43D926DCEE9FD681 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleUserMessagingPlatform;
-			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
-			targetProxy = 8EE085802180F384C6C8CA267D472C59 /* PBXContainerItemProxy */;
-		};
-		5A2A95F262B5ECEEB0B08EAA90F27D65 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleUserMessagingPlatform;
-			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
-			targetProxy = F5BEF61A1926A464D2D8A07AF18E604D /* PBXContainerItemProxy */;
-		};
-		8E17386E9719571A7A743B9F1E7B8544 /* PBXTargetDependency */ = {
+		0BD3189DCB5209AB74BC4EA161BE3ACC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Google-Mobile-Ads-SDK";
 			target = FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */;
-			targetProxy = 2F779C0EA01BBC9D28F5117561CAA50A /* PBXContainerItemProxy */;
+			targetProxy = FA969E1C527250897B805B4B1E56347E /* PBXContainerItemProxy */;
 		};
-		CCBB3989376DD2F6C3AFAFD5A9A3A5AA /* PBXTargetDependency */ = {
+		1CD59004D429B88153AFCE7D36926BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleUserMessagingPlatform-UserMessagingPlatformResources";
+			target = 63A7C675C13F87669AF56006D943998B /* GoogleUserMessagingPlatform-UserMessagingPlatformResources */;
+			targetProxy = 49B82E0650B59A12D778F7D2CA96066F /* PBXContainerItemProxy */;
+		};
+		250BCEE90681E1E232918C8E7768D8FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UnityAds;
+			target = 93D529076BA2F81743BF6033A35532F2 /* UnityAds */;
+			targetProxy = 7E4CC909FE8638A5C164A5F9DCFBD885 /* PBXContainerItemProxy */;
+		};
+		31030B5CD58E54D0C32CC8D91B1CB1E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IronSourceUnityAdsAdapter;
+			target = FAB0F19BE9FFC4EED7E99DF31D5FE145 /* IronSourceUnityAdsAdapter */;
+			targetProxy = FD682BD7EBD3EEBEF2C172E939BC689F /* PBXContainerItemProxy */;
+		};
+		3304D111FEB503E9CFDAC8B717AA7D38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IronSourceSDK;
+			target = 205EFBEF86DA6E7E3D5B9BABED8872EE /* IronSourceSDK */;
+			targetProxy = CDB2ABA065E6ADC746D7D2B4A08DD274 /* PBXContainerItemProxy */;
+		};
+		3FF9BC574E8E815325CFE028E9ACEA6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUserMessagingPlatform;
+			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
+			targetProxy = 320131231A231E2301F7E8C153736E6B /* PBXContainerItemProxy */;
+		};
+		50F0F73C92A37FCEBD5C763BCA716956 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Google-Mobile-Ads-SDK-GoogleMobileAdsResources";
 			target = 36FD0958A0EC4A0FCF599E9B22719B03 /* Google-Mobile-Ads-SDK-GoogleMobileAdsResources */;
-			targetProxy = 4EE90504A00288E507BAD6C5B5888AFE /* PBXContainerItemProxy */;
+			targetProxy = 47B0DCE85DDF11D2A8A97ED06C345D7F /* PBXContainerItemProxy */;
+		};
+		5D90FE8C76F0772EBEB5C448A0206693 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "IronSourceSDK-IronSourcePrivacyInfo";
+			target = AF4066D13B4DC667FB970ABF861B2B47 /* IronSourceSDK-IronSourcePrivacyInfo */;
+			targetProxy = 5DA4D701138E7C570A68DC010C0BFB5B /* PBXContainerItemProxy */;
+		};
+		76C8853A97770E5A65646F01D23EAAB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UnityAds-UnityAds";
+			target = 6FCD9A95708E51D3B877DF5BD54E6524 /* UnityAds-UnityAds */;
+			targetProxy = A6D126A268B295460CD01EAF956E6163 /* PBXContainerItemProxy */;
+		};
+		B3BBE271EB4D4BA7148D31E8CA8A132E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUserMessagingPlatform;
+			target = 458B188365A307B3C128ABF524D1A3E3 /* GoogleUserMessagingPlatform */;
+			targetProxy = 0B0669F24FE0BEFE1793B9580F16A49C /* PBXContainerItemProxy */;
+		};
+		DA441E478ED608BA5B3FD3C6BC028335 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IronSourceSDK;
+			target = 205EFBEF86DA6E7E3D5B9BABED8872EE /* IronSourceSDK */;
+			targetProxy = 153A21F24F44497B9BB4987C40E51EF1 /* PBXContainerItemProxy */;
+		};
+		F1B9113F6DF7ABFBDAE6C12FFEB615EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UnityAds;
+			target = 93D529076BA2F81743BF6033A35532F2 /* UnityAds */;
+			targetProxy = F1A3917F511A1AD9AD314446B63B2279 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -626,42 +1501,38 @@
 			};
 			name = Release;
 		};
-		1AFCCEE8A842E5403A10A56F315E3505 /* Debug */ = {
+		126BBEF4E3824765469E3E8907CA8F77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D30DCF00DB32560D2CF475833733E12 /* Pods-Siesta.debug.xcconfig */;
+			baseConfigurationReference = 0CFB56C6392E32042DD354AD3FD29AC0 /* IronSourceSDK.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-Siesta/Pods-Siesta-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Siesta/Pods-Siesta.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IronSourceSDK";
+				IBSC_MODULE = IronSourceSDK;
+				INFOPLIST_FILE = "Target Support Files/IronSourceSDK/ResourceBundle-IronSourcePrivacyInfo-IronSourceSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_NAME = IronSourcePrivacyInfo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		486C988D60457AFC5A18DA4EA1CF984A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE1496511274C63F595A7725E72BEF6 /* UnityAds.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -731,66 +1602,24 @@
 			};
 			name = Debug;
 		};
-		55BA950591C3932627ECCC0204D66E58 /* Release */ = {
+		531EF85D0D90DE01BDE2AB6106D67D97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31ABF05F4F720C8E40F38BAD866EBDC0 /* GoogleUserMessagingPlatform.release.xcconfig */;
+			baseConfigurationReference = 27C423B671C9078900CEF0DD00FA769D /* GoogleUserMessagingPlatform.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleUserMessagingPlatform";
+				IBSC_MODULE = GoogleUserMessagingPlatform;
+				INFOPLIST_FILE = "Target Support Files/GoogleUserMessagingPlatform/ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				PRODUCT_NAME = UserMessagingPlatformResources;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		612A771FEC74E5BC5C4888D1C8CEEDAF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CB2870152A11C8D7854F09D9999E402 /* Google-Mobile-Ads-SDK.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK.modulemap";
-				PRODUCT_MODULE_NAME = Google_Mobile_Ads_SDK;
-				PRODUCT_NAME = Google_Mobile_Ads_SDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7271209C0B6E838FD93C80FCA360ADA7 /* Release */ = {
+		5A3B9273C9B0B0337D97F3E07ACFC7F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 781FC9783D4806FDC6A016703AB237FB /* Pods-Siesta.release.xcconfig */;
 			buildSettings = {
@@ -830,9 +1659,85 @@
 			};
 			name = Release;
 		};
-		7CB7A7C1166701281782D1E5247235A4 /* Release */ = {
+		612A771FEC74E5BC5C4888D1C8CEEDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BD97D982CAB87B29E6846F927335BF3 /* Google-Mobile-Ads-SDK.release.xcconfig */;
+			baseConfigurationReference = 1421D92BF2D28F5D82EBC009D5299FAA /* Google-Mobile-Ads-SDK.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK.modulemap";
+				PRODUCT_MODULE_NAME = Google_Mobile_Ads_SDK;
+				PRODUCT_NAME = Google_Mobile_Ads_SDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		694C843AF0897DFF07B6118A57B401AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CFB56C6392E32042DD354AD3FD29AC0 /* IronSourceSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79990A18FAC66C44ED51EF945689E166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9C47FF85B5308225363CC26CC0AE41 /* IronSourceSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IronSourceSDK";
+				IBSC_MODULE = IronSourceSDK;
+				INFOPLIST_FILE = "Target Support Files/IronSourceSDK/ResourceBundle-IronSourcePrivacyInfo-IronSourceSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_NAME = IronSourcePrivacyInfo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8A9AEA650870D38EA10780D65F874245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09E70DE728E64355FFDE5BB30DDE508B /* Google-Mobile-Ads-SDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Google-Mobile-Ads-SDK";
@@ -847,27 +1752,9 @@
 			};
 			name = Release;
 		};
-		92E6692998AEFCA50202F156E89D7CAF /* Debug */ = {
+		8BE975B52990C04828BC7E9E9F026E02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE9FA647701D5D9784F7B39F699820EB /* GoogleUserMessagingPlatform.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A70A4F12E2569389F869967F3485404E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31ABF05F4F720C8E40F38BAD866EBDC0 /* GoogleUserMessagingPlatform.release.xcconfig */;
+			baseConfigurationReference = 922034AC685CA03979875ECD8CE6AB17 /* GoogleUserMessagingPlatform.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleUserMessagingPlatform";
@@ -880,11 +1767,104 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
+			name = Debug;
+		};
+		9862B9D0C8F61C9719C39112B36EDB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D30DCF00DB32560D2CF475833733E12 /* Pods-Siesta.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Siesta/Pods-Siesta-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Siesta/Pods-Siesta.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AFCD125BF2193CF8A3D6471CE3B101AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9C47FF85B5308225363CC26CC0AE41 /* IronSourceSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B06E24B5B2AC3F19CD7B51E1CD86C0D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1421D92BF2D28F5D82EBC009D5299FAA /* Google-Mobile-Ads-SDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Google-Mobile-Ads-SDK";
+				IBSC_MODULE = Google_Mobile_Ads_SDK;
+				INFOPLIST_FILE = "Target Support Files/Google-Mobile-Ads-SDK/ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = GoogleMobileAdsResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B826AA21AFB299DBE028A9B2717154F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27C423B671C9078900CEF0DD00FA769D /* GoogleUserMessagingPlatform.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
 			name = Release;
 		};
 		BA2AB6FB0451A4F73DDA8150E1858BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BD97D982CAB87B29E6846F927335BF3 /* Google-Mobile-Ads-SDK.release.xcconfig */;
+			baseConfigurationReference = 09E70DE728E64355FFDE5BB30DDE508B /* Google-Mobile-Ads-SDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -923,16 +1903,53 @@
 			};
 			name = Release;
 		};
-		C0365A3D2448968D14A6A8A2B8C16058 /* Debug */ = {
+		BFD70038A03F337E3F09D849764C6D0B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CB2870152A11C8D7854F09D9999E402 /* Google-Mobile-Ads-SDK.debug.xcconfig */;
+			baseConfigurationReference = 922034AC685CA03979875ECD8CE6AB17 /* GoogleUserMessagingPlatform.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C07A49C1295BE0CE0604B2401398C7A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 995EBBBDECD6A87059A4278D04516A68 /* UnityAds.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBCF410EE4ECF545934BA5D13E3FC423 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE1496511274C63F595A7725E72BEF6 /* UnityAds.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Google-Mobile-Ads-SDK";
-				IBSC_MODULE = Google_Mobile_Ads_SDK;
-				INFOPLIST_FILE = "Target Support Files/Google-Mobile-Ads-SDK/ResourceBundle-GoogleMobileAdsResources-Google-Mobile-Ads-SDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = GoogleMobileAdsResources;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/UnityAds";
+				IBSC_MODULE = UnityAds;
+				INFOPLIST_FILE = "Target Support Files/UnityAds/ResourceBundle-UnityAds-UnityAds-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_NAME = UnityAds;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -940,20 +1957,57 @@
 			};
 			name = Debug;
 		};
-		F590AA4FA957A6F9C1EC136303108F09 /* Debug */ = {
+		EA82E19311384E861DDE73143F3349BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE9FA647701D5D9784F7B39F699820EB /* GoogleUserMessagingPlatform.debug.xcconfig */;
+			baseConfigurationReference = 995EBBBDECD6A87059A4278D04516A68 /* UnityAds.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleUserMessagingPlatform";
-				IBSC_MODULE = GoogleUserMessagingPlatform;
-				INFOPLIST_FILE = "Target Support Files/GoogleUserMessagingPlatform/ResourceBundle-UserMessagingPlatformResources-GoogleUserMessagingPlatform-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = UserMessagingPlatformResources;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/UnityAds";
+				IBSC_MODULE = UnityAds;
+				INFOPLIST_FILE = "Target Support Files/UnityAds/ResourceBundle-UnityAds-UnityAds-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				PRODUCT_NAME = UnityAds;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		F142FF109B2A994FA7BF5BB72D0BC865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5B6B163F44FA6117011E650878EFD08 /* IronSourceUnityAdsAdapter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F76A26899E391F370FA581E2EE0A40C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E915C130D830EDC1B59545755848909 /* IronSourceUnityAdsAdapter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -969,6 +2023,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		382F63D1D98C731AD32AF28BEC44E120 /* Build configuration list for PBXNativeTarget "UnityAds-UnityAds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCF410EE4ECF545934BA5D13E3FC423 /* Debug */,
+				EA82E19311384E861DDE73143F3349BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4123BDB12FD1D1AAA5BCE4354989049C /* Build configuration list for PBXAggregateTarget "UnityAds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				486C988D60457AFC5A18DA4EA1CF984A /* Debug */,
+				C07A49C1295BE0CE0604B2401398C7A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -978,38 +2050,65 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		779A19B3F408B19BC681275E540240E8 /* Build configuration list for PBXAggregateTarget "GoogleUserMessagingPlatform" */ = {
+		5B626D7BB173B12B2721104053676CC6 /* Build configuration list for PBXAggregateTarget "IronSourceSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92E6692998AEFCA50202F156E89D7CAF /* Debug */,
-				55BA950591C3932627ECCC0204D66E58 /* Release */,
+				AFCD125BF2193CF8A3D6471CE3B101AB /* Debug */,
+				694C843AF0897DFF07B6118A57B401AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		783DCCC873B6BC72C8DA9CF78DA3CF6F /* Build configuration list for PBXNativeTarget "Google-Mobile-Ads-SDK-GoogleMobileAdsResources" */ = {
+		5E142A9ABA7E5B92931D0B6CA196A87C /* Build configuration list for PBXNativeTarget "Pods-Siesta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0365A3D2448968D14A6A8A2B8C16058 /* Debug */,
-				7CB7A7C1166701281782D1E5247235A4 /* Release */,
+				9862B9D0C8F61C9719C39112B36EDB61 /* Debug */,
+				5A3B9273C9B0B0337D97F3E07ACFC7F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9556B8BE9EADC8D44F86C8925A6D3740 /* Build configuration list for PBXNativeTarget "Pods-Siesta" */ = {
+		76E06FC61262EEFE8F239936A529A07A /* Build configuration list for PBXAggregateTarget "IronSourceUnityAdsAdapter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1AFCCEE8A842E5403A10A56F315E3505 /* Debug */,
-				7271209C0B6E838FD93C80FCA360ADA7 /* Release */,
+				F76A26899E391F370FA581E2EE0A40C1 /* Debug */,
+				F142FF109B2A994FA7BF5BB72D0BC865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B99B03ABB42BA5B48B6DBAFD36B91EF5 /* Build configuration list for PBXNativeTarget "GoogleUserMessagingPlatform-UserMessagingPlatformResources" */ = {
+		8313C42C3CB9E85C512EC73C6EEBBA52 /* Build configuration list for PBXNativeTarget "GoogleUserMessagingPlatform-UserMessagingPlatformResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F590AA4FA957A6F9C1EC136303108F09 /* Debug */,
-				A70A4F12E2569389F869967F3485404E /* Release */,
+				8BE975B52990C04828BC7E9E9F026E02 /* Debug */,
+				531EF85D0D90DE01BDE2AB6106D67D97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95FB8E7E3B4A52F68D24958324BB71DB /* Build configuration list for PBXNativeTarget "IronSourceSDK-IronSourcePrivacyInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79990A18FAC66C44ED51EF945689E166 /* Debug */,
+				126BBEF4E3824765469E3E8907CA8F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B89FA0AE5FBDE8572C377868D2333BA0 /* Build configuration list for PBXAggregateTarget "GoogleUserMessagingPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD70038A03F337E3F09D849764C6D0B /* Debug */,
+				B826AA21AFB299DBE028A9B2717154F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2C194C2DB07F3AFEBD1D4316E554F9E /* Build configuration list for PBXNativeTarget "Google-Mobile-Ads-SDK-GoogleMobileAdsResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06E24B5B2AC3F19CD7B51E1CD86C0D1 /* Debug */,
+				8A9AEA650870D38EA10780D65F874245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

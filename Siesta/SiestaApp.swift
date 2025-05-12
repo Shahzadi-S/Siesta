@@ -7,26 +7,29 @@
 
 import SwiftUI
 import GoogleMobileAds
+import IronSource
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        MobileAds.shared.start(completionHandler: nil)
-        
-        return true
-    }
-}
+//class AppDelegate: UIResponder, UIApplicationDelegate {
+//    
+//    func application(_ application: UIApplication,
+//                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        
+//        MobileAds.shared.start(completionHandler: nil)
+//        
+//        return true
+//    }
+//}
 
 @main
 struct SiestaApp: App {
     // To handle app delegate callbacks in an app that uses the SwiftUI lifecycle,
     // you must create an application delegate and attach it to your `App` struct
     // using `UIApplicationDelegateAdaptor`.
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+//    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
+    init() { AdsManager.shared.initializeAdSetup() }
     
     var body: some Scene {
         WindowGroup {
